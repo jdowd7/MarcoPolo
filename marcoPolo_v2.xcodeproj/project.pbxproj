@@ -14,14 +14,25 @@
 		903446B019688B1F000C087A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446AF19688B1F000C087A /* main.m */; };
 		903446B419688B1F000C087A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446B319688B1F000C087A /* AppDelegate.m */; };
 		903446B719688B1F000C087A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903446B519688B1F000C087A /* Main.storyboard */; };
-		903446BA19688B1F000C087A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446B919688B1F000C087A /* FirstViewController.m */; };
-		903446BD19688B1F000C087A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446BC19688B1F000C087A /* SecondViewController.m */; };
-		903446BF19688B1F000C087A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903446BE19688B1F000C087A /* Images.xcassets */; };
 		903446C619688B1F000C087A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446C519688B1F000C087A /* XCTest.framework */; };
 		903446C719688B1F000C087A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A319688B1F000C087A /* Foundation.framework */; };
 		903446C819688B1F000C087A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A719688B1F000C087A /* UIKit.framework */; };
 		903446D019688B1F000C087A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 903446CE19688B1F000C087A /* InfoPlist.strings */; };
 		903446D219688B1F000C087A /* marcoPolo_v2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446D119688B1F000C087A /* marcoPolo_v2Tests.m */; };
+		903446F219688DE4000C087A /* Images-3.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903446DB19688DE4000C087A /* Images-3.xcassets */; };
+		903446F319688DE4000C087A /* MarcoSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446DD19688DE4000C087A /* MarcoSceneViewController.m */; };
+		903446F419688DE4000C087A /* MarcoSentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446DF19688DE4000C087A /* MarcoSentViewController.m */; };
+		903446F519688DE4000C087A /* MessageCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E119688DE4000C087A /* MessageCellTableViewCell.m */; };
+		903446F619688DE4000C087A /* MessageSceneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E319688DE4000C087A /* MessageSceneTableViewController.m */; };
+		903446F719688DE4000C087A /* messagesReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E519688DE4000C087A /* messagesReplyViewController.m */; };
+		903446F819688DE4000C087A /* messagesTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E719688DE4000C087A /* messagesTableModel.m */; };
+		903446F919688DE4000C087A /* messagesTableSubTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446E819688DE4000C087A /* messagesTableSubTitlePlist.plist */; };
+		903446FA19688DE4000C087A /* messagesTableTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446E919688DE4000C087A /* messagesTableTitlePlist.plist */; };
+		903446FB19688DE4000C087A /* poloCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446EB19688DE4000C087A /* poloCellTableViewCell.m */; };
+		903446FC19688DE4000C087A /* PoloSceneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446ED19688DE4000C087A /* PoloSceneTableViewController.m */; };
+		903446FD19688DE4000C087A /* poloTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446EF19688DE4000C087A /* poloTableModel.m */; };
+		903446FE19688DE4000C087A /* poloTableSubTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446F019688DE4000C087A /* poloTableSubTitlePlist.plist */; };
+		903446FF19688DE4000C087A /* poloTableTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446F119688DE4000C087A /* poloTableTitlePlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +57,34 @@
 		903446B219688B1F000C087A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		903446B319688B1F000C087A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		903446B619688B1F000C087A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		903446B819688B1F000C087A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		903446B919688B1F000C087A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		903446BB19688B1F000C087A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		903446BC19688B1F000C087A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		903446BE19688B1F000C087A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		903446C419688B1F000C087A /* marcoPolo_v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marcoPolo_v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		903446C519688B1F000C087A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		903446CD19688B1F000C087A /* marcoPolo_v2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "marcoPolo_v2Tests-Info.plist"; sourceTree = "<group>"; };
 		903446CF19688B1F000C087A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		903446D119688B1F000C087A /* marcoPolo_v2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marcoPolo_v2Tests.m; sourceTree = "<group>"; };
+		903446DB19688DE4000C087A /* Images-3.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-3.xcassets"; sourceTree = "<group>"; };
+		903446DC19688DE4000C087A /* MarcoSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcoSceneViewController.h; sourceTree = "<group>"; };
+		903446DD19688DE4000C087A /* MarcoSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarcoSceneViewController.m; sourceTree = "<group>"; };
+		903446DE19688DE4000C087A /* MarcoSentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcoSentViewController.h; sourceTree = "<group>"; };
+		903446DF19688DE4000C087A /* MarcoSentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarcoSentViewController.m; sourceTree = "<group>"; };
+		903446E019688DE4000C087A /* MessageCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCellTableViewCell.h; sourceTree = "<group>"; };
+		903446E119688DE4000C087A /* MessageCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellTableViewCell.m; sourceTree = "<group>"; };
+		903446E219688DE4000C087A /* MessageSceneTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSceneTableViewController.h; sourceTree = "<group>"; };
+		903446E319688DE4000C087A /* MessageSceneTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSceneTableViewController.m; sourceTree = "<group>"; };
+		903446E419688DE4000C087A /* messagesReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagesReplyViewController.h; sourceTree = "<group>"; };
+		903446E519688DE4000C087A /* messagesReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messagesReplyViewController.m; sourceTree = "<group>"; };
+		903446E619688DE4000C087A /* messagesTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagesTableModel.h; sourceTree = "<group>"; };
+		903446E719688DE4000C087A /* messagesTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messagesTableModel.m; sourceTree = "<group>"; };
+		903446E819688DE4000C087A /* messagesTableSubTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messagesTableSubTitlePlist.plist; sourceTree = "<group>"; };
+		903446E919688DE4000C087A /* messagesTableTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messagesTableTitlePlist.plist; sourceTree = "<group>"; };
+		903446EA19688DE4000C087A /* poloCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poloCellTableViewCell.h; sourceTree = "<group>"; };
+		903446EB19688DE4000C087A /* poloCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poloCellTableViewCell.m; sourceTree = "<group>"; };
+		903446EC19688DE4000C087A /* PoloSceneTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoloSceneTableViewController.h; sourceTree = "<group>"; };
+		903446ED19688DE4000C087A /* PoloSceneTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoloSceneTableViewController.m; sourceTree = "<group>"; };
+		903446EE19688DE4000C087A /* poloTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poloTableModel.h; sourceTree = "<group>"; };
+		903446EF19688DE4000C087A /* poloTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poloTableModel.m; sourceTree = "<group>"; };
+		903446F019688DE4000C087A /* poloTableSubTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = poloTableSubTitlePlist.plist; sourceTree = "<group>"; };
+		903446F119688DE4000C087A /* poloTableTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = poloTableTitlePlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,14 +144,13 @@
 		903446A919688B1F000C087A /* marcoPolo_v2 */ = {
 			isa = PBXGroup;
 			children = (
+				903446DB19688DE4000C087A /* Images-3.xcassets */,
+				90DB3BB919689B6F0006DC09 /* Contollers */,
+				90DB3BB719689B200006DC09 /* Models */,
+				90DB3BB819689B570006DC09 /* Datasources */,
 				903446B219688B1F000C087A /* AppDelegate.h */,
 				903446B319688B1F000C087A /* AppDelegate.m */,
 				903446B519688B1F000C087A /* Main.storyboard */,
-				903446B819688B1F000C087A /* FirstViewController.h */,
-				903446B919688B1F000C087A /* FirstViewController.m */,
-				903446BB19688B1F000C087A /* SecondViewController.h */,
-				903446BC19688B1F000C087A /* SecondViewController.m */,
-				903446BE19688B1F000C087A /* Images.xcassets */,
 				903446AA19688B1F000C087A /* Supporting Files */,
 			);
 			path = marcoPolo_v2;
@@ -155,6 +183,49 @@
 				903446CE19688B1F000C087A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90DB3BB719689B200006DC09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				903446EE19688DE4000C087A /* poloTableModel.h */,
+				903446EF19688DE4000C087A /* poloTableModel.m */,
+				903446E619688DE4000C087A /* messagesTableModel.h */,
+				903446E719688DE4000C087A /* messagesTableModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		90DB3BB819689B570006DC09 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				903446F019688DE4000C087A /* poloTableSubTitlePlist.plist */,
+				903446F119688DE4000C087A /* poloTableTitlePlist.plist */,
+				903446E819688DE4000C087A /* messagesTableSubTitlePlist.plist */,
+				903446E919688DE4000C087A /* messagesTableTitlePlist.plist */,
+			);
+			name = Datasources;
+			sourceTree = "<group>";
+		};
+		90DB3BB919689B6F0006DC09 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				903446EA19688DE4000C087A /* poloCellTableViewCell.h */,
+				903446EB19688DE4000C087A /* poloCellTableViewCell.m */,
+				903446EC19688DE4000C087A /* PoloSceneTableViewController.h */,
+				903446ED19688DE4000C087A /* PoloSceneTableViewController.m */,
+				903446DC19688DE4000C087A /* MarcoSceneViewController.h */,
+				903446DD19688DE4000C087A /* MarcoSceneViewController.m */,
+				903446DE19688DE4000C087A /* MarcoSentViewController.h */,
+				903446DF19688DE4000C087A /* MarcoSentViewController.m */,
+				903446E019688DE4000C087A /* MessageCellTableViewCell.h */,
+				903446E119688DE4000C087A /* MessageCellTableViewCell.m */,
+				903446E219688DE4000C087A /* MessageSceneTableViewController.h */,
+				903446E319688DE4000C087A /* MessageSceneTableViewController.m */,
+				903446E419688DE4000C087A /* messagesReplyViewController.h */,
+				903446E519688DE4000C087A /* messagesReplyViewController.m */,
+			);
+			name = Contollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +304,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446BF19688B1F000C087A /* Images.xcassets in Resources */,
+				903446FE19688DE4000C087A /* poloTableSubTitlePlist.plist in Resources */,
+				903446FF19688DE4000C087A /* poloTableTitlePlist.plist in Resources */,
+				903446FA19688DE4000C087A /* messagesTableTitlePlist.plist in Resources */,
+				903446F919688DE4000C087A /* messagesTableSubTitlePlist.plist in Resources */,
 				903446AE19688B1F000C087A /* InfoPlist.strings in Resources */,
+				903446F219688DE4000C087A /* Images-3.xcassets in Resources */,
 				903446B719688B1F000C087A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446BD19688B1F000C087A /* SecondViewController.m in Sources */,
+				903446F819688DE4000C087A /* messagesTableModel.m in Sources */,
+				903446F319688DE4000C087A /* MarcoSceneViewController.m in Sources */,
 				903446B419688B1F000C087A /* AppDelegate.m in Sources */,
-				903446BA19688B1F000C087A /* FirstViewController.m in Sources */,
+				903446F719688DE4000C087A /* messagesReplyViewController.m in Sources */,
+				903446FC19688DE4000C087A /* PoloSceneTableViewController.m in Sources */,
+				903446F519688DE4000C087A /* MessageCellTableViewCell.m in Sources */,
+				903446FD19688DE4000C087A /* poloTableModel.m in Sources */,
 				903446B019688B1F000C087A /* main.m in Sources */,
+				903446F619688DE4000C087A /* MessageSceneTableViewController.m in Sources */,
+				903446F419688DE4000C087A /* MarcoSentViewController.m in Sources */,
+				903446FB19688DE4000C087A /* poloCellTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +467,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
 				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,6 +481,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
 				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -462,6 +546,7 @@
 				903446D719688B1F000C087A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		903446D819688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo_v2Tests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +555,7 @@
 				903446DA19688B1F000C087A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 red5. All rights reserved.
 //
 
-#import "PoloSceneTableViewController.h"
-#import "poloTableModel.h"
-#import "poloCellTableViewCell.h"
+#import "ContactsTableViewController.h"
+#import "contactsTableModel.h"
+#import "ContactsTableViewCell.h"
 
-@interface PoloSceneTableViewController ()
+@interface ContactsTableViewController ()
 
 @end
 
-@implementation PoloSceneTableViewController
+@implementation ContactsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
 	//loads the plists from the datastores via the models
-	poloTableModel *poloTableModelInstance = [[poloTableModel alloc] init];
+	contactsTableModel *poloTableModelInstance = [[contactsTableModel alloc] init];
 	[poloTableModelInstance getPoloTableTitleList];
 	[poloTableModelInstance getPoloTableSubTitleList];
 	
@@ -66,10 +66,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *poloTableCellId = @"poloTableCell";
-    poloCellTableViewCell *poloTableCell = [tableView dequeueReusableCellWithIdentifier:poloTableCellId forIndexPath:indexPath];
+    ContactsTableViewCell *poloTableCell = [tableView dequeueReusableCellWithIdentifier:poloTableCellId forIndexPath:indexPath];
 	if(poloTableCell == nil)
 	{
-		poloTableCell = [[poloCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:poloTableCellId];
+		poloTableCell = [[ContactsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:poloTableCellId];
 	}
     // Configure the cell...
 	poloTableCell.poloCellTitle.text = self.poloTitleArray[indexPath.row];

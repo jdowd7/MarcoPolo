@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 red5. All rights reserved.
 //
 
-#import "poloTableModel.h"
+#import "contactsTableModel.h"
 
-@implementation poloTableModel
+@implementation contactsTableModel
 
 // Getter for the titles
 - (void) getPoloTableTitleList

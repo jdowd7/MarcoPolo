@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PoloSceneTableViewController: UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ContactsTableViewController: UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *poloTitleArray;
 @property (nonatomic, strong) NSMutableArray *poloDetailArray;

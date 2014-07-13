@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 red5. All rights reserved.
 //
 
-#import "poloCellTableViewCell.h"
+#import "ContactsTableViewCell.h"
 
-@implementation poloCellTableViewCell
+@implementation ContactsTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

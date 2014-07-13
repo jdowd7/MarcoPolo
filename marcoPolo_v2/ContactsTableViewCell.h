@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface poloCellTableViewCell : UITableViewCell
+@interface ContactsTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *poloCellTitle;
 @property (strong, nonatomic) IBOutlet UILabel *poloCellDetail;

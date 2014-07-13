@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface poloTableModel : NSObject
+@interface contactsTableModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *poloTableTitleList;
 @property (nonatomic, strong) NSMutableArray *poloTableSubTitleList;

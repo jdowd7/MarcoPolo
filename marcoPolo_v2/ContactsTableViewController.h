@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactsTableViewController: UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ContactsTableViewController: UITableViewController //<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray *poloTitleArray;
-@property (nonatomic, strong) NSMutableArray *poloDetailArray;
+//@property (nonatomic, strong) NSMutableArray *poloTitleArray;
+//@property (nonatomic, strong) NSMutableArray *poloDetailArray;
+
+@property (nonatomic, strong)NSArray * contactsTableResults;
 
 
 @end

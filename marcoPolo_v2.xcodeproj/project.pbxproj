@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7943172A25764A8696145443 /* libPods-marcoPolo_v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */; };
+		902E4DE819775474006C06D5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 902E4DE619775474006C06D5 /* libssl.a */; };
+		902E4DE919775474006C06D5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 902E4DE719775474006C06D5 /* libcrypto.a */; };
+		902F90E3198D7771003931C5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902F90E2198D7771003931C5 /* CoreData.framework */; };
+		902F90E6198D7841003931C5 /* mpCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */; };
+		902F90E9198D856D003931C5 /* ContactsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F90E8198D856D003931C5 /* ContactsData.m */; };
+		902F90EC198D856E003931C5 /* MessagesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F90EB198D856E003931C5 /* MessagesData.m */; };
 		903446A419688B1F000C087A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A319688B1F000C087A /* Foundation.framework */; };
 		903446A619688B1F000C087A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A519688B1F000C087A /* CoreGraphics.framework */; };
 		903446A819688B1F000C087A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A719688B1F000C087A /* UIKit.framework */; };
@@ -24,16 +31,14 @@
 		903446F419688DE4000C087A /* MarcoSentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446DF19688DE4000C087A /* MarcoSentViewController.m */; };
 		903446F519688DE4000C087A /* MessageCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E119688DE4000C087A /* MessageCellTableViewCell.m */; };
 		903446F619688DE4000C087A /* MessageSceneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E319688DE4000C087A /* MessageSceneTableViewController.m */; };
-		903446F719688DE4000C087A /* messagesReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E519688DE4000C087A /* messagesReplyViewController.m */; };
-		903446F819688DE4000C087A /* messagesTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E719688DE4000C087A /* messagesTableModel.m */; };
-		903446F919688DE4000C087A /* messagesTableSubTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446E819688DE4000C087A /* messagesTableSubTitlePlist.plist */; };
-		903446FA19688DE4000C087A /* messagesTableTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446E919688DE4000C087A /* messagesTableTitlePlist.plist */; };
 		903446FB19688DE4000C087A /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446EB19688DE4000C087A /* ContactsTableViewCell.m */; };
 		903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446ED19688DE4000C087A /* ContactsTableViewController.m */; };
-		903446FD19688DE4000C087A /* contactsTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446EF19688DE4000C087A /* contactsTableModel.m */; };
-		903446FE19688DE4000C087A /* poloTableSubTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446F019688DE4000C087A /* poloTableSubTitlePlist.plist */; };
-		903446FF19688DE4000C087A /* poloTableTitlePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903446F119688DE4000C087A /* poloTableTitlePlist.plist */; };
-		90DB3BBB196A15EC0006DC09 /* sendTimeLengths.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90DB3BBA196A15EC0006DC09 /* sendTimeLengths.plist */; };
+		904D643F1996CCE20024118E /* addContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904D643E1996CCE20024118E /* addContactViewController.m */; };
+		905925141984129900C6C1AD /* generateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905925131984129900C6C1AD /* generateKeyViewController.m */; };
+		90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */; };
+		90C17DAE197B064000C386D0 /* keyInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DAD197B064000C386D0 /* keyInstanceViewController.m */; };
+		90C17DB1197B130000C386D0 /* optionsSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DB0197B130000C386D0 /* optionsSceneViewController.m */; };
+		90CAE3CE197B72C200030F22 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CAE3CD197B72C200030F22 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcoPolo_v2.xcconfig"; path = "Pods/Pods-marcoPolo_v2.xcconfig"; sourceTree = "<group>"; };
+		4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marcoPolo_v2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		902E4DE619775474006C06D5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios/libssl.a"; sourceTree = "<group>"; };
+		902E4DE719775474006C06D5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios/libcrypto.a"; sourceTree = "<group>"; };
+		902F90E2198D7771003931C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		902F90E5198D7841003931C5 /* mpCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mpCoreData.xcdatamodel; sourceTree = "<group>"; };
+		902F90E7198D856D003931C5 /* ContactsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsData.h; sourceTree = "<group>"; };
+		902F90E8198D856D003931C5 /* ContactsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsData.m; sourceTree = "<group>"; };
+		902F90EA198D856E003931C5 /* MessagesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesData.h; sourceTree = "<group>"; };
+		902F90EB198D856E003931C5 /* MessagesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesData.m; sourceTree = "<group>"; };
 		903446A019688B1F000C087A /* marcoPolo_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marcoPolo_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903446A319688B1F000C087A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		903446A519688B1F000C087A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,21 +87,25 @@
 		903446E119688DE4000C087A /* MessageCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellTableViewCell.m; sourceTree = "<group>"; };
 		903446E219688DE4000C087A /* MessageSceneTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSceneTableViewController.h; sourceTree = "<group>"; };
 		903446E319688DE4000C087A /* MessageSceneTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSceneTableViewController.m; sourceTree = "<group>"; };
-		903446E419688DE4000C087A /* messagesReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagesReplyViewController.h; sourceTree = "<group>"; };
-		903446E519688DE4000C087A /* messagesReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messagesReplyViewController.m; sourceTree = "<group>"; };
-		903446E619688DE4000C087A /* messagesTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagesTableModel.h; sourceTree = "<group>"; };
-		903446E719688DE4000C087A /* messagesTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messagesTableModel.m; sourceTree = "<group>"; };
-		903446E819688DE4000C087A /* messagesTableSubTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messagesTableSubTitlePlist.plist; sourceTree = "<group>"; };
-		903446E919688DE4000C087A /* messagesTableTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messagesTableTitlePlist.plist; sourceTree = "<group>"; };
 		903446EA19688DE4000C087A /* ContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
 		903446EB19688DE4000C087A /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
 		903446EC19688DE4000C087A /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		903446ED19688DE4000C087A /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
-		903446EE19688DE4000C087A /* contactsTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactsTableModel.h; sourceTree = "<group>"; };
-		903446EF19688DE4000C087A /* contactsTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactsTableModel.m; sourceTree = "<group>"; };
-		903446F019688DE4000C087A /* poloTableSubTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = poloTableSubTitlePlist.plist; sourceTree = "<group>"; };
-		903446F119688DE4000C087A /* poloTableTitlePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = poloTableTitlePlist.plist; sourceTree = "<group>"; };
-		90DB3BBA196A15EC0006DC09 /* sendTimeLengths.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sendTimeLengths.plist; sourceTree = "<group>"; };
+		904D643D1996CCE20024118E /* addContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addContactViewController.h; sourceTree = "<group>"; };
+		904D643E1996CCE20024118E /* addContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addContactViewController.m; sourceTree = "<group>"; };
+		905925121984129900C6C1AD /* generateKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generateKeyViewController.h; sourceTree = "<group>"; };
+		905925131984129900C6C1AD /* generateKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = generateKeyViewController.m; sourceTree = "<group>"; };
+		90C17DA7197B02B400C386D0 /* libUNNetPGP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUNNetPGP.a; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libUNNetPGP.a"; sourceTree = "<group>"; };
+		90C17DA9197B041200C386D0 /* ContactsProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProfileViewController.h; sourceTree = "<group>"; };
+		90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsProfileViewController.m; sourceTree = "<group>"; };
+		90C17DAC197B064000C386D0 /* keyInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keyInstanceViewController.h; sourceTree = "<group>"; };
+		90C17DAD197B064000C386D0 /* keyInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = keyInstanceViewController.m; sourceTree = "<group>"; };
+		90C17DAF197B130000C386D0 /* optionsSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = optionsSceneViewController.h; sourceTree = "<group>"; };
+		90C17DB0197B130000C386D0 /* optionsSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = optionsSceneViewController.m; sourceTree = "<group>"; };
+		90CAE3C7197B263200030F22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		90CAE3C8197B263200030F22 /* libPods-UNNetPGP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-UNNetPGP.a"; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods-UNNetPGP.a"; sourceTree = "<group>"; };
+		90CAE3C9197B263200030F22 /* libPods-OpenSSL-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OpenSSL-Universal.a"; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods-OpenSSL-Universal.a"; sourceTree = "<group>"; };
+		90CAE3CD197B72C200030F22 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +113,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902F90E3198D7771003931C5 /* CoreData.framework in Frameworks */,
+				90CAE3CE197B72C200030F22 /* libsqlite3.dylib in Frameworks */,
+				902E4DE819775474006C06D5 /* libssl.a in Frameworks */,
+				902E4DE919775474006C06D5 /* libcrypto.a in Frameworks */,
 				903446A619688B1F000C087A /* CoreGraphics.framework in Frameworks */,
 				903446A819688B1F000C087A /* UIKit.framework in Frameworks */,
 				903446A419688B1F000C087A /* Foundation.framework in Frameworks */,
+				7943172A25764A8696145443 /* libPods-marcoPolo_v2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +144,7 @@
 				903446CB19688B1F000C087A /* marcoPolo_v2Tests */,
 				903446A219688B1F000C087A /* Frameworks */,
 				903446A119688B1F000C087A /* Products */,
+				3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,10 +160,19 @@
 		903446A219688B1F000C087A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				902F90E2198D7771003931C5 /* CoreData.framework */,
+				90CAE3CD197B72C200030F22 /* libsqlite3.dylib */,
+				90CAE3C7197B263200030F22 /* libPods.a */,
+				90CAE3C8197B263200030F22 /* libPods-UNNetPGP.a */,
+				90CAE3C9197B263200030F22 /* libPods-OpenSSL-Universal.a */,
+				90C17DA7197B02B400C386D0 /* libUNNetPGP.a */,
+				902E4DE619775474006C06D5 /* libssl.a */,
+				902E4DE719775474006C06D5 /* libcrypto.a */,
 				903446A319688B1F000C087A /* Foundation.framework */,
 				903446A519688B1F000C087A /* CoreGraphics.framework */,
 				903446A719688B1F000C087A /* UIKit.framework */,
 				903446C519688B1F000C087A /* XCTest.framework */,
+				4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,7 +182,6 @@
 			children = (
 				903446DB19688DE4000C087A /* Images-3.xcassets */,
 				90DB3BB919689B6F0006DC09 /* Contollers */,
-				90DB3BB719689B200006DC09 /* Models */,
 				90DB3BB819689B570006DC09 /* Datasources */,
 				903446B219688B1F000C087A /* AppDelegate.h */,
 				903446B319688B1F000C087A /* AppDelegate.m */,
@@ -187,25 +220,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		90DB3BB719689B200006DC09 /* Models */ = {
+		90C17DA4197AFFF700C386D0 /* optionsBranch */ = {
 			isa = PBXGroup;
 			children = (
-				903446EE19688DE4000C087A /* contactsTableModel.h */,
-				903446EF19688DE4000C087A /* contactsTableModel.m */,
-				903446E619688DE4000C087A /* messagesTableModel.h */,
-				903446E719688DE4000C087A /* messagesTableModel.m */,
+				903446EA19688DE4000C087A /* ContactsTableViewCell.h */,
+				903446EB19688DE4000C087A /* ContactsTableViewCell.m */,
+				903446EC19688DE4000C087A /* ContactsTableViewController.h */,
+				903446ED19688DE4000C087A /* ContactsTableViewController.m */,
+				90C17DA9197B041200C386D0 /* ContactsProfileViewController.h */,
+				90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */,
+				90C17DAC197B064000C386D0 /* keyInstanceViewController.h */,
+				90C17DAD197B064000C386D0 /* keyInstanceViewController.m */,
+				90C17DAF197B130000C386D0 /* optionsSceneViewController.h */,
+				90C17DB0197B130000C386D0 /* optionsSceneViewController.m */,
+				905925121984129900C6C1AD /* generateKeyViewController.h */,
+				905925131984129900C6C1AD /* generateKeyViewController.m */,
+				904D643D1996CCE20024118E /* addContactViewController.h */,
+				904D643E1996CCE20024118E /* addContactViewController.m */,
 			);
-			name = Models;
+			name = optionsBranch;
+			sourceTree = "<group>";
+		};
+		90C17DA5197B002300C386D0 /* marcoBranch */ = {
+			isa = PBXGroup;
+			children = (
+				903446DC19688DE4000C087A /* MarcoSceneViewController.h */,
+				903446DD19688DE4000C087A /* MarcoSceneViewController.m */,
+				903446DE19688DE4000C087A /* MarcoSentViewController.h */,
+				903446DF19688DE4000C087A /* MarcoSentViewController.m */,
+			);
+			name = marcoBranch;
+			sourceTree = "<group>";
+		};
+		90C17DA6197B005300C386D0 /* messagesBranch */ = {
+			isa = PBXGroup;
+			children = (
+				903446E019688DE4000C087A /* MessageCellTableViewCell.h */,
+				903446E119688DE4000C087A /* MessageCellTableViewCell.m */,
+				903446E219688DE4000C087A /* MessageSceneTableViewController.h */,
+				903446E319688DE4000C087A /* MessageSceneTableViewController.m */,
+			);
+			name = messagesBranch;
 			sourceTree = "<group>";
 		};
 		90DB3BB819689B570006DC09 /* Datasources */ = {
 			isa = PBXGroup;
 			children = (
-				903446F019688DE4000C087A /* poloTableSubTitlePlist.plist */,
-				903446F119688DE4000C087A /* poloTableTitlePlist.plist */,
-				903446E819688DE4000C087A /* messagesTableSubTitlePlist.plist */,
-				903446E919688DE4000C087A /* messagesTableTitlePlist.plist */,
-				90DB3BBA196A15EC0006DC09 /* sendTimeLengths.plist */,
+				902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */,
+				902F90EA198D856E003931C5 /* MessagesData.h */,
+				902F90EB198D856E003931C5 /* MessagesData.m */,
+				902F90E7198D856D003931C5 /* ContactsData.h */,
+				902F90E8198D856D003931C5 /* ContactsData.m */,
 			);
 			name = Datasources;
 			sourceTree = "<group>";
@@ -213,20 +278,9 @@
 		90DB3BB919689B6F0006DC09 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
-				903446EA19688DE4000C087A /* ContactsTableViewCell.h */,
-				903446EB19688DE4000C087A /* ContactsTableViewCell.m */,
-				903446EC19688DE4000C087A /* ContactsTableViewController.h */,
-				903446ED19688DE4000C087A /* ContactsTableViewController.m */,
-				903446DC19688DE4000C087A /* MarcoSceneViewController.h */,
-				903446DD19688DE4000C087A /* MarcoSceneViewController.m */,
-				903446DE19688DE4000C087A /* MarcoSentViewController.h */,
-				903446DF19688DE4000C087A /* MarcoSentViewController.m */,
-				903446E019688DE4000C087A /* MessageCellTableViewCell.h */,
-				903446E119688DE4000C087A /* MessageCellTableViewCell.m */,
-				903446E219688DE4000C087A /* MessageSceneTableViewController.h */,
-				903446E319688DE4000C087A /* MessageSceneTableViewController.m */,
-				903446E419688DE4000C087A /* messagesReplyViewController.h */,
-				903446E519688DE4000C087A /* messagesReplyViewController.m */,
+				90C17DA4197AFFF700C386D0 /* optionsBranch */,
+				90C17DA5197B002300C386D0 /* marcoBranch */,
+				90C17DA6197B005300C386D0 /* messagesBranch */,
 			);
 			name = Contollers;
 			sourceTree = "<group>";
@@ -238,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 903446D519688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo_v2" */;
 			buildPhases = (
+				837DA7EF44004596A7274C3C /* Check Pods Manifest.lock */,
 				9034469C19688B1F000C087A /* Sources */,
 				9034469D19688B1F000C087A /* Frameworks */,
 				9034469E19688B1F000C087A /* Resources */,
+				CF6E8334433D4C0BACCD3417 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,12 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446FE19688DE4000C087A /* poloTableSubTitlePlist.plist in Resources */,
-				903446FF19688DE4000C087A /* poloTableTitlePlist.plist in Resources */,
-				903446FA19688DE4000C087A /* messagesTableTitlePlist.plist in Resources */,
-				903446F919688DE4000C087A /* messagesTableSubTitlePlist.plist in Resources */,
 				903446AE19688B1F000C087A /* InfoPlist.strings in Resources */,
-				90DB3BBB196A15EC0006DC09 /* sendTimeLengths.plist in Resources */,
 				903446F219688DE4000C087A /* Images-3.xcassets in Resources */,
 				903446B719688B1F000C087A /* Main.storyboard in Resources */,
 			);
@@ -328,22 +379,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		837DA7EF44004596A7274C3C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6E8334433D4C0BACCD3417 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-marcoPolo_v2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9034469C19688B1F000C087A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446F819688DE4000C087A /* messagesTableModel.m in Sources */,
 				903446F319688DE4000C087A /* MarcoSceneViewController.m in Sources */,
+				902F90E9198D856D003931C5 /* ContactsData.m in Sources */,
+				90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */,
 				903446B419688B1F000C087A /* AppDelegate.m in Sources */,
-				903446F719688DE4000C087A /* messagesReplyViewController.m in Sources */,
 				903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */,
 				903446F519688DE4000C087A /* MessageCellTableViewCell.m in Sources */,
-				903446FD19688DE4000C087A /* contactsTableModel.m in Sources */,
+				90C17DB1197B130000C386D0 /* optionsSceneViewController.m in Sources */,
+				904D643F1996CCE20024118E /* addContactViewController.m in Sources */,
+				90C17DAE197B064000C386D0 /* keyInstanceViewController.m in Sources */,
 				903446B019688B1F000C087A /* main.m in Sources */,
 				903446F619688DE4000C087A /* MessageSceneTableViewController.m in Sources */,
 				903446F419688DE4000C087A /* MarcoSentViewController.m in Sources */,
+				902F90EC198D856E003931C5 /* MessagesData.m in Sources */,
+				902F90E6198D7841003931C5 /* mpCoreData.xcdatamodeld in Sources */,
 				903446FB19688DE4000C087A /* ContactsTableViewCell.m in Sources */,
+				905925141984129900C6C1AD /* generateKeyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +554,7 @@
 		};
 		903446D619688B1F000C087A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -472,13 +562,20 @@
 				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
 				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/red5/GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios",
+					"$(PROJECT_DIR)/GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		903446D719688B1F000C087A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -486,7 +583,13 @@
 				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
 				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/red5/GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios",
+					"$(PROJECT_DIR)/GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -562,6 +665,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				902F90E5198D7841003931C5 /* mpCoreData.xcdatamodel */,
+			);
+			currentVersion = 902F90E5198D7841003931C5 /* mpCoreData.xcdatamodel */;
+			path = mpCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9034469819688B1F000C087A /* Project object */;
 }

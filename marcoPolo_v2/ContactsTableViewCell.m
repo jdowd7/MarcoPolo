@@ -1,5 +1,5 @@
 //
-//  poloCellTableViewCell.m
+//  contactsTableViewCell.m
 //  marcoPolo
 //
 //  Created by red5 on 7/5/14.

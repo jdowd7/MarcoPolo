@@ -8,7 +8,6 @@
 
 #import "MessageSceneTableViewController.h"
 #import "MessageCellTableViewCell.h"
-#import "messagesTableModel.h"
 
 @interface MessageSceneTableViewController ()
 
@@ -29,14 +28,6 @@
 {
     [super viewDidLoad];
     
-	//loads the plists from the datastores via the models
-	messagesTableModel *messagesTableModelInstance = [[messagesTableModel alloc] init];
-	[messagesTableModelInstance getMessagesTableTitleList];
-	[messagesTableModelInstance getMessagesTableSubTitleList];
-	
-	self.messageTitleArray = [[NSMutableArray alloc] initWithArray:messagesTableModelInstance.messagesTableTitleList];
-	self.messageDetailArray = [[NSMutableArray alloc] initWithArray:messagesTableModelInstance.messagesTableSubTitleList];
-	
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -69,7 +60,7 @@
 	
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *messageTableCellId = @"messageTableCell";
@@ -84,7 +75,7 @@
 	
     return messageTableCell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.

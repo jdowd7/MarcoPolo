@@ -10,7 +10,7 @@
 
 @interface ContactsTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *poloCellTitle;
-@property (strong, nonatomic) IBOutlet UILabel *poloCellDetail;
+@property (strong, nonatomic) IBOutlet UILabel *contactCellTitle;
+@property (strong, nonatomic) IBOutlet UILabel *contactCellDetail;
 
 @end

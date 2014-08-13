@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageSceneTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MessageSceneTableViewController : UITableViewController //<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *messageTitleArray;
 @property (nonatomic, strong) NSMutableArray *messageDetailArray;

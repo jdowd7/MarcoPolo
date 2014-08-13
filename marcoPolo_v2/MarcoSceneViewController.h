@@ -10,4 +10,6 @@
 
 @interface MarcoSceneViewController : UIViewController
 
+-(IBAction)returnMarco:(UIStoryboardSegue *)segue;
+
 @end

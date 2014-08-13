@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Contact" representedClassName="ContactsData" syncable="YES">
+        <attribute name="contact_id" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="contact_name" attributeType="String" syncable="YES"/>
+        <attribute name="contact_phone_number" attributeType="String" syncable="YES"/>
+        <attribute name="contact_public_key" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="c2mRelation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Message" inverseName="m2cRelationship" inverseEntity="Message" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="MessagesData" syncable="YES">
+        <attribute name="contact_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="message_encrypted" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="message_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="message_read" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="message_text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="m2cRelationship" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Contact" inverseName="c2mRelation" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contact" positionX="-405" positionY="-36" width="128" height="118"/>
+        <element name="Message" positionX="-153" positionY="-63" width="128" height="133"/>
+    </elements>
+</model>

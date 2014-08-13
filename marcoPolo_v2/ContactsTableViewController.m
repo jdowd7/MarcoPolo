@@ -6,11 +6,17 @@
 //  Copyright (c) 2014 red5. All rights reserved.
 //
 
+//old imports on plist
 #import "ContactsTableViewController.h"
-#import "contactsTableModel.h"
 #import "ContactsTableViewCell.h"
 
+//new imports
+#import "AppDelegate.h"
+#import "ContactsData.h"
+
 @interface ContactsTableViewController ()
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -20,7 +26,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -29,13 +35,13 @@
 {
     [super viewDidLoad];
     
-	//loads the plists from the datastores via the models
-	contactsTableModel *poloTableModelInstance = [[contactsTableModel alloc] init];
-	[poloTableModelInstance getPoloTableTitleList];
-	[poloTableModelInstance getPoloTableSubTitleList];
-	
-	self.poloTitleArray = [[NSMutableArray alloc] initWithArray:poloTableModelInstance.poloTableTitleList];
-	self.poloDetailArray = [[NSMutableArray alloc] initWithArray:poloTableModelInstance.poloTableSubTitleList];
+#pragma mark topNavbar show
+    self.navigationController.navigationBarHidden = NO;
+    
+#pragma mark LoadTableData - load Contacts data into tableView
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.contactsTableResults =[appDelegate getAllContacts];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,8 +49,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -55,27 +59,28 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _poloTitleArray.count;
+    return _contactsTableResults.count;
 }
 
-- (IBAction)returnPolo:(UIStoryboardSegue *)segue {
+- (IBAction)returnContactsTable:(UIStoryboardSegue *)segue {
     
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *poloTableCellId = @"poloTableCell";
-    ContactsTableViewCell *poloTableCell = [tableView dequeueReusableCellWithIdentifier:poloTableCellId forIndexPath:indexPath];
-	if(poloTableCell == nil)
+	static NSString *contactCellId = @"contactCell";
+    ContactsTableViewCell *contactCellInstance = [tableView dequeueReusableCellWithIdentifier:contactCellId forIndexPath:indexPath];
+	if(contactCellInstance == nil)
 	{
-		poloTableCell = [[ContactsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:poloTableCellId];
+		contactCellInstance = [[ContactsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:contactCellId];
 	}
     // Configure the cell...
-	poloTableCell.poloCellTitle.text = self.poloTitleArray[indexPath.row];
-	poloTableCell.poloCellDetail.text = self.poloDetailArray[indexPath.row];
+    ContactsData *contact = [self.contactsTableResults objectAtIndex:indexPath.row];
+	contactCellInstance.contactCellTitle.text = contact.contact_name;
+	contactCellInstance.contactCellDetail.text = contact.contact_phone_number;
 	
-    return poloTableCell;
+    return contactCellInstance;
 }
 
 
@@ -119,13 +124,10 @@
 
 /*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
 }
-*/
+ */
 
 @end

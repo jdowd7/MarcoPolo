@@ -297,7 +297,7 @@
         <!--generateNewKeyScene-->
         <scene sceneID="L71-CG-7zI">
             <objects>
-                <viewController storyboardIdentifier="generateNewKeyScene" title="generateNewKeyScene" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bD2-6F-QBa" userLabel="generateNewKeyScene" customClass="generateKeyViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="generateNewKeyScene" title="generateNewKeyScene" modalTransitionStyle="flipHorizontal" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bD2-6F-QBa" userLabel="generateNewKeyScene" customClass="generateKeyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vVH-bK-BHy"/>
                         <viewControllerLayoutGuide type="bottom" id="oMb-yC-R0h"/>
@@ -378,13 +378,13 @@
         <!--keyViewScene-->
         <scene sceneID="nK8-lo-Aa2">
             <objects>
-                <viewController storyboardIdentifier="keyViewScene" title="keyViewScene" hidesBottomBarWhenPushed="YES" id="3ah-RA-I0q" userLabel="keyViewScene" customClass="keyInstanceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="keyViewScene" title="keyViewScene" modalTransitionStyle="flipHorizontal" hidesBottomBarWhenPushed="YES" id="3ah-RA-I0q" userLabel="keyViewScene" customClass="keyInstanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kDF-bl-GeR"/>
                         <viewControllerLayoutGuide type="bottom" id="tWS-gk-6qp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5yB-Ou-cdg">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="burnKeyButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPb-GE-iNe" userLabel="burnKeyButton">
@@ -437,6 +437,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="RPm-lb-77e">
                         <barButtonItem key="leftBarButtonItem" image="IconBack" id="FBR-UE-RZG">
                             <connections>
@@ -458,7 +459,7 @@
         <!--optionsSceneView-->
         <scene sceneID="AZx-LE-UaV">
             <objects>
-                <viewController storyboardIdentifier="optionsSceneView" title="optionsSceneView" id="zsh-Ul-954" userLabel="optionsSceneView" customClass="optionsSceneViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="optionsSceneView" title="optionsSceneView" modalTransitionStyle="flipHorizontal" id="zsh-Ul-954" userLabel="optionsSceneView" customClass="optionsSceneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pFb-n5-vGa"/>
                         <viewControllerLayoutGuide type="bottom" id="syG-AY-J1F"/>
@@ -475,15 +476,15 @@
                                 <rect key="frame" x="57" y="15" width="228" height="152"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your Public Key" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Bk-ZqV">
-                                <rect key="frame" x="40" y="199" width="240" height="246"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" editable="NO" text="No key available, create one." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Bk-ZqV">
+                                <rect key="frame" x="40" y="199" width="240" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Public Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmz-p4-1oV">
-                                <rect key="frame" x="57" y="469" width="207" height="21"/>
+                                <rect key="frame" x="57" y="424" width="207" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -512,7 +513,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="RP0-Zs-rdl"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="optionsScenePublicKeyDisplay" destination="87r-Bk-ZqV" id="OSG-zk-610"/>
                     </connections>
@@ -561,36 +566,36 @@
         <!--Add Contact View Controller - addContactInstanceViewController-->
         <scene sceneID="edm-Wb-Y8N">
             <objects>
-                <viewController storyboardIdentifier="addContactInstanceViewController" title="addContactInstanceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QF6-lT-XHb" customClass="addContactViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addContactInstanceViewController" title="addContactInstanceViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QF6-lT-XHb" customClass="addContactViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Ri-l3-RGR"/>
                         <viewControllerLayoutGuide type="bottom" id="FI8-1B-G8m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HvT-BS-gBs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="246"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input Contact Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56q-aW-qKN">
-                                <rect key="frame" x="20" y="84" width="280" height="21"/>
+                                <rect key="frame" x="20" y="34" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactName" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact's Name" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-hF-2dD">
-                                <rect key="frame" x="20" y="123" width="280" height="30"/>
+                                <rect key="frame" x="20" y="73" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactPhoneNumber" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact's Phone Number" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-RF-Ifh">
-                                <rect key="frame" x="20" y="180" width="280" height="30"/>
+                                <rect key="frame" x="20" y="130" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y71-BU-RyQ">
-                                <rect key="frame" x="20" y="244" width="87" height="32"/>
+                                <rect key="frame" x="20" y="194" width="87" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="IconPeopleAdd-01"/>
                                 <connections>
@@ -598,7 +603,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5c-eX-JTV">
-                                <rect key="frame" x="213" y="244" width="87" height="32"/>
+                                <rect key="frame" x="213" y="194" width="87" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="IconFlame"/>
                                 <connections>
@@ -608,6 +613,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="Item" id="vBl-Rr-Ugo"/>
                         <barButtonItem title="Item" id="NnO-Gn-3ez"/>
@@ -709,7 +715,7 @@
         <!--contactsProfileView-->
         <scene sceneID="jTu-Nf-eNz">
             <objects>
-                <viewController storyboardIdentifier="contactsProfileView" title="contactsProfileScene" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OlY-zt-NM2" userLabel="contactsProfileView" customClass="ContactsProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactsProfileView" title="contactsProfileScene" modalTransitionStyle="flipHorizontal" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OlY-zt-NM2" userLabel="contactsProfileView" customClass="ContactsProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="odu-UK-2rs"/>
                         <viewControllerLayoutGuide type="bottom" id="IrF-i5-mhU"/>
@@ -772,6 +778,7 @@ EENvbnRhY3QncyBOYW1lA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="Erase" id="MMM-CK-Cuc"/>
                         <barButtonItem width="22" style="plain" systemItem="fixedSpace" id="N3c-MA-eZN"/>

@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBarHidden = YES;
     _usernameKey.clearButtonMode = UITextFieldViewModeWhileEditing;
     _passwordKey.clearButtonMode = UITextFieldViewModeWhileEditing;
 }

@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     
+        self.navigationController.navigationBarHidden = NO;
     //TODO: IF (PROFILE IS NOT CREATED, PROMPT USER TO CREATE A PROFILE)
     
     // Do any additional setup after loading the view.

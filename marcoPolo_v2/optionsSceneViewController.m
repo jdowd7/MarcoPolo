@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.navigationController.navigationBarHidden = YES;
 #pragma mark SQL-Lite3 setup
  /*
     NSArray *docPathsArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -82,7 +84,7 @@
 }
 
 - (IBAction)returnOptionsMain:(UIStoryboardSegue *)segue {
-    
+    self.navigationController.navigationBarHidden = YES;
 }
 /*
 #pragma mark - Navigation

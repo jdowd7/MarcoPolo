@@ -13,10 +13,12 @@
 //new imports
 #import "AppDelegate.h"
 #import "ContactsData.h"
+#import "ContactsProfileViewController.h"
 
 @interface ContactsTableViewController ()
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) ContactsData *contactAdded;
 
 @end
 
@@ -63,7 +65,7 @@
 }
 
 - (IBAction)returnContactsTable:(UIStoryboardSegue *)segue {
-    
+    [self viewDidLoad];
 }
 
 
@@ -122,12 +124,26 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+    
+    if([[segue identifier] isEqualToString:@"pushContactDetail"])
+    {
+        ContactsProfileViewController *contactsProfileVC = [segue destinationViewController];
+        contactsProfileVC.passedDetailInstance = self.contactAdded;
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+    }
 }
- */
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ContactsProfileViewController *profileView = [segue destinationViewController];
+    profileView.passedDetailInstance = [self.contactsTableResults objectAtIndex:indexPath.row];
+    //[self.navigationController pushViewController:profileView animated:YES];
+    //[self performSegueWithIdentifier:@"pushContactDetail" sender:sender];
+}
 
 @end

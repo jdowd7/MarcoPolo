@@ -14,6 +14,7 @@
 		902F90E6198D7841003931C5 /* mpCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */; };
 		902F90E9198D856D003931C5 /* ContactsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F90E8198D856D003931C5 /* ContactsData.m */; };
 		902F90EC198D856E003931C5 /* MessagesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F90EB198D856E003931C5 /* MessagesData.m */; };
+		9033DCBA19A2D16700AFF2AF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9033DCB919A2D16700AFF2AF /* MessageUI.framework */; };
 		903446A419688B1F000C087A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A319688B1F000C087A /* Foundation.framework */; };
 		903446A619688B1F000C087A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A519688B1F000C087A /* CoreGraphics.framework */; };
 		903446A819688B1F000C087A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A719688B1F000C087A /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 		903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446ED19688DE4000C087A /* ContactsTableViewController.m */; };
 		904D643F1996CCE20024118E /* addContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904D643E1996CCE20024118E /* addContactViewController.m */; };
 		905925141984129900C6C1AD /* generateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905925131984129900C6C1AD /* generateKeyViewController.m */; };
+		9075CFEC199FF5F900A95AAC /* KeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9075CFEB199FF5F900A95AAC /* KeyPair.m */; };
 		90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */; };
 		90C17DAE197B064000C386D0 /* keyInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DAD197B064000C386D0 /* keyInstanceViewController.m */; };
 		90C17DB1197B130000C386D0 /* optionsSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DB0197B130000C386D0 /* optionsSceneViewController.m */; };
@@ -62,6 +64,7 @@
 		902F90E8198D856D003931C5 /* ContactsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsData.m; sourceTree = "<group>"; };
 		902F90EA198D856E003931C5 /* MessagesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesData.h; sourceTree = "<group>"; };
 		902F90EB198D856E003931C5 /* MessagesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesData.m; sourceTree = "<group>"; };
+		9033DCB919A2D16700AFF2AF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		903446A019688B1F000C087A /* marcoPolo_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marcoPolo_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903446A319688B1F000C087A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		903446A519688B1F000C087A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,8 @@
 		904D643E1996CCE20024118E /* addContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addContactViewController.m; sourceTree = "<group>"; };
 		905925121984129900C6C1AD /* generateKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generateKeyViewController.h; sourceTree = "<group>"; };
 		905925131984129900C6C1AD /* generateKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = generateKeyViewController.m; sourceTree = "<group>"; };
+		9075CFEA199FF5F900A95AAC /* KeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPair.h; sourceTree = "<group>"; };
+		9075CFEB199FF5F900A95AAC /* KeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPair.m; sourceTree = "<group>"; };
 		90C17DA7197B02B400C386D0 /* libUNNetPGP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUNNetPGP.a; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libUNNetPGP.a"; sourceTree = "<group>"; };
 		90C17DA9197B041200C386D0 /* ContactsProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProfileViewController.h; sourceTree = "<group>"; };
 		90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsProfileViewController.m; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9033DCBA19A2D16700AFF2AF /* MessageUI.framework in Frameworks */,
 				902F90E3198D7771003931C5 /* CoreData.framework in Frameworks */,
 				90CAE3CE197B72C200030F22 /* libsqlite3.dylib in Frameworks */,
 				902E4DE819775474006C06D5 /* libssl.a in Frameworks */,
@@ -160,6 +166,7 @@
 		903446A219688B1F000C087A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9033DCB919A2D16700AFF2AF /* MessageUI.framework */,
 				902F90E2198D7771003931C5 /* CoreData.framework */,
 				90CAE3CD197B72C200030F22 /* libsqlite3.dylib */,
 				90CAE3C7197B263200030F22 /* libPods.a */,
@@ -229,14 +236,14 @@
 				903446ED19688DE4000C087A /* ContactsTableViewController.m */,
 				90C17DA9197B041200C386D0 /* ContactsProfileViewController.h */,
 				90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */,
+				904D643D1996CCE20024118E /* addContactViewController.h */,
+				904D643E1996CCE20024118E /* addContactViewController.m */,
 				90C17DAC197B064000C386D0 /* keyInstanceViewController.h */,
 				90C17DAD197B064000C386D0 /* keyInstanceViewController.m */,
 				90C17DAF197B130000C386D0 /* optionsSceneViewController.h */,
 				90C17DB0197B130000C386D0 /* optionsSceneViewController.m */,
 				905925121984129900C6C1AD /* generateKeyViewController.h */,
 				905925131984129900C6C1AD /* generateKeyViewController.m */,
-				904D643D1996CCE20024118E /* addContactViewController.h */,
-				904D643E1996CCE20024118E /* addContactViewController.m */,
 			);
 			name = optionsBranch;
 			sourceTree = "<group>";
@@ -267,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */,
+				9075CFEA199FF5F900A95AAC /* KeyPair.h */,
+				9075CFEB199FF5F900A95AAC /* KeyPair.m */,
 				902F90EA198D856E003931C5 /* MessagesData.h */,
 				902F90EB198D856E003931C5 /* MessagesData.m */,
 				902F90E7198D856D003931C5 /* ContactsData.h */,
@@ -421,6 +430,7 @@
 				902F90E9198D856D003931C5 /* ContactsData.m in Sources */,
 				90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */,
 				903446B419688B1F000C087A /* AppDelegate.m in Sources */,
+				9075CFEC199FF5F900A95AAC /* KeyPair.m in Sources */,
 				903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */,
 				903446F519688DE4000C087A /* MessageCellTableViewCell.m in Sources */,
 				90C17DB1197B130000C386D0 /* optionsSceneViewController.m in Sources */,

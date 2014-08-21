@@ -15,5 +15,6 @@
     #import <Foundation/Foundation.h>
     #import <UNNetPgp/UNNetPGP.h>
     #import <CoreData/CoreData.h>
+    #import <MessageUI/MessageUI.h>
     //#import <sqlite3.h>
 #endif

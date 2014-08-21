@@ -7,14 +7,20 @@
 //
 
 #import "ContactsProfileViewController.h"
+#import "AppDelegate.h"
+#import "KeyPair.h"
 
-@interface ContactsProfileViewController ()
+
+@interface ContactsProfileViewController () <MFMessageComposeViewControllerDelegate>
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
 
 @implementation ContactsProfileViewController
 
 @synthesize passedContactInstance;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,16 +31,28 @@
     return self;
 }
 
-- (void)viewDidLoad:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
 #pragma mark topNavbar show
     self.navigationController.navigationBarHidden = NO;
-    if([[segue identifier] isEqualToString:@"pushSuccessDetail"]){
+    
+#pragma mark pass entity object and load the data
+    //set data if coming from the addContactScene
+    if(!IsEmpty(self.passedContactInstance.contact_name))
+    {
         self.contactName.text = self.passedContactInstance.contact_name;
-        self.contactName.text = self.passedContactInstance.contact_phone_number;
+        self.contactNumber.text = self.passedContactInstance.contact_phone_number;
+        self.keyField.text = self.passedContactInstance.contact_public_key;
+    }
+    else
+    {
+        self.contactName.text = self.passedContactInstance.contact_name;
+        self.contactNumber.text = self.passedContactInstance.contact_phone_number;
+        self.keyField.text = self.passedContactInstance.contact_public_key;
+        
     }
 
 }
@@ -45,6 +63,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+static inline BOOL IsEmpty(id thing)
+{
+    return thing == nil
+    || ([thing respondsToSelector:@selector(length)]
+        && [(NSData *)thing length] == 0)
+    || ([thing respondsToSelector:@selector(count)]
+        && [(NSArray *)thing count] == 0);
+}
 /*
 #pragma mark - Navigation
 
@@ -55,5 +81,74 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result)
+    {
+        { case MessageComposeResultCancelled:
+            NSLog(@"message was sent");
+            UIAlertView *sentAlert = [[UIAlertView alloc] initWithTitle:@" "
+                                                            message:@" "
+                                                           delegate:self
+                                                  cancelButtonTitle:@" "
+                                                  otherButtonTitles: nil ];
+            [sentAlert show];
+            [self dismissViewControllerAnimated:YES  completion:NULL];
+            break;
+        }
+        { case MessageComposeResultFailed:
+            NSLog(@"message failed");
+            UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@" "
+                                                            message:@" "
+                                                           delegate:self
+                                                  cancelButtonTitle:@" "
+                                                  otherButtonTitles: nil ];
+            [failAlert show];
+            [self dismissViewControllerAnimated:YES  completion:NULL];
+            break;
+        }
+        { case MessageComposeResultSent:
+            NSLog(@"message was sent");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@" "
+                                                            message:@" "
+                                                           delegate:self
+                                                  cancelButtonTitle:@" "
+                                                  otherButtonTitles: nil ];
+            [alert show];
+            [self dismissViewControllerAnimated:YES  completion:NULL];
+            break;
+        }
+        { default:
+                break;
+        }
+    }
+    
+    
+}
+- (IBAction)requestKey:(UIButton *)sender
+{
+    MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
+    
+    //TODO need to declare fetch
+    messageRequest.body = [NSString stringWithFormat:@"%@ has requested your public key, click here to send your public key to %@ using MarcoPolo", @"TODO: 1", @"TODO: 2"];
+    messageRequest.recipients = @[@"TODO GET NUMBER"];
+    messageRequest.messageComposeDelegate = self;
+    
+    [self presentViewController:messageRequest animated:NO completion:NULL];
+}
+
+
+- (IBAction)sendKey:(UIButton *)sender
+{
+    MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
+    
+    //TODO need to declare fetch
+    messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"TODO: 1"];
+    messageRequest.recipients = @[@"TODO GET NUMBER"];
+    messageRequest.messageComposeDelegate = self;
+    
+    [self presentViewController:messageRequest animated:NO completion:NULL];
+}
 
 @end

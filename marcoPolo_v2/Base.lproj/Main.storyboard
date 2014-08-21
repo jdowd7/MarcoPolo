@@ -97,10 +97,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Marco" image="IconSoloChatBubble" id="u1e-5L-l1D"/>
+                    <navigationItem key="navigationItem" id="r8H-UO-2Jx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="-138"/>
+            <point key="canvasLocation" x="678" y="-138"/>
         </scene>
         <!--Message Scene Table View Controller - messageSceneTableVC-->
         <scene sceneID="RFQ-IM-toY">
@@ -227,6 +228,9 @@
                                 <inset key="titleEdgeInsets" minX="-30" minY="35" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="15" minY="-10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Reply" image="IconMailOut"/>
+                                <connections>
+                                    <segue destination="CZ4-MO-1fc" kind="push" id="j9o-MX-YgI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-H6-Sg9">
                                 <rect key="frame" x="225" y="429" width="75" height="75"/>
@@ -272,7 +276,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foP-5e-DZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1Mt-p1-Rlr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="-820"/>
+            <point key="canvasLocation" x="1842" y="-820"/>
         </scene>
         <!--Navigation Controller - Polo-->
         <scene sceneID="Pub-Cn-rlB">
@@ -368,6 +372,7 @@
                     <connections>
                         <outlet property="passwordKey" destination="2Jx-UJ-7Qc" id="1bT-5d-8YA"/>
                         <outlet property="usernameKey" destination="pLv-w0-vgy" id="T31-os-ukD"/>
+                        <segue destination="52o-sg-fZr" kind="unwind" identifier="returnKeySegue" unwindAction="returnKeySuccess:" id="WMV-jG-5fv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQi-5D-tFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,7 +428,7 @@
                                     <action selector="keyToggle:" destination="3ah-RA-I0q" eventType="valueChanged" id="SeY-ZL-Aj2"/>
                                 </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Key Here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L87-a9-DV3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="keyField" text="Key Here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L87-a9-DV3" userLabel="keyField">
                                 <rect key="frame" x="20" y="159" width="280" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -582,13 +587,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactName" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact's Name" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-hF-2dD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactName" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact Name" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-hF-2dD">
                                 <rect key="frame" x="20" y="73" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactPhoneNumber" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact's Phone Number" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-RF-Ifh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactPhoneNumber" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact's Phone Number" borderStyle="roundedRect" placeholder="Contact Phone Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-RF-Ifh">
                                 <rect key="frame" x="20" y="130" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -679,7 +684,7 @@
                                 <connections>
                                     <outlet property="contactCellDetail" destination="mxV-sr-C8y" id="CTv-A6-hsk"/>
                                     <outlet property="contactCellTitle" destination="3wD-2i-QEL" id="osB-1b-6qv"/>
-                                    <segue destination="OlY-zt-NM2" kind="push" id="dMw-Qn-cZJ"/>
+                                    <segue destination="OlY-zt-NM2" kind="push" identifier="pushContactDetail" id="dMw-Qn-cZJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -759,6 +764,9 @@ EENvbnRhY3QncyBOYW1lA
                                 <inset key="titleEdgeInsets" minX="-35" minY="5" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="35" minY="-50" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Send Your Key" image="IconsKeySmall"/>
+                                <connections>
+                                    <action selector="sendKey:" destination="OlY-zt-NM2" eventType="touchUpInside" id="5vU-71-U5N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIE-pi-4TW">
                                 <rect key="frame" x="191" y="214" width="109" height="57"/>
@@ -767,6 +775,9 @@ EENvbnRhY3QncyBOYW1lA
                                 <inset key="titleEdgeInsets" minX="-35" minY="5" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="35" minY="-50" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Request Key" image="IconMessageOut"/>
+                                <connections>
+                                    <action selector="requestKey:" destination="OlY-zt-NM2" eventType="touchUpInside" id="hNr-O2-SSp"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="contactKeyField" editable="NO" text="contactKeyField" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bg1-0A-m7H" userLabel="contactKeyField">
                                 <rect key="frame" x="20" y="323" width="286" height="161"/>
@@ -802,6 +813,7 @@ EENvbnRhY3QncyBOYW1lA
                     <connections>
                         <outlet property="contactName" destination="qHc-D4-S5M" id="A4V-Zn-R1J"/>
                         <outlet property="contactNumber" destination="Qj6-cA-Vmj" id="MD9-Ou-3nU"/>
+                        <outlet property="keyField" destination="Bg1-0A-m7H" id="fOF-pD-H3Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QII-TB-emD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -865,6 +877,7 @@ EENvbnRhY3QncyBOYW1lA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SZA-QZ-N70"/>
+        <segue reference="dMw-Qn-cZJ"/>
+        <segue reference="j9o-MX-YgI"/>
     </inferredMetricsTieBreakers>
 </document>

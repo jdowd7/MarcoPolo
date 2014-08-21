@@ -106,6 +106,22 @@
     // Query on managedObjectContext With Generated fetchRequest
     NSArray *resultRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
+    return resultRecords;
+}
+
+
+#pragma mark retrieveKeys
+-(NSArray*)getPersonalKeys{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    //Setting Entity to be Queried
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"KeyPair"
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError* error;
+    
+    // Query on managedObjectContext With Generated fetchRequest
+    NSArray *resultRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     return resultRecords;
 }

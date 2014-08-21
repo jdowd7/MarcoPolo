@@ -9,12 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "ContactsData.h"
 
-@interface ContactsProfileViewController : UIViewController
+@interface ContactsProfileViewController : UIViewController <UIAlertViewDelegate>
 
-@property (nonatomic, retain) ContactsData *passedContactInstance;
+- (IBAction)sendKey:(UIButton *)sender;
+
+- (IBAction)requestKey:(UIButton *)sender;
+
+@property (nonatomic, strong) ContactsData *passedContactInstance;
+
+@property (nonatomic, strong) ContactsData *passedDetailInstance;
 
 @property (strong, nonatomic) IBOutlet UILabel *contactName;
 
 @property (strong, nonatomic) IBOutlet UILabel *contactNumber;
+
+@property (strong, nonatomic) IBOutlet UITextView *keyField;
 
 @end

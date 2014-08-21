@@ -10,6 +10,8 @@
 
 @interface generateKeyViewController ()
 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 @end
 
 @implementation generateKeyViewController
@@ -30,6 +32,10 @@
     self.navigationController.navigationBarHidden = YES;
     _usernameKey.clearButtonMode = UITextFieldViewModeWhileEditing;
     _passwordKey.clearButtonMode = UITextFieldViewModeWhileEditing;
+
+#pragma mark appDelegate Instance Setup
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +63,17 @@
     pgpInstance.password = passwordString;
     pgpInstance.armored = YES;
     
+    KeyPair *KeyPairInstance = [KeyPair alloc];
+    KeyPairInstance.publicKey = pgpInstance.publicKeyRingPath;
+    KeyPairInstance.privateKey = pgpInstance.secretKeyRingPath;
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save KEY : %@", [error localizedDescription]);
+    }
     
+    _usernameKey.text =@"";
+    _passwordKey.text =@"";
+    [self.view endEditing:YES];
+    [self performSegueWithIdentifier:@"returnKeySegue" sender:self];
 }
 @end

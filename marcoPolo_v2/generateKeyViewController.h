@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "KeyPair.h"
 
 @interface generateKeyViewController : UIViewController
 

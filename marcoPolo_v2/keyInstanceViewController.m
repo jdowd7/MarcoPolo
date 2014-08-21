@@ -7,9 +7,13 @@
 //
 
 #import "keyInstanceViewController.h"
+#import "AppDelegate.h"
+#import "KeyPair.h"
 
 
 @interface keyInstanceViewController ()
+
+@property (nonatomic, strong)NSArray* fetchedKeyArray;
 
 @end
 
@@ -31,7 +35,7 @@
         self.navigationController.navigationBarHidden = NO;
     //TODO: IF (PROFILE IS NOT CREATED, PROMPT USER TO CREATE A PROFILE)
     
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +56,7 @@
 */
 
 - (IBAction)generateNewKey:(UIButton *)sender {
+    
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *generateNewKeyScene = [mainStoryboard instantiateViewControllerWithIdentifier:@"generateNewKeyScene"];
@@ -83,6 +88,17 @@
 
 - (IBAction)returnKey:(UIStoryboardSegue *)segue {
     
+}
+
+-(IBAction)returnKeySuccess:(UIStoryboard *)segue {
+    // Do any additional setup after loading the view.
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    // Fetching Records and saving it in "fetchedRecordsArray" object
+    self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    KeyPair *keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    
+    self.keyInstancePublicPrivateKeyDisplay.text = keyPairInstance.publicKey;
 }
 
 #pragma mark burnSection called when the burn key button is called- then is handled in the below alertview method

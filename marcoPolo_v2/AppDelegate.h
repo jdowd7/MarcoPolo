@@ -16,5 +16,6 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 -(NSArray*)getAllContacts;
+-(NSArray*)getPersonalKeys;
 
 @end

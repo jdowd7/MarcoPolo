@@ -297,9 +297,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9034469F19688B1F000C087A /* marcoPolo_v2 */ = {
+		9034469F19688B1F000C087A /* marcoPolo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 903446D519688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo_v2" */;
+			buildConfigurationList = 903446D519688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo" */;
 			buildPhases = (
 				837DA7EF44004596A7274C3C /* Check Pods Manifest.lock */,
 				9034469C19688B1F000C087A /* Sources */,
@@ -311,7 +311,7 @@
 			);
 			dependencies = (
 			);
-			name = marcoPolo_v2;
+			name = marcoPolo;
 			productName = marcoPolo_v2;
 			productReference = 903446A019688B1F000C087A /* marcoPolo_v2.app */;
 			productType = "com.apple.product-type.application";
@@ -361,7 +361,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9034469F19688B1F000C087A /* marcoPolo_v2 */,
+				9034469F19688B1F000C087A /* marcoPolo */,
 				903446C319688B1F000C087A /* marcoPolo_v2Tests */,
 			);
 		};
@@ -459,7 +459,7 @@
 /* Begin PBXTargetDependency section */
 		903446CA19688B1F000C087A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9034469F19688B1F000C087A /* marcoPolo_v2 */;
+			target = 9034469F19688B1F000C087A /* marcoPolo */;
 			targetProxy = 903446C919688B1F000C087A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -656,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		903446D519688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo_v2" */ = {
+		903446D519688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				903446D619688B1F000C087A /* Debug */,

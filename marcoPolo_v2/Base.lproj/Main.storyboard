@@ -103,12 +103,41 @@
             </objects>
             <point key="canvasLocation" x="678" y="-138"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="GuU-ew-OkH">
+            <objects>
+                <tableViewController id="B8Z-VX-Hnp" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ih8-w2-n53">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SCl-wf-nbY">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SCl-wf-nbY" id="2WN-SH-wr9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B8Z-VX-Hnp" id="WQa-8t-juR"/>
+                            <outlet property="delegate" destination="B8Z-VX-Hnp" id="L8i-Xv-f8j"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A17-vx-Fnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="-1522"/>
+        </scene>
         <!--Message Scene Table View Controller - messageSceneTableVC-->
         <scene sceneID="RFQ-IM-toY">
             <objects>
                 <tableViewController title="messageSceneTableVC" modalTransitionStyle="flipHorizontal" id="GtB-YU-IoU" customClass="MessageSceneTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hUw-Gm-GbQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -148,7 +177,15 @@
                             <outlet property="delegate" destination="GtB-YU-IoU" id="8RW-do-QyD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iiz-II-fhD"/>
+                    <navigationItem key="navigationItem" id="iiz-II-fhD">
+                        <barButtonItem key="leftBarButtonItem" image="IconMailOut" id="4BC-yd-J6G">
+                            <connections>
+                                <segue destination="B8Z-VX-Hnp" kind="modal" id="3Ue-Ii-PCu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="IconFlame" id="Tcw-Un-vki"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <size key="freeformSize" width="0.0" height="0.0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-2M-WcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,7 +393,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="IconBack"/>
                                 <connections>
-                                    <segue destination="52o-sg-fZr" kind="unwind" unwindAction="returnKey:" id="PCJ-tM-0nD"/>
+                                    <segue destination="52o-sg-fZr" kind="unwind" identifier="returnKeyInstance" unwindAction="returnKey:" id="PCJ-tM-0nD"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iyp-JI-y1m">
@@ -684,7 +721,6 @@
                                 <connections>
                                     <outlet property="contactCellDetail" destination="mxV-sr-C8y" id="CTv-A6-hsk"/>
                                     <outlet property="contactCellTitle" destination="3wD-2i-QEL" id="osB-1b-6qv"/>
-                                    <segue destination="OlY-zt-NM2" kind="push" identifier="pushContactDetail" id="dMw-Qn-cZJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -711,6 +747,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="OlY-zt-NM2" kind="push" identifier="pushContactDetail" id="sK7-qI-y5c"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLG-os-6ZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zxa-Rm-YaB" userLabel="Exit" sceneMemberID="exit"/>
@@ -877,7 +916,7 @@ EENvbnRhY3QncyBOYW1lA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dMw-Qn-cZJ"/>
         <segue reference="j9o-MX-YgI"/>
+        <segue reference="sK7-qI-y5c"/>
     </inferredMetricsTieBreakers>
 </document>

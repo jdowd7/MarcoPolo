@@ -47,11 +47,11 @@
         self.contactNumber.text = self.passedContactInstance.contact_phone_number;
         self.keyField.text = self.passedContactInstance.contact_public_key;
     }
-    else
+    else //else its data coming from the tableview
     {
-        self.contactName.text = self.passedContactInstance.contact_name;
-        self.contactNumber.text = self.passedContactInstance.contact_phone_number;
-        self.keyField.text = self.passedContactInstance.contact_public_key;
+        self.contactName.text = self.passedDetailInstance.contact_name;
+        self.contactNumber.text = self.passedDetailInstance.contact_phone_number;
+        self.keyField.text = self.passedDetailInstance.contact_public_key;
         
     }
 

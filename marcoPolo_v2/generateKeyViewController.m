@@ -11,6 +11,7 @@
 @interface generateKeyViewController ()
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) KeyPair *keyPair;
 
 @end
 
@@ -59,13 +60,38 @@
     NSString *usernameString = _usernameKey.text;
     NSString *passwordString = _passwordKey.text;
     
+    //get doc path for documents directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [paths objectAtIndex:0];
+    
+    //create key
     UNNetPGP *pgpInstance = [[UNNetPGP alloc] initWithUserId:usernameString];
     pgpInstance.password = passwordString;
     pgpInstance.armored = YES;
+    BOOL generated = [pgpInstance generateKey:2048];
     
-    KeyPair *KeyPairInstance = [KeyPair alloc];
-    KeyPairInstance.publicKey = pgpInstance.publicKeyRingPath;
-    KeyPairInstance.privateKey = pgpInstance.secretKeyRingPath;
+    
+    //setup keypair instance in order to save to coredata object
+    self.keyPair = [NSEntityDescription insertNewObjectForEntityForName:@"KeyPair"
+                                                     inManagedObjectContext:self.managedObjectContext];
+    
+
+    
+    //append file paths
+    pgpInstance.publicKeyRingPath = [documentPath stringByAppendingPathComponent:@"pubring.gpg"];
+    pgpInstance.secretKeyRingPath = [documentPath stringByAppendingPathComponent:@"secring.gpg"];
+    NSLog(@"path is: %@", pgpInstance.publicKeyRingPath);
+    NSString *key = [pgpInstance exportKeyNamed:usernameString];
+    NSLog(@"key is: %@", key);
+    
+    //get contents of the files
+    NSString *publicKey = [NSString stringWithContentsOfFile:pgpInstance.publicKeyRingPath encoding:NSUTF8StringEncoding error:NULL];
+    NSString *privateKey = [NSString stringWithContentsOfFile:pgpInstance.secretKeyRingPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    //save the results
+    [_keyPair  setValue:publicKey forKeyPath:@"publicKey"];
+    [_keyPair setValue:privateKey forKeyPath:@"privateKey"];
+    
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Whoops, couldn't save KEY : %@", [error localizedDescription]);

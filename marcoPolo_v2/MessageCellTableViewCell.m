@@ -8,6 +8,11 @@
 
 #import "MessageCellTableViewCell.h"
 
+//new imports
+#import "AppDelegate.h"
+#import "ContactsData.h"
+#import "ContactsProfileViewController.h"
+
 @implementation MessageCellTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9034469F19688B1F000C087A"
                BuildableName = "marcoPolo_v2.app"
-               BlueprintName = "marcoPolo_v2"
+               BlueprintName = "marcoPolo"
                ReferencedContainer = "container:marcoPolo_v2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9034469F19688B1F000C087A"
             BuildableName = "marcoPolo_v2.app"
-            BlueprintName = "marcoPolo_v2"
+            BlueprintName = "marcoPolo"
             ReferencedContainer = "container:marcoPolo_v2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9034469F19688B1F000C087A"
             BuildableName = "marcoPolo_v2.app"
-            BlueprintName = "marcoPolo_v2"
+            BlueprintName = "marcoPolo"
             ReferencedContainer = "container:marcoPolo_v2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9034469F19688B1F000C087A"
             BuildableName = "marcoPolo_v2.app"
-            BlueprintName = "marcoPolo_v2"
+            BlueprintName = "marcoPolo"
             ReferencedContainer = "container:marcoPolo_v2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

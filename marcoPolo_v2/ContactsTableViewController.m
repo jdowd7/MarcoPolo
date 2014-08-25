@@ -19,6 +19,7 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) ContactsData *contactAdded;
+@property (nonatomic,retain) ContactsData *contactPassed;
 
 @end
 
@@ -124,6 +125,12 @@
 }
 */
 
+ - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+     self.contactPassed = [self.contactsTableResults objectAtIndex:indexPath.row];
+     [self performSegueWithIdentifier:@"pushContactDetail" sender:self.contactPassed];
+     NSLog(@"Selected Name in Did select: %@", self.contactPassed.contact_name);
+ }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -131,19 +138,10 @@
     
     if([[segue identifier] isEqualToString:@"pushContactDetail"])
     {
-        ContactsProfileViewController *contactsProfileVC = [segue destinationViewController];
-        contactsProfileVC.passedDetailInstance = self.contactAdded;
-        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        ContactsProfileViewController *contactDetailVC = segue.destinationViewController;
+        contactDetailVC.passedDetailInstance = self.contactPassed;
     }
 }
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ContactsProfileViewController *profileView = [segue destinationViewController];
-    profileView.passedDetailInstance = [self.contactsTableResults objectAtIndex:indexPath.row];
-    //[self.navigationController pushViewController:profileView animated:YES];
-    //[self performSegueWithIdentifier:@"pushContactDetail" sender:sender];
-}
 
 @end

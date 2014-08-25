@@ -10,8 +10,9 @@
 
 @interface MessageSceneTableViewController : UITableViewController //<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray *messageTitleArray;
-@property (nonatomic, strong) NSMutableArray *messageDetailArray;
+//@property (nonatomic, strong) NSMutableArray *messageTitleArray;
+//@property (nonatomic, strong) NSMutableArray *messageDetailArray;
 
+@property (nonatomic, strong)NSArray * messagesTableResults;
 
 @end

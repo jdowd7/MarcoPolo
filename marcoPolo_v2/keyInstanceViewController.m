@@ -14,6 +14,7 @@
 @interface keyInstanceViewController ()
 
 @property (nonatomic, strong)NSArray* fetchedKeyArray;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -77,7 +78,17 @@
 #pragma mark burnFunction
 - (BOOL)burnKey{
     bool result = false;
-    //TODO: BIND METHOD TO DELETE USERS PUBLIC/PRIVATE KEY FROM LIBRARY
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
+    // Fetching Records and saving it in "fetchedRecordsArray" object
+    self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    for (int currentIndex=0; currentIndex <= self.fetchedKeyArray.count; currentIndex++)
+    {
+        KeyPair *keyPairInstance = [self.fetchedKeyArray objectAtIndex:currentIndex];
+        keyPairInstance.publicKey = @"Public Key Empty";
+        keyPairInstance.privateKey = @"Private Key Empty";
+    }
+    
     
     return result;
 }
@@ -124,14 +135,18 @@
     if(alertView.tag == 101){
         if(buttonIndex == 1)
         {
-            [self burnKey];
-            UIAlertView *burnConfirmation = [[UIAlertView alloc] initWithTitle:@"Key Deleted"
-                                                                       message:@"Key pair has been deleted."
-                                                                      delegate:nil
-                                                             cancelButtonTitle:@"Okay"
-                                                             otherButtonTitles: nil];
-            
-            [burnConfirmation show];
+            bool result = [self burnKey];
+            if (result == TRUE)
+            {
+                UIAlertView *burnConfirmation = [[UIAlertView alloc] initWithTitle:@"Key Deleted"
+                                                                           message:@"Key pair has been deleted."
+                                                                          delegate:nil
+                                                                 cancelButtonTitle:@"Okay"
+                                                                 otherButtonTitles: nil];
+                
+                [burnConfirmation show];
+            }
+
             
         } else {
             

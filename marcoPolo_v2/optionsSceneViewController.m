@@ -7,8 +7,14 @@
 //
 
 #import "optionsSceneViewController.h"
+#import "AppDelegate.h"
+#import "KeyPair.h"
 
 @interface optionsSceneViewController ()
+
+@property (nonatomic, strong)NSArray* fetchedKeyArray;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) KeyPair *keyPairInstance;
 
 @end
 
@@ -29,51 +35,16 @@
     
     self.edgesForExtendedLayout=UIRectEdgeNone;
     self.navigationController.navigationBarHidden = YES;
-#pragma mark SQL-Lite3 setup
- /*
-    NSArray *docPathsArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docsDirectory = docPathsArray[0];
+
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
-    _mainDbPath = [[NSString alloc] initWithString: [docsDirectory stringByAppendingPathComponent: @"mainDb"]];
-    
-    NSFileManager *filemanager = [NSFileManager defaultManager];
-    
-    if ([filemanager fileExistsAtPath:_mainDbPath] == NO)
-         {
-             const char *databasePathConstant = [_mainDbPath UTF8String];
-             
-             if (sqlite3_open(databasePathConstant, &_mainDbInstance) == SQLITE_OK)
-             {
-                 char *errorMsg;
-                 
-                 //Create Contacts DB
-                 const char *sqlContacts =
-                 "CREATE TABLE IF NOT EXISTS CONTACTS (contact_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, phone_number INTEGER, public_key TEXT)";
-                 
-                 if (sqlite3_exec(_mainDbInstance, sqlContacts, NULL, NULL, &errorMsg) != SQLITE_OK)
-                 {
-                     NSLog(@"Failed to create contacts database.");
-                 }
-                 
-                 //Create Messages DB
-                 const char *sqlMessages=
-                 "CREATE TABLE IF NOT EXISTS MESSAGES (message_id INTEGER PRIMARY KEY AUTOINCREMENT, FOREIGN KEY(contact_id) REFERENCES CONTACTS, message TEXT, read INTEGER)";
-                 
-                 if (sqlite3_exec(_mainDbInstance, sqlMessages, NULL, NULL, &errorMsg) != SQLITE_OK)
-                 {
-                     NSLog(@"Failed to create messages database.");
-                 }
-                 
-                 
-                 sqlite3_close(_mainDbInstance);
-             }
-             else
-             {
-                 NSLog(@"Failed to open or create database.");
-                 
-             }
-         }
-  */
+    // Fetching Records and saving it in "fetchedRecordsArray" object
+    self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    if (self.fetchedKeyArray.count > 0)
+    {
+        self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+        self.optionsScenePublicKeyDisplay.text = self.keyPairInstance.publicKey;
+    }
     
 }
 
@@ -84,7 +55,8 @@
 }
 
 - (IBAction)returnOptionsMain:(UIStoryboardSegue *)segue {
-    self.navigationController.navigationBarHidden = YES;
+    
+    [self viewDidLoad];
 }
 /*
 #pragma mark - Navigation

@@ -89,7 +89,7 @@
     //contactAdded.contact_name = self.addContactName.text;
     [_contactAdded setValue:self.addContactPhoneNumber.text forKeyPath:@"contact_phone_number"];
     //contactAdded.contact_phone_number = [NSString stringWithFormat:@"%@", self.addContactPhoneNumber.text];
-    [_contactAdded setValue:@"" forKeyPath:@"contact_public_key"];
+    //[_contactAdded setValue:@"" forKeyPath:@"contact_public_key"];
     
     //give the contact_id the phone number?
     [_contactAdded setValue:self.addContactPhoneNumber.text forKeyPath:@"contact_id"];

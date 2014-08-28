@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong)NSArray* fetchedKeyArray;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) KeyPair *keyPairInstance;
 
 @end
 
@@ -33,9 +34,16 @@
 {
     [super viewDidLoad];
     
-        self.navigationController.navigationBarHidden = NO;
-    //TODO: IF (PROFILE IS NOT CREATED, PROMPT USER TO CREATE A PROFILE)
+    self.navigationController.navigationBarHidden = NO;
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
+    // Fetching Records and saving it in "fetchedRecordsArray" object
+    self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    if(self.fetchedKeyArray.count > 0)
+    {
+            self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+            self.keyInstancePublicPrivateKeyDisplay.text = self.keyPairInstance.publicKey;
+    }
 
 }
 
@@ -82,13 +90,12 @@
     self.managedObjectContext = appDelegate.managedObjectContext;
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedKeyArray = [appDelegate getPersonalKeys];
-    for (int currentIndex=0; currentIndex <= self.fetchedKeyArray.count; currentIndex++)
+    for (int currentIndex=0; currentIndex < self.fetchedKeyArray.count; currentIndex++)
     {
         KeyPair *keyPairInstance = [self.fetchedKeyArray objectAtIndex:currentIndex];
         keyPairInstance.publicKey = @"Public Key Empty";
-        keyPairInstance.privateKey = @"Private Key Empty";
     }
-    
+    [self viewDidLoad];
     
     return result;
 }
@@ -107,9 +114,9 @@
     
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedKeyArray = [appDelegate getPersonalKeys];
-    KeyPair *keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    self.keyInstancePublicPrivateKeyDisplay.text = self.keyPairInstance.publicKey;
     
-    self.keyInstancePublicPrivateKeyDisplay.text = keyPairInstance.publicKey;
 }
 
 #pragma mark burnSection called when the burn key button is called- then is handled in the below alertview method
@@ -122,9 +129,24 @@
                                                 otherButtonTitles: nil ];
     
     [alert addButtonWithTitle:@"Confirm Delete"];
-    [alert setTag:101];
-    [alert show];
     
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    // Fetching Records and saving it in "fetchedRecordsArray" object
+    self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    
+    if([self.keyPairInstance.publicKey length] == 0)
+    {
+        
+        
+        
+    }
+    else
+    {
+        [alert setTag:101];
+        [alert show];
+    }
 }
 
 
@@ -157,8 +179,6 @@
         //can do other stuff here != alertView.tag 101
     }
 }
-
-
 
 
 @end

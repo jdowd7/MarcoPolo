@@ -65,7 +65,7 @@
 		902F90EA198D856E003931C5 /* MessagesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesData.h; sourceTree = "<group>"; };
 		902F90EB198D856E003931C5 /* MessagesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesData.m; sourceTree = "<group>"; };
 		9033DCB919A2D16700AFF2AF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		903446A019688B1F000C087A /* marcoPolo_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marcoPolo_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		903446A019688B1F000C087A /* marcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903446A319688B1F000C087A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		903446A519688B1F000C087A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		903446A719688B1F000C087A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -157,7 +157,7 @@
 		903446A119688B1F000C087A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				903446A019688B1F000C087A /* marcoPolo_v2.app */,
+				903446A019688B1F000C087A /* marcoPolo.app */,
 				903446C419688B1F000C087A /* marcoPolo_v2Tests.xctest */,
 			);
 			name = Products;
@@ -313,7 +313,7 @@
 			);
 			name = marcoPolo;
 			productName = marcoPolo_v2;
-			productReference = 903446A019688B1F000C087A /* marcoPolo_v2.app */;
+			productReference = 903446A019688B1F000C087A /* marcoPolo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		903446C319688B1F000C087A /* marcoPolo_v2Tests */ = {

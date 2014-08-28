@@ -14,12 +14,15 @@
 @interface ContactsProfileViewController () <MFMessageComposeViewControllerDelegate>
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong)NSArray* fetchedKeyArray;
+@property (nonatomic, strong) KeyPair *keyPairInstance;
 
 @end
 
 @implementation ContactsProfileViewController
 
 @synthesize passedContactInstance;
+@synthesize passedDetailInstance;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -45,16 +48,22 @@
     {
         self.contactName.text = self.passedContactInstance.contact_name;
         self.contactNumber.text = self.passedContactInstance.contact_phone_number;
-        self.keyField.text = self.passedContactInstance.contact_public_key;
+        self.keyField.text = [NSString stringWithFormat:@"Request %@'s key!", self.passedContactInstance.contact_name];
+    }
+    else if (IsEmpty(self.passedContactInstance.contact_name) && IsEmpty(self.passedDetailInstance.contact_name))
+    {
+        //do nothing- no errors thrown
     }
     else //else its data coming from the tableview
     {
         self.contactName.text = self.passedDetailInstance.contact_name;
         self.contactNumber.text = self.passedDetailInstance.contact_phone_number;
         self.keyField.text = self.passedDetailInstance.contact_public_key;
-        
+        if([self.passedDetailInstance.contact_public_key length] == 0)
+        {
+            self.keyField.text = [NSString stringWithFormat:@"Request %@'s key!", self.passedContactInstance.contact_name];
+        }
     }
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,34 +95,37 @@ static inline BOOL IsEmpty(id thing)
 {
     switch (result)
     {
-        { case MessageComposeResultCancelled:
-            NSLog(@"message was sent");
-            UIAlertView *sentAlert = [[UIAlertView alloc] initWithTitle:@" "
-                                                            message:@" "
+        {
+            case MessageComposeResultCancelled:
+            NSLog(@"message was cancelled");
+            UIAlertView *sentAlert = [[UIAlertView alloc] initWithTitle:@"Cancel"
+                                                            message:@"Request was cancelled."
                                                            delegate:self
-                                                  cancelButtonTitle:@" "
+                                                  cancelButtonTitle:@"Okay"
                                                   otherButtonTitles: nil ];
             [sentAlert show];
             [self dismissViewControllerAnimated:YES  completion:NULL];
             break;
         }
-        { case MessageComposeResultFailed:
+        {
+            case MessageComposeResultFailed:
             NSLog(@"message failed");
-            UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@" "
-                                                            message:@" "
+            UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                            message:@"Request was not sent."
                                                            delegate:self
-                                                  cancelButtonTitle:@" "
+                                                  cancelButtonTitle:@"Okay"
                                                   otherButtonTitles: nil ];
             [failAlert show];
             [self dismissViewControllerAnimated:YES  completion:NULL];
             break;
         }
-        { case MessageComposeResultSent:
+        {
+            case MessageComposeResultSent:
             NSLog(@"message was sent");
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@" "
-                                                            message:@" "
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                            message:@"Request was sent!"
                                                            delegate:self
-                                                  cancelButtonTitle:@" "
+                                                  cancelButtonTitle:@"Okay"
                                                   otherButtonTitles: nil ];
             [alert show];
             [self dismissViewControllerAnimated:YES  completion:NULL];
@@ -144,10 +156,29 @@ static inline BOOL IsEmpty(id thing)
     MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
     
     //TODO need to declare fetch
-    messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"TODO: 1"];
-    messageRequest.recipients = @[@"TODO GET NUMBER"];
-    messageRequest.messageComposeDelegate = self;
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
+    // Fetching Records and saving it in "fetchedRecordsArray" object
+    self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    if(self.fetchedKeyArray.count > 0)
+    {
+        self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+        self.keyField.text = self.keyPairInstance.publicKey;
+    
+        if(!IsEmpty(self.passedContactInstance.contact_name))
+        {
+            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"self.keyPairInstance.user_contact_number"];
+            messageRequest.recipients = @[@"TODO GET NUMBER"];
+            messageRequest.messageComposeDelegate = self;
+        }
+        
+        if(!IsEmpty(self.passedDetailInstance.contact_name))
+        {
+            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"TODO: 1"];
+            messageRequest.recipients = @[@"TODO GET NUMBER"];
+            messageRequest.messageComposeDelegate = self;
+        }
+    }
     [self presentViewController:messageRequest animated:NO completion:NULL];
 }
 

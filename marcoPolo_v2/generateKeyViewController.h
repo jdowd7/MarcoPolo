@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *passwordKey;
 
+@property (strong, nonatomic) IBOutlet UITextField *phoneNumberKey;
 
 - (IBAction)buttonGenerateKey:(UIButton *)sender;
 

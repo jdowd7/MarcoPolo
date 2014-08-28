@@ -12,9 +12,5 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *optionsScenePublicKeyDisplay;
 
-#pragma mark depreciated because of use of CoreData
-//@property (strong, nonatomic) NSString *mainDbPath;
-//@property (nonatomic) sqlite3 *mainDbInstance;
-
 
 @end

@@ -19,8 +19,6 @@
 
 - (BOOL)burnKey;
 
-- (IBAction)keyToggle:(UISegmentedControl *)sender;
-
 - (IBAction)burnAlert:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UITextView *keyInstancePublicPrivateKeyDisplay;

@@ -14,6 +14,7 @@
 
 @dynamic message_id;
 @dynamic contact_id;
+@dynamic message_title;
 @dynamic message_text;
 @dynamic message_read;
 @dynamic message_encrypted;

@@ -110,7 +110,7 @@
 }
 
 
-#pragma mark retrieveKeys
+#pragma mark retrieve public Keys
 -(NSArray*)getPersonalKeys{
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
@@ -124,6 +124,23 @@
     NSArray *resultRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     return resultRecords;
+}
+
+#pragma mark retrieve all messages from the persisent store
+-(NSArray*)getAllMessages{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    //Setting Entity to be Queried
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Message"
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError* error;
+    
+    // Query on managedObjectContext With Generated fetchRequest
+    NSArray *resultMessages = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    //NSMutableArray *resultMessages = [(NSArray*)resultArray mutableCopy];
+    
+    return resultMessages;
 }
 
 @end

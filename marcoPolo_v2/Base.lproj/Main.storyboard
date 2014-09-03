@@ -168,7 +168,6 @@
                                 <connections>
                                     <outlet property="messageCellDetail" destination="gKw-pw-cl0" id="HmV-3D-ylI"/>
                                     <outlet property="messageCellTitle" destination="daT-Sh-hMz" id="Tcd-sd-dTs"/>
-                                    <segue destination="LWh-jM-hRS" kind="push" id="NLZ-cP-hcc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -187,6 +186,9 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <size key="freeformSize" width="0.0" height="0.0"/>
+                    <connections>
+                        <segue destination="LWh-jM-hRS" kind="push" identifier="pushContactDetail" id="Caz-0b-5rU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-2M-WcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="-117" y="-138"/>
         </scene>
-        <!--Message Display View Controller-->
+        <!--Message Display View Controller - messageDetailView-->
         <scene sceneID="lm7-VV-p49">
             <objects>
-                <viewController storyboardIdentifier="MessageDisplayScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LWh-jM-hRS" customClass="MessageDisplayViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageDisplayScene" title="messageDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LWh-jM-hRS" customClass="MessageDisplayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="diz-Tx-DpB"/>
                         <viewControllerLayoutGuide type="bottom" id="TUC-0Z-uKw"/>
@@ -232,11 +234,11 @@
                                 <rect key="frame" x="140" y="-11" width="244" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Contents of Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-E3-ytz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Contents of Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-E3-ytz">
                                 <rect key="frame" x="20" y="138" width="280" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd0-dc-C4M">
                                 <rect key="frame" x="20" y="99" width="280" height="21"/>
@@ -280,6 +282,13 @@
                                 <rect key="frame" x="88" y="0.0" width="171" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czs-IM-PqO">
+                                <rect key="frame" x="126" y="429" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="-30" minY="35" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="-10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Decrypt" image="IconsKeySmall"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -901,7 +910,7 @@ EENvbnRhY3QncyBOYW1lA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SUk-Ux-ee1"/>
-        <segue reference="SZA-QZ-N70"/>
+        <segue reference="j9o-MX-YgI"/>
+        <segue reference="sK7-qI-y5c"/>
     </inferredMetricsTieBreakers>
 </document>

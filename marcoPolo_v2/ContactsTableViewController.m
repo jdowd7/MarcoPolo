@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 red5. All rights reserved.
 //
 
-//old imports on plist
 #import "ContactsTableViewController.h"
 #import "ContactsTableViewCell.h"
 
@@ -18,7 +17,7 @@
 @interface ContactsTableViewController ()
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) ContactsData *contactAdded;
+//@property (nonatomic, retain) ContactsData *contactAdded;
 @property (nonatomic,retain) ContactsData *contactPassed;
 
 @end

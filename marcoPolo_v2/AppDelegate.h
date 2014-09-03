@@ -17,5 +17,6 @@
 
 -(NSArray*)getAllContacts;
 -(NSArray*)getPersonalKeys;
+-(NSArray*)getMessages;
 
 @end

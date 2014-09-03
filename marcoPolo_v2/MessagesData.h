@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * message_id;
 @property (nonatomic, retain) NSNumber * contact_id;
+@property (nonatomic, retain) NSString * message_title;
 @property (nonatomic, retain) NSString * message_text;
 @property (nonatomic, retain) NSNumber * message_read;
 @property (nonatomic, retain) NSNumber * message_encrypted;

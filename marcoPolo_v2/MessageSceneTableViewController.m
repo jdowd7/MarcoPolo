@@ -9,7 +9,15 @@
 #import "MessageSceneTableViewController.h"
 #import "MessageCellTableViewCell.h"
 
+//core data headers
+#import "MessagesData.h"
+#import "AppDelegate.h"
+
 @interface MessageSceneTableViewController ()
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+//@property (nonatomic, retain) messagesData *messageAdded;
+@property (nonatomic,retain) MessagesData *messagePassed;
 
 @end
 
@@ -27,6 +35,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+#pragma mark topNavbar show
+    self.navigationController.navigationBarHidden = NO;
+    
+#pragma mark LoadTableData - load Message data into tableView
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.messagesTableResults =[appDelegate getMessages];
+    [self.tableView reloadData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,22 +76,28 @@
 	
 }
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.messagePassed = [self.messagesTableResults objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"pushMessageDetail" sender:self.messagePassed];
+    NSLog(@"Selected message select: %@", self.messagePassed.message_text);
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *messageTableCellId = @"messageTableCell";
-    MessageCellTableViewCell *messageTableCell = [tableView dequeueReusableCellWithIdentifier:messageTableCellId forIndexPath:indexPath];
-	if(messageTableCell == nil)
+	static NSString *messageCellId = @"messageTableCell";
+    MessageCellTableViewCell *messageCellInstance = [tableView dequeueReusableCellWithIdentifier:messageCellId forIndexPath:indexPath];
+	if(messageCellInstance == nil)
 	{
-		messageTableCell = [[MessageCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageTableCellId];
+		messageCellInstance = [[MessageCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageCellId];
 	}
     // Configure the cell...
-	messageTableCell.messageCellTitle.text = self.messageTitleArray[indexPath.row];
-	messageTableCell.messageCellDetail.text = self.messageDetailArray[indexPath.row];
+    MessagesData *message = [self.messagesTableResults objectAtIndex:indexPath.row];
+	messageCellInstance.messageCellTitle.text = message.message_text;
+	messageCellInstance.messageCellDetail.text = message.message_text;
 	
-    return messageTableCell;
+    return messageCellInstance;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -106,6 +128,7 @@
 }
 */
 
+
 /*
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,15 +138,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"pushContactDetail"])
+    {
+        MessageCellTableViewCell *messageDetailVC = segue.destinationViewController;
+        messageDetailVC = self.messagePassed;
+    }
 }
-*/
+
 
 @end

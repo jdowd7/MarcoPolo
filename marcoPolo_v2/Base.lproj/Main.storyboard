@@ -56,6 +56,9 @@
                                 <inset key="titleEdgeInsets" minX="-25" minY="50" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Save" image="downloadHD"/>
+                                <connections>
+                                    <action selector="buttonSaveMarco:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="FZC-9n-YQX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0g-WG-bSO">
                                 <rect key="frame" x="125" y="297" width="75" height="75"/>
@@ -66,6 +69,7 @@
                                 <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Send" image="IconPaperPlane"/>
                                 <connections>
+                                    <action selector="buttonSendMarco:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="Msf-RS-KDq"/>
                                     <segue destination="MiK-lb-r2o" kind="modal" id="MUQ-vQ-qUl"/>
                                 </connections>
                             </button>
@@ -77,6 +81,9 @@
                                 <inset key="titleEdgeInsets" minX="-25" minY="50" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Discard" image="IconExclaim"/>
+                                <connections>
+                                    <action selector="buttonDiscardMarco:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="R0Z-ZO-hly"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receipient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aw-SI-9fD">
                                 <rect key="frame" x="16" y="414" width="100" height="34"/>
@@ -88,6 +95,10 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iDl-Wt-2ET">
                                 <rect key="frame" x="166" y="351" width="134" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CZ4-MO-1fc" id="0oH-sJ-mhm"/>
+                                    <outlet property="delegate" destination="CZ4-MO-1fc" id="g7f-Qr-ved"/>
+                                </connections>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconForward" translatesAutoresizingMaskIntoConstraints="NO" id="rSe-BD-6Qo">
                                 <rect key="frame" x="116" y="414" width="36" height="36"/>
@@ -98,10 +109,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Marco" image="IconSoloChatBubble" id="u1e-5L-l1D"/>
                     <navigationItem key="navigationItem" id="r8H-UO-2Jx"/>
+                    <connections>
+                        <outlet property="contactPicker" destination="iDl-Wt-2ET" id="wjR-qn-xkS"/>
+                        <outlet property="labelTitleMessage" destination="QGu-0C-1vU" id="cbg-rn-dIP"/>
+                        <outlet property="textFieldMessage" destination="yem-aB-5e9" id="0wb-Ls-rLz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="-138"/>
+            <point key="canvasLocation" x="682" y="-138"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="GuU-ew-OkH">
@@ -214,10 +230,10 @@
             </objects>
             <point key="canvasLocation" x="-117" y="-138"/>
         </scene>
-        <!--Message Display View Controller - messageDetailView-->
+        <!--Message Detail View Controller - messageDetailView-->
         <scene sceneID="lm7-VV-p49">
             <objects>
-                <viewController storyboardIdentifier="MessageDisplayScene" title="messageDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LWh-jM-hRS" customClass="MessageDisplayViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageDisplayScene" title="messageDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LWh-jM-hRS" customClass="MessageDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="diz-Tx-DpB"/>
                         <viewControllerLayoutGuide type="bottom" id="TUC-0Z-uKw"/>
@@ -234,9 +250,10 @@
                                 <rect key="frame" x="140" y="-11" width="244" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Contents of Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-E3-ytz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="messageTextField" editable="NO" text="Contents of Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-E3-ytz" userLabel="messageTextField">
                                 <rect key="frame" x="20" y="138" width="280" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="messageTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textView>
@@ -268,6 +285,7 @@
                                 <inset key="imageEdgeInsets" minX="15" minY="-10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Reply" image="IconMailOut"/>
                                 <connections>
+                                    <action selector="buttonReply:" destination="LWh-jM-hRS" eventType="touchUpInside" id="oQc-ty-RTK"/>
                                     <segue destination="CZ4-MO-1fc" kind="push" id="j9o-MX-YgI"/>
                                 </connections>
                             </button>
@@ -277,6 +295,9 @@
                                 <inset key="titleEdgeInsets" minX="-30" minY="35" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="15" minY="-10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Erase" image="IconFlame"/>
+                                <connections>
+                                    <action selector="buttonErase:" destination="LWh-jM-hRS" eventType="touchUpInside" id="eHe-R2-Vxr"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.95000001192092909" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poloLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hO1-zy-KjG">
                                 <rect key="frame" x="88" y="0.0" width="171" height="86"/>
@@ -288,6 +309,9 @@
                                 <inset key="titleEdgeInsets" minX="-30" minY="35" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="15" minY="-10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Decrypt" image="IconsKeySmall"/>
+                                <connections>
+                                    <action selector="buttonDecrypt:" destination="LWh-jM-hRS" eventType="touchUpInside" id="Z3U-3d-oZt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -318,6 +342,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <size key="freeformSize" width="320" height="569"/>
+                    <connections>
+                        <outlet property="labelAuthor" destination="8cD-s6-v53" id="r9n-Ee-u6X"/>
+                        <outlet property="labelDateTime" destination="i9U-7f-JPO" id="H8I-xg-5Sz"/>
+                        <outlet property="labelTitle" destination="kd0-dc-C4M" id="Z2X-fM-zaN"/>
+                        <outlet property="textMessageContent" destination="Q4y-E3-ytz" id="Tp2-hN-hPG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foP-5e-DZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1Mt-p1-Rlr" userLabel="Exit" sceneMemberID="exit"/>
@@ -628,7 +658,7 @@
                                 <rect key="frame" x="20" y="130" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y71-BU-RyQ">
                                 <rect key="frame" x="20" y="194" width="87" height="32"/>
@@ -911,6 +941,6 @@ EENvbnRhY3QncyBOYW1lA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="j9o-MX-YgI"/>
-        <segue reference="sK7-qI-y5c"/>
+        <segue reference="SZA-QZ-N70"/>
     </inferredMetricsTieBreakers>
 </document>

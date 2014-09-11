@@ -46,4 +46,12 @@
 }
 */
 
+- (IBAction)buttonDecrypt:(UIButton *)sender {
+}
+
+- (IBAction)buttonErase:(UIButton *)sender {
+}
+
+- (IBAction)buttonReply:(UIButton *)sender {
+}
 @end

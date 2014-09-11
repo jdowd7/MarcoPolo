@@ -10,4 +10,18 @@
 
 @interface MessageDetailViewController : UIViewController
 
+- (IBAction)buttonReply:(UIButton *)sender;
+
+- (IBAction)buttonDecrypt:(UIButton *)sender;
+
+- (IBAction)buttonErase:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTitle;
+
+@property (strong, nonatomic) IBOutlet UITextView *textMessageContent;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelAuthor;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelDateTime;
+
 @end

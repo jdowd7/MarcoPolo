@@ -8,8 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MarcoSceneViewController : UIViewController
+
+@interface MarcoSceneViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue;
+
+@property (strong, nonatomic) IBOutlet UITextField *labelTitleMessage;
+
+@property (strong, nonatomic) IBOutlet UITextView *textFieldMessage;
+
+@property (nonatomic) NSArray* fetchedContactsArray;
+
+- (IBAction)buttonSaveMarco:(UIButton *)sender;
+
+- (IBAction)buttonSendMarco:(UIButton *)sender;
+
+- (IBAction)buttonDiscardMarco:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet UIPickerView *contactPicker;
 
 @end

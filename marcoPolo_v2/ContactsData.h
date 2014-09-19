@@ -10,13 +10,13 @@
 #import <CoreData/CoreData.h>
 
 
-@interface ContactsData : NSManagedObject
-
+@interface ContactsData : NSManagedObject <NSCopying>
 @property (nonatomic, retain) NSNumber * contact_id;
 @property (nonatomic, retain) NSString * contact_name;
 @property (nonatomic, retain) NSString* contact_phone_number;
 @property (nonatomic, retain) NSString * contact_public_key;
 @property (nonatomic, retain) NSSet *c2mRelation;
+
 @end
 
 @interface ContactsData (CoreDataGeneratedAccessors)
@@ -25,5 +25,6 @@
 - (void)removeC2mRelationObject:(NSManagedObject *)value;
 - (void)addC2mRelation:(NSSet *)values;
 - (void)removeC2mRelation:(NSSet *)values;
+- (id) copyWithZone: (NSZone *) zone;
 
 @end

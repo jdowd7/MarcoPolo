@@ -7,15 +7,15 @@
 //
 
 #import "MarcoSceneViewController.h"
-#import "KeyPair.h"
-#import "MessagesData.h"
+//#import "KeyPair.h"
+//#import "MessagesData.h"
 #import "ContactsData.h"
 #import "AppDelegate.h"
 
 @interface MarcoSceneViewController ()
 
-@property (nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic) KeyPair *keyPairInstance;
+//@property (retain, nonatomic) KeyPair *keyPairInstance;
+//@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -34,12 +34,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBarHidden = YES;
     
-    AppDelegate *appDelegateMarco = [UIApplication sharedApplication].delegate;
-    //_managedObjectContext = [appDelegateMarco managedObjectContext];
-    _fetchedContactsArray =[appDelegateMarco getAllContacts];
-
-    [_contactPicker setDataSource:self];
+    if(!IsEmpty(self.contactSelected.contact_name))
+    {
+        self.marcoRecipient.text = self.contactSelected.contact_name;
+    }
+    
+    /*
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    _managedObjectContext = appDelegate.managedObjectContext;
+    _fetchedContactsArray = [[appDelegate getAllContacts] mutableCopy];
+    */
     
     }
 
@@ -49,7 +55,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-// The number of columns of data
+-(IBAction)returnMarco:(UIStoryboardSegue *)segue
+{
+    [self viewDidLoad];
+}
+
+static inline BOOL IsEmpty(id thing)
+{
+    return thing == nil
+    || ([thing respondsToSelector:@selector(length)]
+        && [(NSData *)thing length] == 0)
+    || ([thing respondsToSelector:@selector(count)]
+        && [(NSArray *)thing count] == 0);
+}
+
+
+
+/* The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -58,18 +80,18 @@
 // The number of rows of data
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _fetchedContactsArray.count;
+    return self.dataSource.count;
 }
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return _fetchedContactsArray[row];
+    return [self.dataSource objectAtIndex:row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    ContactsData *contact = _fetchedContactsArray[row];
+    _contactInstance.contact_name = [self.fetchedContactsArray objectAtIndex:row];
     //float dollars = [_dollarText.text floatValue];
     //float result = dollars * rate;
     
@@ -78,10 +100,7 @@
         //                      _countryNames[row]];
     //_resultLabel.text = resultString;
 }
-
--(IBAction)returnMarco:(UIStoryboardSegue *)segue {
-}
-
+*/
 /*
 #pragma mark - Navigation
 
@@ -93,10 +112,6 @@
 }
 */
 
-- (IBAction)buttonSaveMarco:(UIButton *)sender {
-
-}
-
 - (IBAction)buttonSendMarco:(UIButton *)sender {
     
 }
@@ -104,5 +119,7 @@
 - (IBAction)buttonDiscardMarco:(UIButton *)sender {
 
 }
+
+
 
 @end

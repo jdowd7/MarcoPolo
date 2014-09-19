@@ -41,7 +41,7 @@
     
 #pragma mark LoadTableData - load Message data into tableView
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    self.messagesTableResults =[appDelegate getMessages];
+    self.messagesTableResults =[appDelegate getAllMessages];
     [self.tableView reloadData];
     
     // Uncomment the following line to preserve selection between presentations.

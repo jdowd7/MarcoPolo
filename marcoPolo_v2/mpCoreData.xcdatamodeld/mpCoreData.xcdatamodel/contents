@@ -21,7 +21,7 @@
         <attribute name="message_title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contact" positionX="-405" positionY="-36" width="128" height="103"/>
+        <element name="Contact" positionX="-405" positionY="-36" width="128" height="105"/>
         <element name="KeyPair" positionX="-290" positionY="-190" width="128" height="103"/>
         <element name="Message" positionX="-153" positionY="-63" width="128" height="133"/>
     </elements>

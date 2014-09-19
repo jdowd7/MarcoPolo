@@ -7,9 +7,8 @@
 //
 
 #import "ContactsProfileViewController.h"
-#import "AppDelegate.h"
 #import "KeyPair.h"
-
+#import "AppDelegate.h"
 
 @interface ContactsProfileViewController () <MFMessageComposeViewControllerDelegate>
 

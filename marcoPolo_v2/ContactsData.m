@@ -17,4 +17,19 @@
 @dynamic contact_public_key;
 @dynamic c2mRelation;
 
+- (id) copyWithZone:(NSZone *)zone
+{
+    ContactsData *contactsDataCopy = [[ContactsData allocWithZone: zone] init];
+    if (contactsDataCopy)
+    {
+        [contactsDataCopy setContact_id: self.contact_id];
+        [contactsDataCopy setContact_name: self.contact_name];
+        [contactsDataCopy setContact_phone_number: self.contact_phone_number];
+        [contactsDataCopy setContact_public_key: self.contact_public_key];
+    }
+    return contactsDataCopy;
+}
+
 @end
+
+

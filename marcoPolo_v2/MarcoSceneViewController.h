@@ -7,24 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContactsData.h"
 
 
-@interface MarcoSceneViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface MarcoSceneViewController : UIViewController
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue;
+
+@property (strong, nonatomic) NSMutableArray *fetchedContactsArray;
+
+@property (retain, nonatomic) ContactsData *contactSelected;
 
 @property (strong, nonatomic) IBOutlet UITextField *labelTitleMessage;
 
 @property (strong, nonatomic) IBOutlet UITextView *textFieldMessage;
 
-@property (nonatomic) NSArray* fetchedContactsArray;
-
-- (IBAction)buttonSaveMarco:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UILabel *marcoRecipient;
 
 - (IBAction)buttonSendMarco:(UIButton *)sender;
 
 - (IBAction)buttonDiscardMarco:(UIButton *)sender;
-
-@property (strong, nonatomic) IBOutlet UIPickerView *contactPicker;
 
 @end

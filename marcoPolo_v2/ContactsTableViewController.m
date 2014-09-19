@@ -16,8 +16,6 @@
 
 @interface ContactsTableViewController ()
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-//@property (nonatomic, retain) ContactsData *contactAdded;
 @property (nonatomic,retain) ContactsData *contactPassed;
 
 @end
@@ -44,6 +42,8 @@
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.contactsTableResults =[appDelegate getAllContacts];
     [self.tableView reloadData];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +51,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(bool)isMarcoSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  
+    return true;
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

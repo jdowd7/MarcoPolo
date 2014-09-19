@@ -34,6 +34,8 @@
 		903446F619688DE4000C087A /* MessageSceneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446E319688DE4000C087A /* MessageSceneTableViewController.m */; };
 		903446FB19688DE4000C087A /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446EB19688DE4000C087A /* ContactsTableViewCell.m */; };
 		903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446ED19688DE4000C087A /* ContactsTableViewController.m */; };
+		9036B77B19CBE8C4001D474C /* marcoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9036B77A19CBE8C4001D474C /* marcoTableViewController.m */; };
+		9043825919CBDA66004EB497 /* marcoContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043825819CBDA66004EB497 /* marcoContactCell.m */; };
 		904D643F1996CCE20024118E /* addContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904D643E1996CCE20024118E /* addContactViewController.m */; };
 		905925141984129900C6C1AD /* generateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905925131984129900C6C1AD /* generateKeyViewController.m */; };
 		9075CFEC199FF5F900A95AAC /* KeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9075CFEB199FF5F900A95AAC /* KeyPair.m */; };
@@ -95,6 +97,10 @@
 		903446EB19688DE4000C087A /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
 		903446EC19688DE4000C087A /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		903446ED19688DE4000C087A /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		9036B77919CBE8C4001D474C /* marcoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marcoTableViewController.h; sourceTree = "<group>"; };
+		9036B77A19CBE8C4001D474C /* marcoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = marcoTableViewController.m; sourceTree = "<group>"; };
+		9043825719CBDA66004EB497 /* marcoContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marcoContactCell.h; sourceTree = "<group>"; };
+		9043825819CBDA66004EB497 /* marcoContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = marcoContactCell.m; sourceTree = "<group>"; };
 		904D643D1996CCE20024118E /* addContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addContactViewController.h; sourceTree = "<group>"; };
 		904D643E1996CCE20024118E /* addContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addContactViewController.m; sourceTree = "<group>"; };
 		905925121984129900C6C1AD /* generateKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generateKeyViewController.h; sourceTree = "<group>"; };
@@ -258,6 +264,10 @@
 				903446DD19688DE4000C087A /* MarcoSceneViewController.m */,
 				903446DE19688DE4000C087A /* MarcoSentViewController.h */,
 				903446DF19688DE4000C087A /* MarcoSentViewController.m */,
+				9043825719CBDA66004EB497 /* marcoContactCell.h */,
+				9043825819CBDA66004EB497 /* marcoContactCell.m */,
+				9036B77919CBE8C4001D474C /* marcoTableViewController.h */,
+				9036B77A19CBE8C4001D474C /* marcoTableViewController.m */,
 			);
 			name = marcoBranch;
 			sourceTree = "<group>";
@@ -432,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				903446F319688DE4000C087A /* MarcoSceneViewController.m in Sources */,
+				9043825919CBDA66004EB497 /* marcoContactCell.m in Sources */,
 				902F90E9198D856D003931C5 /* ContactsData.m in Sources */,
 				90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */,
 				90AE284D19B6B8C7000DD416 /* MessageDetailViewController.m in Sources */,
@@ -448,6 +459,7 @@
 				902F90EC198D856E003931C5 /* MessagesData.m in Sources */,
 				902F90E6198D7841003931C5 /* mpCoreData.xcdatamodeld in Sources */,
 				903446FB19688DE4000C087A /* ContactsTableViewCell.m in Sources */,
+				9036B77B19CBE8C4001D474C /* marcoTableViewController.m in Sources */,
 				905925141984129900C6C1AD /* generateKeyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

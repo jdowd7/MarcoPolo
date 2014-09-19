@@ -14,6 +14,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -83,7 +84,7 @@
                                    initWithManagedObjectModel:[self managedObjectModel]];
     if(![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                   configuration:nil URL:storeUrl options:nil error:&error]) {
-        /*Error for store creation should be handled in here*/
+        NSLog(@"Unresolved error with persistentstore: %@, %@", error, [error userInfo]);
     }
     
     return _persistentStoreCoordinator;
@@ -105,7 +106,7 @@
     
     // Query on managedObjectContext With Generated fetchRequest
     NSArray *resultRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
+    _contacts = [resultRecords mutableCopy];
     return resultRecords;
 }
 
@@ -141,6 +142,21 @@
     //NSMutableArray *resultMessages = [(NSArray*)resultArray mutableCopy];
     
     return resultMessages;
+}
+
+-(NSArray*)getContactsMarco{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    //Setting Entity to be Queried
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Contact"
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError* error;
+    
+    // Query on managedObjectContext With Generated fetchRequest
+    NSArray *resultRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    return resultRecords;
 }
 
 @end

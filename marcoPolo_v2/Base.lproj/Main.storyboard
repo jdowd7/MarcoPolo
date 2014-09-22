@@ -182,7 +182,7 @@ Write your message and press send!</string>
                     <navigationItem key="navigationItem" id="iiz-II-fhD">
                         <barButtonItem key="leftBarButtonItem" image="IconMailOut" id="4BC-yd-J6G">
                             <connections>
-                                <segue destination="B8Z-VX-Hnp" kind="modal" id="3Ue-Ii-PCu"/>
+                                <segue destination="B8Z-VX-Hnp" kind="push" id="3Ue-Ii-PCu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="IconFlame" id="Tcw-Un-vki"/>
@@ -370,7 +370,7 @@ Write your message and press send!</string>
                         <viewControllerLayoutGuide type="bottom" id="oMb-yC-R0h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qPl-sj-jxV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="360"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="316"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Generate New Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrq-oK-YMs">
@@ -422,6 +422,7 @@ Write your message and press send!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="wc2-Lf-JxH"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="360"/>
                     <connections>
@@ -434,7 +435,7 @@ Write your message and press send!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQi-5D-tFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="52o-sg-fZr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="1386"/>
+            <point key="canvasLocation" x="1317" y="1713"/>
         </scene>
         <!--keyViewScene-->
         <scene sceneID="nK8-lo-Aa2">
@@ -502,12 +503,13 @@ Write your message and press send!</string>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="keyInstancePublicPrivateKeyDisplay" destination="L87-a9-DV3" id="fZd-cI-UI6"/>
+                        <segue destination="bD2-6F-QBa" kind="push" identifier="generateKeySegue" id="o2o-Uq-PfA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wd-Tb-O6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wph-Zb-aze" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="1386"/>
+            <point key="canvasLocation" x="1861" y="1365"/>
         </scene>
         <!--optionsSceneView-->
         <scene sceneID="AZx-LE-UaV">
@@ -614,7 +616,6 @@ Write your message and press send!</string>
                                 <connections>
                                     <outlet property="marcoCellDetail" destination="9LC-Tg-1WT" id="HJE-Cc-LVi"/>
                                     <outlet property="marcoCellTitle" destination="lRb-Ck-Ym2" id="3Fy-Kx-JkU"/>
-                                    <segue destination="QFT-3h-a6m" kind="unwind" identifier="returnMarcoUnwind" unwindAction="returnMarco:" id="AXm-pz-QUE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -631,6 +632,9 @@ Write your message and press send!</string>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="QFT-3h-a6m" kind="unwind" identifier="returnMarcoUnwind" unwindAction="returnMarco:" id="zeL-9V-oy4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5G-AQ-wSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QFT-3h-a6m" userLabel="Exit" sceneMemberID="exit"/>

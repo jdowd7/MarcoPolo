@@ -7,14 +7,11 @@
 //
 
 #import "MarcoSceneViewController.h"
-//#import "KeyPair.h"
-//#import "MessagesData.h"
-#import "ContactsData.h"
-#import "AppDelegate.h"
+
 
 @interface MarcoSceneViewController ()
 
-//@property (retain, nonatomic) KeyPair *keyPairInstance;
+@property (retain, nonatomic) KeyPair *keyPairInstance;
 //@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
@@ -36,9 +33,17 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
     
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSArray *keys =[appDelegate getPersonalKeys];
+    self.keyPairInstance = keys[0];
+    NSLog(@"key is %@", self.keyPairInstance.publicKey);
+    
+    
     if(!IsEmpty(self.contactSelected.contact_name))
     {
         self.marcoRecipient.text = self.contactSelected.contact_name;
+        BOOL result = [self encryptMessageMarco];
     }
     
     /*
@@ -112,7 +117,8 @@ static inline BOOL IsEmpty(id thing)
 }
 */
 
-- (IBAction)buttonSendMarco:(UIButton *)sender {
+- (IBAction)buttonSendMarco:(UIButton *)sender
+{
     
 }
 
@@ -120,6 +126,21 @@ static inline BOOL IsEmpty(id thing)
 
 }
 
-
+-(BOOL)encryptMessageMarco
+{
+    bool success = FALSE;
+    
+    UNNetPGP *pgpInstance = [[UNNetPGP alloc] initWithUserId:self.contactSelected.contact_name];
+    //[pgpInstance.availableKeys arrayByAddingObject:self.contactSelected.contact_public_key];
+    [pgpInstance.availableKeys arrayByAddingObject:self.contactSelected.contact_public_key];
+    NSData *data = [self.textFieldMessage.text dataUsingEncoding:NSUTF8StringEncoding];
+    self.encryptedMessage = [pgpInstance encryptData:data options:UNEncryptOptionNone];
+    if(self.encryptedMessage.length > 0)
+    {
+        self.textFieldMessage.text = [[NSString alloc] initWithData:self.encryptedMessage encoding:NSUTF8StringEncoding];
+        success = TRUE;
+    }
+    return success;
+}
 
 @end

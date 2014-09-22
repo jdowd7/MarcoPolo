@@ -66,10 +66,11 @@
 
 - (IBAction)generateNewKey:(UIButton *)sender {
     
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *generateNewKeyScene = [mainStoryboard instantiateViewControllerWithIdentifier:@"generateNewKeyScene"];
-    [self presentViewController:generateNewKeyScene animated:YES completion:nil];
+    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //UIViewController *generateNewKeyScene = [mainStoryboard instantiateViewControllerWithIdentifier:@"generateNewKeyScene"];
+    //[self presentViewController:generateNewKeyScene animated:YES completion:nil];
     
+    [self performSegueWithIdentifier:@"generateKeySegue" sender:self];
 }
 
 /* REFERENCE CODE FOR LATER

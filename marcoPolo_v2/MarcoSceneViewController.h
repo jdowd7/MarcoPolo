@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "ContactsData.h"
+#import "AppDelegate.h"
+#import "KeyPair.h"
 
 
 @interface MarcoSceneViewController : UIViewController
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue;
 
-@property (strong, nonatomic) NSMutableArray *fetchedContactsArray;
-
 @property (retain, nonatomic) ContactsData *contactSelected;
+
+@property (retain, nonatomic) NSData *encryptedMessage;
 
 @property (strong, nonatomic) IBOutlet UITextField *labelTitleMessage;
 
@@ -27,5 +29,7 @@
 - (IBAction)buttonSendMarco:(UIButton *)sender;
 
 - (IBAction)buttonDiscardMarco:(UIButton *)sender;
+
+//- (BOOL)encryptMessageMarco;
 
 @end

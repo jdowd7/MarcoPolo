@@ -12,7 +12,7 @@
 #import "KeyPair.h"
 
 
-@interface MarcoSceneViewController : UIViewController
+@interface MarcoSceneViewController : UIViewController <UIAlertViewDelegate>
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue;
 
@@ -30,6 +30,6 @@
 
 - (IBAction)buttonDiscardMarco:(UIButton *)sender;
 
-//- (BOOL)encryptMessageMarco;
+- (IBAction)buttonEncrypt:(UIButton *)sender;
 
 @end

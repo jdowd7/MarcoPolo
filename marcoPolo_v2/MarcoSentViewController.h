@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContactsData.h"
 
-@interface MarcoSentViewController : UIViewController
+@interface MarcoSentViewController : UIViewController <MFMessageComposeViewControllerDelegate>
+
+@property (retain, strong) ContactsData *contactMarcoPassed;
+@property (retain, strong) NSString *messageEncryptedText;
+@property (retain, strong) NSString *messageSubject;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonSentImage;
+
+- (IBAction)buttonSent:(UIButton *)sender;
 
 @end

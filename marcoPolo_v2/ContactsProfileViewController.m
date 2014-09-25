@@ -141,9 +141,9 @@ static inline BOOL IsEmpty(id thing)
 {
     MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
     
-    //TODO need to declare fetch
-    messageRequest.body = [NSString stringWithFormat:@"%@ has requested your public key, click here to send your public key to %@ using MarcoPolo", @"TODO: 1", @"TODO: 2"];
-    messageRequest.recipients = @[@"TODO GET NUMBER"];
+    //TODO NEED TO ACCOUNT FOR CONTACT INSTANCE BEING NULL FROM ADD THEN FROM TABLE
+    messageRequest.body = [NSString stringWithFormat:@"%@ has requested your public key, click here to send your public key to %@ using MarcoPolo", self.passedDetailInstance.contact_name, self.passedDetailInstance.contact_name];
+    messageRequest.recipients = @[self.passedDetailInstance.contact_phone_number];
     messageRequest.messageComposeDelegate = self;
     
     [self presentViewController:messageRequest animated:NO completion:NULL];

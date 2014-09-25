@@ -9,10 +9,15 @@
 #import "MarcoSentViewController.h"
 
 @interface MarcoSentViewController ()
-
+@property (assign) BOOL resultSent;
 @end
 
 @implementation MarcoSentViewController
+
+@synthesize contactMarcoPassed;
+@synthesize messageEncryptedText;
+@synthesize messageSubject;
+@synthesize resultSent = _resultSent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +31,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+
+}
+
+-(void)sendMessage
+{
+    MFMessageComposeViewController *messageSender = [[MFMessageComposeViewController alloc] init];
+    
+    //TODO need to declare fetch
+    messageSender.body = [NSString stringWithFormat:@"%@", self.messageEncryptedText];
+    messageSender.recipients = @[self.contactMarcoPassed.contact_phone_number];
+    messageSender.subject = self.messageSubject;
+    messageSender.messageComposeDelegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +53,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result)
+    {
+        {
+        case MessageComposeResultCancelled:
+            NSLog(@"message was cancelled");
+                        [self dismissViewControllerAnimated:YES  completion:NULL];
+            break;
+        }
+        {
+        case MessageComposeResultFailed:
+            NSLog(@"message failed");
+                        [self dismissViewControllerAnimated:YES  completion:NULL];
+            break;
+        }
+        {
+        case MessageComposeResultSent:
+            NSLog(@"message was sent");
+                [self dismissViewControllerAnimated:YES  completion:NULL];
+            break;
+        }
+        { default:
+            break;
+        }
+    }
+}
 /*
 #pragma mark - Navigation
 
@@ -46,4 +91,6 @@
 }
 */
 
+- (IBAction)buttonSent:(UIButton *)sender {
+}
 @end

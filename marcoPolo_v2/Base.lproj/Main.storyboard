@@ -28,16 +28,16 @@
                                 <rect key="frame" x="15" y="98" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" canCancelContentTouches="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yem-aB-5e9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="yem-aB-5e9">
                                 <rect key="frame" x="15" y="151" width="285" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" keyboardKey="YES"/>
                                 </accessibility>
-                                <string key="text">
+                                <string key="text"> 
 Write your message and press send!</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -58,7 +58,6 @@ Write your message and press send!</string>
                                 <state key="normal" title="Send" image="IconPaperPlane"/>
                                 <connections>
                                     <action selector="buttonSendMarco:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="Msf-RS-KDq"/>
-                                    <segue destination="MiK-lb-r2o" kind="push" id="MUQ-vQ-qUl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soz-BQ-qQO">
@@ -68,7 +67,7 @@ Write your message and press send!</string>
                                 <inset key="contentEdgeInsets" minX="-2" minY="-6" maxX="0.0" maxY="0.0"/>
                                 <inset key="titleEdgeInsets" minX="-25" minY="50" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Discard" image="IconExclaim"/>
+                                <state key="normal" title="Clear" image="IconExclaim"/>
                                 <connections>
                                     <action selector="buttonDiscardMarco:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="R0Z-ZO-hly"/>
                                 </connections>
@@ -82,7 +81,7 @@ Write your message and press send!</string>
                                 <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Recipient" image="IconProfile"/>
                                 <connections>
-                                    <segue destination="x43-eG-bmE" kind="push" id="fhm-Qv-gdb"/>
+                                    <action selector="buttonEncrypt:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="HZL-Up-fS8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-dL-cGI">
@@ -100,6 +99,8 @@ Write your message and press send!</string>
                         <outlet property="labelTitleMessage" destination="QGu-0C-1vU" id="cbg-rn-dIP"/>
                         <outlet property="marcoRecipient" destination="h5u-dL-cGI" id="VTH-qQ-MKB"/>
                         <outlet property="textFieldMessage" destination="yem-aB-5e9" id="0wb-Ls-rLz"/>
+                        <segue destination="MiK-lb-r2o" kind="push" identifier="marcoSentSegue" id="ekN-qd-su1"/>
+                        <segue destination="x43-eG-bmE" kind="push" identifier="marcoTableSegue" id="cFl-qB-71K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -644,16 +645,16 @@ Write your message and press send!</string>
         <!--marcoSentScene-->
         <scene sceneID="eoJ-0Z-ofA">
             <objects>
-                <viewController storyboardIdentifier="MarcoSentScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MiK-lb-r2o" userLabel="marcoSentScene" customClass="MarcoSentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MarcoSentScene" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MiK-lb-r2o" userLabel="marcoSentScene" customClass="MarcoSentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qxn-bw-iRC"/>
                         <viewControllerLayoutGuide type="bottom" id="wWm-ot-JMl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="t1w-zx-OEx">
+                    <view key="view" opaque="NO" alpha="0.39999999999999997" contentMode="scaleToFill" id="t1w-zx-OEx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-9v-0up">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="sentConfirmButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-9v-0up">
                                 <rect key="frame" x="110" y="234" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
@@ -662,16 +663,20 @@ Write your message and press send!</string>
                                 <state key="normal" title="Sent" image="IconCheck"/>
                                 <state key="selected" title="Sent!"/>
                                 <connections>
+                                    <action selector="buttonSent:" destination="MiK-lb-r2o" eventType="touchUpInside" id="wnJ-Lr-Tux"/>
                                     <action selector="marcoSentConfirmButton:forEvent:" destination="MiK-lb-r2o" eventType="touchUpInside" id="Zfj-gU-vh9"/>
                                     <segue destination="F0F-3Y-5oW" kind="unwind" unwindAction="returnMarco:" id="ZPg-ec-6CI"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Uxc-b7-BJ0"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonSentImage" destination="X2a-9v-0up" id="84s-eZ-cJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Er-JP-s4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F0F-3Y-5oW" userLabel="Exit" sceneMemberID="exit"/>

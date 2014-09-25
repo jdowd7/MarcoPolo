@@ -7,16 +7,19 @@
 //
 
 #import "MarcoSceneViewController.h"
+#import "MarcoSentViewController.h"
 
 
 @interface MarcoSceneViewController ()
 
 @property (retain, nonatomic) KeyPair *keyPairInstance;
-//@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (assign) BOOL resultEncrypt;
 
 @end
 
 @implementation MarcoSceneViewController
+
+@synthesize resultEncrypt = _resultEncrypt;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,18 +35,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
-    
+    _resultEncrypt = NO;
     
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSArray *keys =[appDelegate getPersonalKeys];
     self.keyPairInstance = keys[0];
     NSLog(@"key is %@", self.keyPairInstance.publicKey);
     
-    
     if(!IsEmpty(self.contactSelected.contact_name))
     {
         self.marcoRecipient.text = self.contactSelected.contact_name;
-        BOOL result = [self encryptMessageMarco];
+        _resultEncrypt = [self encryptMessageMarco];
     }
     
     /*
@@ -76,36 +78,7 @@ static inline BOOL IsEmpty(id thing)
 
 
 
-/* The number of columns of data
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
 
-// The number of rows of data
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return self.dataSource.count;
-}
-
-// The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [self.dataSource objectAtIndex:row];
-}
-
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    _contactInstance.contact_name = [self.fetchedContactsArray objectAtIndex:row];
-    //float dollars = [_dollarText.text floatValue];
-    //float result = dollars * rate;
-    
-    //NSString *resultString = [[NSString alloc] initWithFormat:
-      //                        @"%.2f USD = %.2f %@", dollars, result,
-        //                      _countryNames[row]];
-    //_resultLabel.text = resultString;
-}
-*/
 /*
 #pragma mark - Navigation
 
@@ -119,28 +92,70 @@ static inline BOOL IsEmpty(id thing)
 
 - (IBAction)buttonSendMarco:(UIButton *)sender
 {
-    
+    if(_resultEncrypt)
+    {
+        [self performSegueWithIdentifier:@"marcoSentSegue" sender:self];
+    }
 }
 
-- (IBAction)buttonDiscardMarco:(UIButton *)sender {
+- (IBAction)buttonDiscardMarco:(UIButton *)sender
+{
+    self.contactSelected = nil;
+    self.encryptedMessage = nil;
+    self.labelTitleMessage = nil;
+    self.textFieldMessage = nil;
+    self.marcoRecipient = nil;
+}
 
+- (IBAction)buttonEncrypt:(UIButton *)sender
+{
+    self.contactSelected = nil;
+    [self performSegueWithIdentifier:@"marcoTableSegue" sender:self];
+    
 }
 
 -(BOOL)encryptMessageMarco
 {
-    bool success = FALSE;
+    bool success = NO;
     
     UNNetPGP *pgpInstance = [[UNNetPGP alloc] initWithUserId:self.contactSelected.contact_name];
     //[pgpInstance.availableKeys arrayByAddingObject:self.contactSelected.contact_public_key];
-    [pgpInstance.availableKeys arrayByAddingObject:self.contactSelected.contact_public_key];
-    NSData *data = [self.textFieldMessage.text dataUsingEncoding:NSUTF8StringEncoding];
-    self.encryptedMessage = [pgpInstance encryptData:data options:UNEncryptOptionNone];
-    if(self.encryptedMessage.length > 0)
+    
+    if(!IsEmpty(self.contactSelected.contact_public_key))
     {
+        [pgpInstance.availableKeys arrayByAddingObject:self.contactSelected.contact_public_key];
+        NSData *data = [self.textFieldMessage.text dataUsingEncoding:NSUTF8StringEncoding];
+        self.encryptedMessage = [pgpInstance encryptData:data options:UNEncryptOptionNone];
         self.textFieldMessage.text = [[NSString alloc] initWithData:self.encryptedMessage encoding:NSUTF8StringEncoding];
-        success = TRUE;
+        success = YES;
+    }
+    else
+    {
+        NSString *contactName = [NSString stringWithFormat:@"Ask %@ for their public key!", self.contactSelected.contact_name];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Public Key Available"
+                                                        message:contactName
+                                                       delegate:self
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles: nil ];
+        
+        [alert show];
+        self.contactSelected = nil;
+  
     }
     return success;
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if([[segue identifier] isEqualToString:@"marcoSentSegue"])
+    {
+        MarcoSentViewController *marcoSentVC = segue.destinationViewController;
+        marcoSentVC.contactMarcoPassed = self.contactSelected;
+        marcoSentVC.messageEncryptedText = self.textFieldMessage.text;
+        marcoSentVC.messageSubject = self.labelTitleMessage.text;
+    }
 }
 
 @end

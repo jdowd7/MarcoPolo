@@ -15,6 +15,8 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong)NSArray* fetchedKeyArray;
 @property (nonatomic, strong) KeyPair *keyPairInstance;
+@property (assign) ContactsData *contactAggregated;
+
 
 @end
 
@@ -22,6 +24,7 @@
 
 @synthesize passedContactInstance;
 @synthesize passedDetailInstance;
+@synthesize contactAggregated;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -48,10 +51,14 @@
         self.contactName.text = self.passedContactInstance.contact_name;
         self.contactNumber.text = self.passedContactInstance.contact_phone_number;
         self.keyField.text = [NSString stringWithFormat:@"Request %@'s key!", self.passedContactInstance.contact_name];
+        
+        //need to assign so that you can text them
+        self.contactAggregated = self.passedContactInstance;
     }
     else if (IsEmpty(self.passedContactInstance.contact_name) && IsEmpty(self.passedDetailInstance.contact_name))
     {
         //do nothing- no errors thrown
+        self.contactAggregated = nil;
     }
     else //else its data coming from the tableview
     {
@@ -62,6 +69,9 @@
         {
             self.keyField.text = [NSString stringWithFormat:@"Request %@'s key!", self.passedContactInstance.contact_name];
         }
+        
+        //need to assign so that you can text them
+        self.contactAggregated = self.passedDetailInstance;
     }
 }
 
@@ -137,18 +147,6 @@ static inline BOOL IsEmpty(id thing)
     
     
 }
-- (IBAction)requestKey:(UIButton *)sender
-{
-    MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
-    
-    //TODO NEED TO ACCOUNT FOR CONTACT INSTANCE BEING NULL FROM ADD THEN FROM TABLE
-    messageRequest.body = [NSString stringWithFormat:@"%@ has requested your public key, click here to send your public key to %@ using MarcoPolo", self.passedDetailInstance.contact_name, self.passedDetailInstance.contact_name];
-    messageRequest.recipients = @[self.passedDetailInstance.contact_phone_number];
-    messageRequest.messageComposeDelegate = self;
-    
-    [self presentViewController:messageRequest animated:NO completion:NULL];
-}
-
 
 - (IBAction)sendKey:(UIButton *)sender
 {
@@ -164,14 +162,14 @@ static inline BOOL IsEmpty(id thing)
         self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
         self.keyField.text = self.keyPairInstance.publicKey;
     
-        if(!IsEmpty(self.passedContactInstance.contact_name))
+        if(!IsEmpty(self.contactAggregated.contact_name))
         {
             messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"self.keyPairInstance.user_contact_number"];
             messageRequest.recipients = @[@"TODO GET NUMBER"];
             messageRequest.messageComposeDelegate = self;
         }
         
-        if(!IsEmpty(self.passedDetailInstance.contact_name))
+        if(!IsEmpty(self.contactAggregated.contact_name))
         {
             messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"TODO: 1"];
             messageRequest.recipients = @[@"TODO GET NUMBER"];

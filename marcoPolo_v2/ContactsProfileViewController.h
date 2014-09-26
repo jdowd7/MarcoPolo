@@ -13,8 +13,6 @@
 
 - (IBAction)sendKey:(UIButton *)sender;
 
-- (IBAction)requestKey:(UIButton *)sender;
-
 @property (nonatomic, strong) ContactsData *passedContactInstance;
 
 @property (nonatomic, strong) ContactsData *passedDetailInstance;

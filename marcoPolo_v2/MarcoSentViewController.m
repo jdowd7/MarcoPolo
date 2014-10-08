@@ -42,8 +42,10 @@
     //TODO need to declare fetch
     messageSender.body = [NSString stringWithFormat:@"%@", self.messageEncryptedText];
     messageSender.recipients = @[self.contactMarcoPassed.contact_phone_number];
-    messageSender.subject = self.messageSubject;
+    //messageSender.subject = self.messageSubject;
     messageSender.messageComposeDelegate = self;
+    
+    [self presentViewController:messageSender animated:NO completion:NULL];
 
 }
 
@@ -55,6 +57,9 @@
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
     switch (result)
     {
         {

@@ -13,5 +13,6 @@
 
 @dynamic publicKey;
 @dynamic privateKey;
+@dynamic username;
 
 @end

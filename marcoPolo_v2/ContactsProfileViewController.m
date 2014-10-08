@@ -67,7 +67,7 @@
         self.keyField.text = self.passedDetailInstance.contact_public_key;
         if([self.passedDetailInstance.contact_public_key length] == 0)
         {
-            self.keyField.text = [NSString stringWithFormat:@"Request %@'s key!", self.passedContactInstance.contact_name];
+            self.keyField.text = [NSString stringWithFormat:@"Request %@'s key!", self.passedDetailInstance.contact_name];
         }
         
         //need to assign so that you can text them
@@ -132,10 +132,12 @@ static inline BOOL IsEmpty(id thing)
             case MessageComposeResultSent:
             NSLog(@"message was sent");
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                            message:@"Request was sent!"
+                                                            message:@"Key was sent!"
                                                            delegate:self
                                                   cancelButtonTitle:@"Okay"
                                                   otherButtonTitles: nil ];
+            NSLog(@"%@", self.contactAggregated.contact_name);
+            NSLog(@"%@", self.contactAggregated.contact_phone_number);
             [alert show];
             [self dismissViewControllerAnimated:YES  completion:NULL];
             break;
@@ -150,33 +152,85 @@ static inline BOOL IsEmpty(id thing)
 
 - (IBAction)sendKey:(UIButton *)sender
 {
-    MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
     
     //TODO need to declare fetch
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedKeyArray = [appDelegate getPersonalKeys];
+    self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    
     if(self.fetchedKeyArray.count > 0)
     {
-        self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
-        self.keyField.text = self.keyPairInstance.publicKey;
+        
+        //self.keyField.text = self.keyPairInstance.publicKey;
     
         if(!IsEmpty(self.contactAggregated.contact_name))
         {
-            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"self.keyPairInstance.user_contact_number"];
-            messageRequest.recipients = @[@"TODO GET NUMBER"];
+            MFMessageComposeViewController *messageRequest = [[MFMessageComposeViewController alloc] init];
+            
+            NSString *marcoUrlYourKey = [NSString stringWithFormat:@"%@ ", self.keyPairInstance.publicKey];
+            marcoUrlYourKey = [self pgpStripper:marcoUrlYourKey];
+            //NSURL *marcoURL = [NSURL URLWithString:marcoUrlYourKey];
+            //marcoUrlYourKey = [marcoURL absoluteString];
+            
+            
+            NSString *marcoContactNumber = [NSString stringWithFormat:@"%@", self.contactAggregated.contact_phone_number];
+            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click marcoPolo://%@ to save their key with MarcoPolo", self.keyPairInstance.username,  self.keyPairInstance.publicKey];
+            messageRequest.subject = self.contactAggregated.contact_name;
+            messageRequest.title = self.contactAggregated.contact_name;
+            messageRequest.recipients = [NSArray arrayWithObject:marcoContactNumber];
             messageRequest.messageComposeDelegate = self;
-        }
-        
-        if(!IsEmpty(self.contactAggregated.contact_name))
-        {
-            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click here to save their key with MarcoPolo", @"TODO: 1"];
-            messageRequest.recipients = @[@"TODO GET NUMBER"];
-            messageRequest.messageComposeDelegate = self;
+            
+            
+            
+            [self presentViewController:messageRequest animated:YES completion:nil];
         }
     }
-    [self presentViewController:messageRequest animated:NO completion:NULL];
+}
+
+- (NSString *) pgpStripper:(NSString *)passedKey
+{
+    NSString *isolatedString;
+    NSError *regexError= nil;
+    
+    
+    
+    //NSRegularExpression *pgpBegin = [NSRegularExpression regularExpressionWithPattern:@"/^-----BEGIN PGP PUBLIC KEY BLOCK-----Version: NetPGP portable \\d*.\\d*.\\d*..\\d*.\\r/g" options:0 error:&regexError];
+    //NSRegularExpression *pgpBegin = [NSRegularExpression regularExpressionWithPattern:@"/^-----BEGIN PGP PUBLIC KEY BLOCK-----\\nVersion: NetPGP portable \\d*.\\d*.\\d*..\\d*.\\n/g" options:0 error:&regexError];
+
+    NSRange searchRange = NSMakeRange(0, [passedKey length]);
+    NSLog([passedKey substringWithRange:NSMakeRange(0,82)]);
+    NSString *header = [passedKey substringWithRange:NSMakeRange(0,82)];
+    NSString *keyMINUS = [passedKey substringWithRange:NSMakeRange(83,(searchRange.length-83))]; //takes off header leaves key and footer
+    
+    NSRange searchRangeRemain = NSMakeRange(0, [keyMINUS length]);
+    NSLog([keyMINUS substringWithRange:NSMakeRange(0, searchRangeRemain.length)]);
+    
+    NSString *stringKey = [keyMINUS substringWithRange:NSMakeRange(0,searchRangeRemain.length-35)];
+    NSString *footer = [keyMINUS substringWithRange:NSMakeRange((searchRangeRemain.length-35),35)];
+    
+    
+    
+     /*
+      NSArray *matches = [pgpBegin matchesInString:passedKey options:0 range:searchRange];
+    
+   
+     NSRegularExpression *pgpBegin = [[NSRegularExpression alloc] initWithPattern:@"/^-----BEGIN PGP PUBLIC KEY BLOCK-----\\nVersion: NetPGP portable \\d*.\\d*.\\d*..\\d*.\\n/g" options:0 error:&regexError];
+    [pgpBegin enumerateMatchesInString:passedKey options:0 range:NSMakeRange(0, passedKey.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop)
+     {
+         NSLog(@"Match at [%d, %d]", result.range.location, result.range.length);
+     }];
+     
+    
+    
+    NSRegularExpression *pgpKey = [NSRegularExpression regularExpressionWithPattern:@"/.*\\n/g" options:0 error:&regexError];
+    
+    
+    NSRegularExpression *pgpEnd = [NSRegularExpression regularExpressionWithPattern:@"/^-----END PGP PUBLIC KEY BLOCK-----\\n./g" options:0 error:&regexError];
+    
+    */
+    return isolatedString;
 }
 
 @end

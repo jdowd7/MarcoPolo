@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSString * publicKey;
 @property (nonatomic, retain) NSString * privateKey;
+@property (nonatomic, retain) NSString * username;
 
 @end

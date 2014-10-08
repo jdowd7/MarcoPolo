@@ -12,7 +12,7 @@
 #import "KeyPair.h"
 
 
-@interface MarcoSceneViewController : UIViewController <UIAlertViewDelegate>
+@interface MarcoSceneViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue;
 

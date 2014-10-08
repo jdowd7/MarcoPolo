@@ -41,7 +41,7 @@
 Write your message and press send!</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mpLogoCombo" translatesAutoresizingMaskIntoConstraints="NO" id="BMR-y1-AXZ">
                                 <rect key="frame" x="31" y="-3" width="262" height="78"/>
@@ -711,7 +711,7 @@ Write your message and press send!</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="addContactPhoneNumber" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact's Phone Number" borderStyle="roundedRect" placeholder="Contact Phone Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-RF-Ifh">
                                 <rect key="frame" x="20" y="130" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y71-BU-RyQ">
@@ -990,6 +990,6 @@ Write your message and press send!</string>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="j9o-MX-YgI"/>
-        <segue reference="sK7-qI-y5c"/>
+        <segue reference="SZA-QZ-N70"/>
     </inferredMetricsTieBreakers>
 </document>

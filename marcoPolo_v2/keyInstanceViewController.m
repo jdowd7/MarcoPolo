@@ -90,10 +90,17 @@
     self.managedObjectContext = appDelegate.managedObjectContext;
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedKeyArray = [appDelegate getPersonalKeys];
-    for (int currentIndex=0; currentIndex < self.fetchedKeyArray.count; currentIndex++)
+    
+    [self.managedObjectContext deleteObject:[self.fetchedKeyArray objectAtIndex:0]];
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error])
     {
-        KeyPair *keyPairInstance = [self.fetchedKeyArray objectAtIndex:currentIndex];
-        keyPairInstance.publicKey = @"Public Key Empty";
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    else
+    {
+        self.keyInstancePublicPrivateKeyDisplay.text = @"Public Key Empty";
     }
     [self viewDidLoad];
     
@@ -110,13 +117,16 @@
 
 -(IBAction)returnKeySuccess:(UIStoryboard *)segue {
     // Do any additional setup after loading the view.
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    [self viewDidLoad];
+    
+    
+    /*AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedKeyArray = [appDelegate getPersonalKeys];
     self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
     self.keyInstancePublicPrivateKeyDisplay.text = self.keyPairInstance.publicKey;
-    
+    */
 }
 
 #pragma mark burnSection called when the burn key button is called- then is handled in the below alertview method

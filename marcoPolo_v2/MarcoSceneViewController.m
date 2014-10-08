@@ -48,6 +48,8 @@
         _resultEncrypt = [self encryptMessageMarco];
     }
     
+    [self.view endEditing:YES];
+    
     /*
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     _managedObjectContext = appDelegate.managedObjectContext;
@@ -60,6 +62,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue
@@ -131,7 +139,7 @@ static inline BOOL IsEmpty(id thing)
     }
     else
     {
-        NSString *contactName = [NSString stringWithFormat:@"Ask %@ for their public key!", self.contactSelected.contact_name];
+        NSString *contactName = [NSString stringWithFormat:@"Ask %@ to send their public key!", self.contactSelected.contact_name];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Public Key Available"
                                                         message:contactName
                                                        delegate:self

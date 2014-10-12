@@ -80,20 +80,25 @@
         //TODO: validation here
         
     }
+    
+    NSString *usernameString = self.addContactName.text;
+    NSString *contactPhoneNumber = self.addContactPhoneNumber.text;
+    
+    [usernameString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    [contactPhoneNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    [contactPhoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
     //  Create instance of contacts Data
     self.contactAdded= [NSEntityDescription insertNewObjectForEntityForName:@"Contact"
                                                                inManagedObjectContext:self.managedObjectContext];
     //  Assign attributes of that object
     
-    [_contactAdded setValue:self.addContactName.text forKeyPath:@"contact_name"];
-    //contactAdded.contact_name = self.addContactName.text;
-    [_contactAdded setValue:self.addContactPhoneNumber.text forKeyPath:@"contact_phone_number"];
-    //contactAdded.contact_phone_number = [NSString stringWithFormat:@"%@", self.addContactPhoneNumber.text];
-    //[_contactAdded setValue:@"" forKeyPath:@"contact_public_key"];
-    
-    //give the contact_id the phone number?
-    [_contactAdded setValue:self.addContactPhoneNumber.text forKeyPath:@"contact_id"];
-    //_contactAdded.c2mRelation = [NSSet setWithObjects:_contactAdded, nil];
+    [_contactAdded setValue:usernameString forKeyPath:@"contact_name"];
+
+    [_contactAdded setValue:contactPhoneNumber forKeyPath:@"contact_phone_number"];
+
+    [_contactAdded setValue:contactPhoneNumber forKeyPath:@"contact_id"];
     
     //  Check for error and save to memory so it persisits
     NSError *error;

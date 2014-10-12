@@ -14,13 +14,69 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    //Display error is there is no URL
+    if ([launchOptions objectForKey:UIApplicationLaunchOptionsURLKey])
+    {
+        UIAlertView *alertView;
+        alertView = [[UIAlertView alloc] initWithTitle:@"Import this key?" message:[NSString stringWithFormat:@"Import key for %@ ?", self.importName] delegate:nil cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        [alertView show];
+    }
+
     return YES;
 }
-							
+
+- (BOOL)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 1)
+    {
+        [self performURLUpdate];
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
+-(void)performURLUpdate
+{
+    ContactsData *contact2Search;
+    contact2Search.contact_id = self.importID;
+    contact2Search.contact_name = self.importName;
+    contact2Search.contact_phone_number = self.importNumber;
+    
+    NSArray *contacts = [self getAllContacts];
+    if([contacts containsObject:contact2Search])
+    {
+        [self.managedObjectContext deleteObject:contact2Search];
+        NSError *error;
+        if (![self.managedObjectContext save:&error])
+        {
+            NSLog(@"Whoops, couldn't delete: %@", [error localizedDescription]);
+        }
+    }
+    self.Contact2Add= [NSEntityDescription insertNewObjectForEntityForName:@"Contact"
+                                                    inManagedObjectContext:self.managedObjectContext];
+    
+    [self.Contact2Add setValue:self.importName forKeyPath:@"contact_name"];
+    
+    [self.Contact2Add setValue:self.importNumber forKeyPath:@"contact_phone_number"];
+    
+    [self.Contact2Add setValue:self.importKey forKeyPath:@"contact_public_key"];
+    
+    //  Check for error and save to memory so it persisits
+    NSError *error;
+    if (![self.managedObjectContext save:&error])
+    {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+
+    
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -51,9 +107,67 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     
+    NSLog(@"Calling Application Bundle ID: %@", sourceApplication);
+    NSLog(@"URL scheme:%@", [url scheme]);
+    NSLog(@"URL query: %@", [url relativeString]);
+    NSLog(@"URL resourceSpecifier: %@", [url resourceSpecifier]); //use this one- and take off the first 2 characters, substring it
     
+    NSArray *keyAndSender = [[url resourceSpecifier] componentsSeparatedByString:@"!"];
+    NSString *senderKey = [keyAndSender objectAtIndex:0];
+
+    NSString *senderNumber = [keyAndSender objectAtIndex:1];
+
+    NSString *senderName = [keyAndSender objectAtIndex:2];
+
+    [senderNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [senderNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    
+    self.importKey = senderKey;
+    self.importNumber = senderNumber;
+    self.importID = senderNumber;
+    self.importName = senderName;
+    
+    /*
+      *Refactored to own method
+     
+     ContactsData *contact2Search;
+    contact2Search.contact_id = senderNumber;
+    contact2Search.contact_name = senderName;
+    contact2Search.contact_phone_number = senderNumber;
+
+    NSArray *contacts = [self getAllContacts];
+    if([contacts containsObject:contact2Search])
+    {
+        [self.managedObjectContext deleteObject:contact2Search];
+        NSError *error;
+        if (![self.managedObjectContext save:&error])
+        {
+            NSLog(@"Whoops, couldn't delete: %@", [error localizedDescription]);
+            return NO;
+        }
+    }
+        self.Contact2Add= [NSEntityDescription insertNewObjectForEntityForName:@"Contact"
+                                                        inManagedObjectContext:self.managedObjectContext];
+        
+        [self.Contact2Add setValue:self.importName forKeyPath:@"contact_name"];
+        
+        [self.Contact2Add setValue:self.importNumber forKeyPath:@"contact_phone_number"];
+        
+        [self.Contact2Add setValue:self.importKey forKeyPath:@"contact_public_key"];
+    
+    //  Check for error and save to memory so it persisits
+    NSError *error;
+    if (![self.managedObjectContext save:&error])
+    {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        return NO;
+    }
+     */
+
+    //return [self application:application handleOpenURL:url];
     return YES;
 }
+
 
 #pragma mark managedObject Method
 - (NSManagedObjectContext *) managedObjectContext {

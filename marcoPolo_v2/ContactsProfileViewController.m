@@ -176,7 +176,7 @@ static inline BOOL IsEmpty(id thing)
             
             
             NSString *marcoContactNumber = [NSString stringWithFormat:@"%@", self.contactAggregated.contact_phone_number];
-            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click marcoPolo://%@ to save their key with MarcoPolo", self.keyPairInstance.username,  self.keyPairInstance.publicKey];
+            messageRequest.body = [NSString stringWithFormat:@"%@ has sent you their public key, click marcoPolo://%@ to save their key with MarcoPolo", self.keyPairInstance.username,  marcoUrlYourKey];
             messageRequest.subject = self.contactAggregated.contact_name;
             messageRequest.title = self.contactAggregated.contact_name;
             messageRequest.recipients = [NSArray arrayWithObject:marcoContactNumber];
@@ -192,45 +192,40 @@ static inline BOOL IsEmpty(id thing)
 - (NSString *) pgpStripper:(NSString *)passedKey
 {
     NSString *isolatedString;
-    NSError *regexError= nil;
     
-    
-    
-    //NSRegularExpression *pgpBegin = [NSRegularExpression regularExpressionWithPattern:@"/^-----BEGIN PGP PUBLIC KEY BLOCK-----Version: NetPGP portable \\d*.\\d*.\\d*..\\d*.\\r/g" options:0 error:&regexError];
-    //NSRegularExpression *pgpBegin = [NSRegularExpression regularExpressionWithPattern:@"/^-----BEGIN PGP PUBLIC KEY BLOCK-----\\nVersion: NetPGP portable \\d*.\\d*.\\d*..\\d*.\\n/g" options:0 error:&regexError];
-
     NSRange searchRange = NSMakeRange(0, [passedKey length]);
-    NSLog([passedKey substringWithRange:NSMakeRange(0,82)]);
-    NSString *header = [passedKey substringWithRange:NSMakeRange(0,82)];
-    NSString *keyMINUS = [passedKey substringWithRange:NSMakeRange(83,(searchRange.length-83))]; //takes off header leaves key and footer
+    //header portion
+    //NSLog([passedKey substringWithRange:NSMakeRange(0,82)]); //log it for checking
+    //NSString *header = [passedKey substringWithRange:NSMakeRange(0,82)];
     
+    //key and footer
+    NSString *keyMINUS = [passedKey substringWithRange:NSMakeRange(83,(searchRange.length-83))];
+    
+    //take the key and footer and get the length
     NSRange searchRangeRemain = NSMakeRange(0, [keyMINUS length]);
-    NSLog([keyMINUS substringWithRange:NSMakeRange(0, searchRangeRemain.length)]);
+    //NSLog([keyMINUS substringWithRange:NSMakeRange(0, searchRangeRemain.length)]); //log it for checking
     
-    NSString *stringKey = [keyMINUS substringWithRange:NSMakeRange(0,searchRangeRemain.length-35)];
-    NSString *footer = [keyMINUS substringWithRange:NSMakeRange((searchRangeRemain.length-35),35)];
+    //split the string at the hypen
+    NSArray *keyFooter2Split = [keyMINUS componentsSeparatedByString:@"-"];
+    NSString *keyIsolated = [keyFooter2Split objectAtIndex:0];
     
+    NSArray *keyIsolatedTakeOutNewLines = [keyIsolated componentsSeparatedByString:@"\r\n"];
+    isolatedString = [keyIsolatedTakeOutNewLines componentsJoinedByString:@""];
     
+    NSURL *keyURL = [NSURL URLWithString:isolatedString];
     
-     /*
-      NSArray *matches = [pgpBegin matchesInString:passedKey options:0 range:searchRange];
+    isolatedString = [keyURL absoluteString];
+
+    NSString *ownerPhoneNumber = self.keyPairInstance.user_contact_number;
+    NSString *ownerName = self.keyPairInstance.username;
     
-   
-     NSRegularExpression *pgpBegin = [[NSRegularExpression alloc] initWithPattern:@"/^-----BEGIN PGP PUBLIC KEY BLOCK-----\\nVersion: NetPGP portable \\d*.\\d*.\\d*..\\d*.\\n/g" options:0 error:&regexError];
-    [pgpBegin enumerateMatchesInString:passedKey options:0 range:NSMakeRange(0, passedKey.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop)
-     {
-         NSLog(@"Match at [%d, %d]", result.range.location, result.range.length);
-     }];
-     
+    [ownerPhoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [ownerPhoneNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    [ownerName stringByReplacingOccurrencesOfString:@" " withString:@""];
     
-    
-    NSRegularExpression *pgpKey = [NSRegularExpression regularExpressionWithPattern:@"/.*\\n/g" options:0 error:&regexError];
-    
-    
-    NSRegularExpression *pgpEnd = [NSRegularExpression regularExpressionWithPattern:@"/^-----END PGP PUBLIC KEY BLOCK-----\\n./g" options:0 error:&regexError];
-    
-    */
-    return isolatedString;
+    NSString *finalURL = [NSString stringWithFormat:@"%@!%@!%@", isolatedString, ownerPhoneNumber, ownerName];
+
+    return finalURL;
 }
 
 @end

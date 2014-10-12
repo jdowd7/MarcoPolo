@@ -14,5 +14,6 @@
 @dynamic publicKey;
 @dynamic privateKey;
 @dynamic username;
+@dynamic user_contact_number;
 
 @end

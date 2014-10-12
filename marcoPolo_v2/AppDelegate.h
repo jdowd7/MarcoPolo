@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KeyPair.h"
+#import "ContactsData.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -21,6 +23,14 @@
 -(NSArray*)getPersonalKeys;
 -(NSArray*)getAllMessages;
 -(NSArray*)getContactsMarco;
+
+
+//for handling URL query
+@property (nonatomic, retain) NSString *importKey;
+@property (nonatomic, retain) NSString *importNumber;
+@property (nonatomic, retain) NSString *importName;
+@property (nonatomic, retain) NSString *importID;
+@property (nonatomic, retain) KeyPair *Contact2Add;
 
 @end
 

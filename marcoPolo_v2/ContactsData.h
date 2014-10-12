@@ -11,7 +11,7 @@
 
 
 @interface ContactsData : NSManagedObject <NSCopying>
-@property (nonatomic, retain) NSNumber * contact_id;
+@property (nonatomic, retain) NSString * contact_id;
 @property (nonatomic, retain) NSString * contact_name;
 @property (nonatomic, retain) NSString* contact_phone_number;
 @property (nonatomic, retain) NSString * contact_public_key;

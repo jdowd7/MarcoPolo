@@ -17,12 +17,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    //Display error is there is no URL
-    if ([launchOptions objectForKey:UIApplicationLaunchOptionsURLKey])
+    if ( [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey] != nil )
     {
-        UIAlertView *alertView;
+        /* Not sure this is needed.
+         UIAlertView *alertView;
         alertView = [[UIAlertView alloc] initWithTitle:@"Import this key?" message:[NSString stringWithFormat:@"Import key for %@ ?", self.importName] delegate:nil cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         [alertView show];
+         */
     }
 
     return YES;
@@ -112,7 +113,8 @@
     NSLog(@"URL query: %@", [url relativeString]);
     NSLog(@"URL resourceSpecifier: %@", [url resourceSpecifier]); //use this one- and take off the first 2 characters, substring it
     
-    NSArray *keyAndSender = [[url resourceSpecifier] componentsSeparatedByString:@"!"];
+    NSString *newURL = [[url resourceSpecifier] substringFromIndex:2];
+    NSArray *keyAndSender = [newURL componentsSeparatedByString:@"!"];
     NSString *senderKey = [keyAndSender objectAtIndex:0];
 
     NSString *senderNumber = [keyAndSender objectAtIndex:1];
@@ -122,10 +124,17 @@
     [senderNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
     [senderNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
+    
+    NSString *headerBlock = @"-----BEGIN PGP PUBLIC KEY BLOCK-----\r\nVersion: NetPGP portable 3.99.14/[20101107]\r\n\r\n";
+    NSString *footerBlock = @"\r\n-----END PGP PUBLIC KEY BLOCK-----";
+    senderKey = [NSString stringWithFormat:@"%@%@%@", headerBlock, senderKey, footerBlock];
+    
     self.importKey = senderKey;
     self.importNumber = senderNumber;
     self.importID = senderNumber;
     self.importName = senderName;
+    
+    [self performURLUpdate];
     
     /*
       *Refactored to own method

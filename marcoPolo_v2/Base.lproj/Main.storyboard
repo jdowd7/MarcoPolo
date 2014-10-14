@@ -663,8 +663,6 @@ Write your message and press send!</string>
                                 <state key="normal" title="Sent" image="IconCheck"/>
                                 <state key="selected" title="Sent!"/>
                                 <connections>
-                                    <action selector="buttonSent:" destination="MiK-lb-r2o" eventType="touchUpInside" id="wnJ-Lr-Tux"/>
-                                    <action selector="marcoSentConfirmButton:forEvent:" destination="MiK-lb-r2o" eventType="touchUpInside" id="Zfj-gU-vh9"/>
                                     <segue destination="F0F-3Y-5oW" kind="unwind" unwindAction="returnMarco:" id="ZPg-ec-6CI"/>
                                 </connections>
                             </button>

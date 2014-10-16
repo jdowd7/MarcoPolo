@@ -30,15 +30,13 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="yem-aB-5e9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" keyboardDismissMode="onDrag" text=" Write your message and press send!" translatesAutoresizingMaskIntoConstraints="NO" id="yem-aB-5e9">
                                 <rect key="frame" x="15" y="151" width="285" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" keyboardKey="YES"/>
                                 </accessibility>
-                                <string key="text"> 
-Write your message and press send!</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
@@ -85,7 +83,7 @@ Write your message and press send!</string>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-dL-cGI">
-                                <rect key="frame" x="31" y="395" width="262" height="21"/>
+                                <rect key="frame" x="31" y="404" width="262" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -116,7 +114,7 @@ Write your message and press send!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SCl-wf-nbY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="poloCell" id="SCl-wf-nbY">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SCl-wf-nbY" id="2WN-SH-wr9">
@@ -663,7 +661,7 @@ Write your message and press send!</string>
                                 <state key="normal" title="Sent" image="IconCheck"/>
                                 <state key="selected" title="Sent!"/>
                                 <connections>
-                                    <segue destination="F0F-3Y-5oW" kind="unwind" unwindAction="returnMarco:" id="ZPg-ec-6CI"/>
+                                    <segue destination="F0F-3Y-5oW" kind="unwind" unwindAction="returnSendMarco:" id="6Za-HY-B3d"/>
                                 </connections>
                             </button>
                         </subviews>

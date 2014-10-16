@@ -11,9 +11,9 @@
 
 @interface MarcoSentViewController : UIViewController <MFMessageComposeViewControllerDelegate>
 
-@property (assign) ContactsData *contactMarcoPassed;
-@property (assign) NSString *messageEncryptedText;
-@property (assign) NSString *messageSubject;
+@property (nonatomic, retain) ContactsData *contactMarcoPassed;
+@property (nonatomic, retain) NSString *messageEncryptedText;
+@property (nonatomic, retain) NSString *messageSubject;
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonSentImage;
 

@@ -124,10 +124,49 @@
     [senderNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
     [senderNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
+    NSString *copyKey = [senderKey copy];
+    NSString *newKey = @"";
+    for (int current = 0; current <= senderKey.length; current++)
+    {
+        if(copyKey.length > 76)
+        {
+            //make the range 0-76 per line
+            NSRange segmentRange = NSMakeRange(0, 76);
+            //substring it
+            NSString* segmentString = [copyKey substringWithRange:segmentRange];
+            
+            //take the segmented string and add it to the new key
+            newKey = [newKey stringByAppendingString:segmentString];
+            //add a newline
+            //newKey = [newKey stringByAppendingString:@"\r\n"];
+            newKey = [newKey stringByAppendingString:@"\n"];
+            
+            //delete the range from the copy key
+            copyKey = [copyKey stringByReplacingCharactersInRange:segmentRange withString:@""];
+        }
+        else
+        {
+            //get remaining count string
+            int amountLeft = copyKey.length;
+            //make it the range
+            NSRange leftRange = NSMakeRange(0, amountLeft);
+            
+            //substring it with the NSRange
+            NSString *remainderString = [copyKey substringWithRange:leftRange];
+            //append it to the existing key
+            newKey = [newKey stringByAppendingString:remainderString];
+            break;
+        }
+    }
+    NSLog(@"%@", newKey);
     
-    NSString *headerBlock = @"-----BEGIN PGP PUBLIC KEY BLOCK-----\r\nVersion: NetPGP portable 3.99.14/[20101107]\r\n\r\n";
-    NSString *footerBlock = @"\r\n-----END PGP PUBLIC KEY BLOCK-----";
-    senderKey = [NSString stringWithFormat:@"%@%@%@", headerBlock, senderKey, footerBlock];
+    //NSString *headerBlock = @"-----BEGIN PGP PUBLIC KEY BLOCK-----\r\nVersion: NetPGP portable 3.99.14/[20101107]\r\n\r\n";
+    NSString *headerBlock = @"-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: NetPGP portable 3.99.14/[20101107]\n\n";
+    //NSString *footerBlock = @"\r\n-----END PGP PUBLIC KEY BLOCK-----";
+    NSString *footerBlock = @"\n-----END PGP PUBLIC KEY BLOCK-----";
+    senderKey = [NSString stringWithFormat:@"%@%@%@", headerBlock, newKey, footerBlock];
+    NSLog(@"%@", senderKey);
+    
     
     self.importKey = senderKey;
     self.importNumber = senderNumber;

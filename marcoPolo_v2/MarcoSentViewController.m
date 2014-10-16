@@ -32,7 +32,10 @@
 {
     [super viewDidLoad];
     
-
+    messageEncryptedText =  [self pgpStripper:messageEncryptedText];
+    
+    [self sendMessage];
+    
 }
 
 -(void)sendMessage
@@ -96,6 +99,51 @@
 }
 */
 
-- (IBAction)buttonSent:(UIButton *)sender {
+- (IBAction)buttonSent:(UIButton *)sender
+{
+    
+    //bound?
 }
+
+
+//reused :D
+- (NSString *) pgpStripper:(NSString *)passedMessage
+{
+    NSString *isolatedString = @"";
+    
+    NSRange searchRange = NSMakeRange(0, [passedMessage length]);
+    //header portion
+    NSLog([passedMessage substringWithRange:NSMakeRange(0,27)]); //log it for checking
+    //NSString *header = [passedMessage substringWithRange:NSMakeRange(0,82)];
+    
+    //key and footer
+    NSString *msgMINUS = [passedMessage substringWithRange:NSMakeRange(28,(searchRange.length-28))];
+    
+    //take the key and footer and get the length
+    NSRange searchRangeRemain = NSMakeRange(0, [msgMINUS length]);
+    NSLog([msgMINUS substringWithRange:NSMakeRange(0, searchRangeRemain.length)]); //log it for checking
+    
+    //split the string at the hypen
+    NSArray *keyFooter2Split = [msgMINUS componentsSeparatedByString:@"-"];
+    NSString *keyIsolated = [keyFooter2Split objectAtIndex:0];
+    
+    NSArray *keyIsolatedTakeOutNewLines = [keyIsolated componentsSeparatedByString:@"\n\r\n"];
+    isolatedString = [keyIsolatedTakeOutNewLines componentsJoinedByString:@""];
+    
+    NSURL *keyURL = [NSURL URLWithString:isolatedString];
+    
+    isolatedString = [keyURL absoluteString];
+    
+    NSString *ownerPhoneNumber = self.contactMarcoPassed.contact_phone_number;
+    NSString *ownerName = self.contactMarcoPassed.contact_name;
+    
+    [ownerPhoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [ownerPhoneNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    [ownerName stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSString *finalURL = [NSString stringWithFormat:@"%@!%@!%@", isolatedString, ownerPhoneNumber, ownerName];
+    
+    return finalURL;
+}
+
 @end

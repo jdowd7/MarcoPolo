@@ -54,7 +54,8 @@
     }
 
 - (void) textViewDidBeginEditing:(UITextView *) textView {
-    [textView setText:@""];
+    
+    textView.text = @"";
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,8 +72,17 @@
 
 -(IBAction)returnMarco:(UIStoryboardSegue *)segue
 {
+
+    
     [self viewDidLoad];
 }
+
+-(IBAction)returnSendMarco:(UIStoryboardSegue *)segue
+{
+    self.contactSelected.contact_public_key =@"";
+    
+}
+
 
 static inline BOOL IsEmpty(id thing)
 {
@@ -118,11 +128,16 @@ static inline BOOL IsEmpty(id thing)
 
 - (IBAction)buttonDiscardMarco:(UIButton *)sender
 {
+    [self clearFields];
+}
+
+-(void)clearFields
+{
     self.contactSelected = nil;
     self.encryptedMessage = nil;
-    self.labelTitleMessage = nil;
-    self.textFieldMessage = nil;
-    self.marcoRecipient = nil;
+    self.labelTitleMessage.text = @"";
+    self.textFieldMessage.text = @"";
+    self.marcoRecipient.text = @"";
 }
 
 - (IBAction)buttonEncrypt:(UIButton *)sender
@@ -150,7 +165,7 @@ static inline BOOL IsEmpty(id thing)
     bool success = NO;
     
     UNNetPGP *pgpInstance = [[UNNetPGP alloc] initWithUserId:self.contactSelected.contact_name];
-   
+    pgpInstance.armored = YES;
     //[pgpInstance.availableKeys arrayByAddingObject:self.contactSelected.contact_public_key];
     
     if(!IsEmpty(self.contactSelected.contact_public_key))
@@ -163,9 +178,11 @@ static inline BOOL IsEmpty(id thing)
         
         if(importSuccess)
         {
+            self.textFieldMessage.text = @"";
             NSData *data = [self.textFieldMessage.text dataUsingEncoding:NSUTF8StringEncoding];
             self.encryptedMessage = [pgpInstance encryptData:data options:UNEncryptOptionNone];
-            self.textFieldMessage.text = [[NSString alloc] initWithData:self.encryptedMessage encoding:NSUTF8StringEncoding];
+            self.textFieldMessage.text = [[NSString alloc] initWithData:self.encryptedMessage encoding:NSASCIIStringEncoding];
+            NSLog(@"%@", self.textFieldMessage.text);
             success = YES;
         }
     }
@@ -187,18 +204,29 @@ static inline BOOL IsEmpty(id thing)
 
 - (NSString *)writeStringToFile:(NSString*)publicKeyString {
     
+    NSError *error;
     // Build the path, and create if needed.
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"publicKeyEncrypt.txt";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
     
-    if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath]) {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath])
+    {
         [[NSFileManager defaultManager] createFileAtPath:fileAtPath contents:nil attributes:nil];
     }
     
-    // Write the key in memory to text file
-    [[publicKeyString dataUsingEncoding:NSUTF8StringEncoding] writeToFile:fileAtPath atomically:NO];
     
+    // Write the key in memory to text file
+    //NSData *encodedData = [publicKeyString dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *publicKeyEncodedData = [[publicKeyString dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
+    //[[publicKeyString dataUsingEncoding:NSUTF8StringEncoding] writeToFile:fileAtPath atomically:NO];
+    [publicKeyEncodedData writeToFile:fileAtPath atomically:YES encoding:NSASCIIStringEncoding error:NULL];
+
+    
+    
+    NSString *keyPath = [filePath stringByAppendingPathComponent:@"publicKeyEncrypt.gpg"];
+    //copy it over
+    [[NSFileManager defaultManager] copyItemAtPath:fileAtPath toPath:keyPath error:&error];
     return fileAtPath;
 }
 

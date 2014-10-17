@@ -42,8 +42,7 @@
 {
     MFMessageComposeViewController *messageSender = [[MFMessageComposeViewController alloc] init];
     
-    //TODO need to declare fetch
-    messageSender.body = [NSString stringWithFormat:@"%@", self.messageEncryptedText];
+    messageSender.body = [NSString stringWithFormat:@"%@ has sent you a message, click marcoPolo://msg!%@", self.contactMarcoPassed.contact_name, self.messageEncryptedText];
     messageSender.recipients = @[self.contactMarcoPassed.contact_phone_number];
     //messageSender.subject = self.messageSubject;
     messageSender.messageComposeDelegate = self;
@@ -60,34 +59,52 @@
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
-    
     switch (result)
     {
         {
         case MessageComposeResultCancelled:
             NSLog(@"message was cancelled");
-                        [self dismissViewControllerAnimated:YES  completion:NULL];
+            UIAlertView *sentAlert = [[UIAlertView alloc] initWithTitle:@"Cancel"
+                                                                message:@"Message was cancelled."
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Okay"
+                                                      otherButtonTitles: nil ];
+            [sentAlert show];
+            [self dismissViewControllerAnimated:YES  completion:NULL];
             break;
         }
         {
         case MessageComposeResultFailed:
             NSLog(@"message failed");
-                        [self dismissViewControllerAnimated:YES  completion:NULL];
+            UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                                message:@"Message was not sent."
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Okay"
+                                                      otherButtonTitles: nil ];
+            [failAlert show];
+            [self dismissViewControllerAnimated:YES  completion:NULL];
             break;
         }
         {
         case MessageComposeResultSent:
             NSLog(@"message was sent");
-                [self dismissViewControllerAnimated:YES  completion:NULL];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                            message:@"Message was sent!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Okay"
+                                                  otherButtonTitles: nil ];
+            [alert show];
+            [self dismissViewControllerAnimated:YES  completion:NULL];
             break;
         }
         { default:
             break;
         }
     }
+    
+    
 }
+
 /*
 #pragma mark - Navigation
 
@@ -130,7 +147,11 @@
     NSArray *keyIsolatedTakeOutNewLines = [keyIsolated componentsSeparatedByString:@"\n\r\n"];
     isolatedString = [keyIsolatedTakeOutNewLines componentsJoinedByString:@""];
     
-    NSURL *keyURL = [NSURL URLWithString:isolatedString];
+    NSCharacterSet *seperator = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSArray *comps = [isolatedString componentsSeparatedByCharactersInSet:seperator];
+    NSString *stringer = [comps componentsJoinedByString:@""];
+    
+    NSURL *keyURL = [NSURL URLWithString:stringer];
     
     isolatedString = [keyURL absoluteString];
     

@@ -8,6 +8,7 @@
 
 #import "MessageSceneTableViewController.h"
 #import "MessageCellTableViewCell.h"
+#import "MessageDetailViewController.h"
 
 //core data headers
 #import "MessagesData.h"
@@ -93,8 +94,8 @@
 	}
     // Configure the cell...
     MessagesData *message = [self.messagesTableResults objectAtIndex:indexPath.row];
-	messageCellInstance.messageCellTitle.text = message.message_text;
-	messageCellInstance.messageCellDetail.text = message.message_text;
+	messageCellInstance.messageCellTitle.text = message.message_title;
+	messageCellInstance.messageCellDetail.text = message.contact_id;
 	
     return messageCellInstance;
 }
@@ -144,10 +145,12 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"pushContactDetail"])
+    if([[segue identifier] isEqualToString:@"pushMessageDetail"])
     {
-        MessageCellTableViewCell *messageDetailVC = segue.destinationViewController;
-        messageDetailVC = self.messagePassed;
+        MessageDetailViewController *messageDetailVC = segue.destinationViewController;
+        messageDetailVC.passedMessage = self.messagePassed;
+        messageDetailVC.msgTextPolo = self.messagePassed.message_text;
+        
     }
 }
 

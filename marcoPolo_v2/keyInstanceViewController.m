@@ -144,7 +144,10 @@
     
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedKeyArray = [appDelegate getPersonalKeys];
-    self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    if(self.fetchedKeyArray.count > 0)
+    {
+        self.keyPairInstance = [self.fetchedKeyArray objectAtIndex:0];
+    }
     
     if([self.keyPairInstance.publicKey length] == 0)
     {

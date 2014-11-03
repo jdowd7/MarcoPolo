@@ -2,7 +2,7 @@
 //  KeyPair.h
 //  marcoPolo_v2
 //
-//  Created by red5 on 8/16/14.
+//  Created by red5 on 10/18/14.
 //  Copyright (c) 2014 red5. All rights reserved.
 //
 
@@ -12,9 +12,9 @@
 
 @interface KeyPair : NSManagedObject
 
-@property (nonatomic, retain) NSString * publicKey;
 @property (nonatomic, retain) NSString * privateKey;
-@property (nonatomic, retain) NSString * username;
+@property (nonatomic, retain) NSString * publicKey;
 @property (nonatomic, retain) NSString * user_contact_number;
+@property (nonatomic, retain) NSString * username;
 
 @end

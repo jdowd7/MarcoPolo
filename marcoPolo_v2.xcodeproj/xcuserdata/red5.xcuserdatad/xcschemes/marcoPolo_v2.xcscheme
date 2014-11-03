@@ -38,6 +38,16 @@
                ReferencedContainer = "container:marcoPolo_v2.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "905A5A5B1A03261F0076CB98"
+               BuildableName = "marcoPoloTests.xctest"
+               BlueprintName = "marcoPoloTests"
+               ReferencedContainer = "container:marcoPolo_v2.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

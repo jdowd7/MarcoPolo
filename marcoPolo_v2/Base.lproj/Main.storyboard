@@ -189,7 +189,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <size key="freeformSize" width="0.0" height="0.0"/>
                     <connections>
-                        <segue destination="LWh-jM-hRS" kind="push" identifier="pushContactDetail" id="Caz-0b-5rU"/>
+                        <segue destination="LWh-jM-hRS" kind="push" identifier="pushMessageDetail" id="Caz-0b-5rU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-2M-WcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,13 +219,13 @@
         <!--Message Detail View Controller - messageDetailView-->
         <scene sceneID="lm7-VV-p49">
             <objects>
-                <viewController storyboardIdentifier="MessageDisplayScene" title="messageDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LWh-jM-hRS" customClass="MessageDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageDisplayScene" title="messageDetailView" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LWh-jM-hRS" customClass="MessageDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="diz-Tx-DpB"/>
                         <viewControllerLayoutGuide type="bottom" id="TUC-0Z-uKw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hkq-AU-ilr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.29999999999999966" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconFlameLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K9d-qN-FPk">
@@ -236,8 +236,8 @@
                                 <rect key="frame" x="140" y="-11" width="244" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="messageTextField" editable="NO" text="Contents of Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-E3-ytz" userLabel="messageTextField">
-                                <rect key="frame" x="20" y="138" width="280" height="217"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="messageTextField" editable="NO" text="Contents of Message" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-E3-ytz" userLabel="messageTextField">
+                                <rect key="frame" x="20" y="138" width="280" height="254"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="messageTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -251,14 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-s6-v53">
-                                <rect key="frame" x="23" y="363" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date &amp; Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9U-7f-JPO">
-                                <rect key="frame" x="23" y="400" width="287" height="21"/>
+                                <rect key="frame" x="23" y="400" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,7 +295,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="Erase" id="iBw-O7-ufG">
                             <connections>
@@ -326,11 +319,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="9HI-En-4xB"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <size key="freeformSize" width="320" height="569"/>
                     <connections>
                         <outlet property="labelAuthor" destination="8cD-s6-v53" id="r9n-Ee-u6X"/>
-                        <outlet property="labelDateTime" destination="i9U-7f-JPO" id="H8I-xg-5Sz"/>
                         <outlet property="labelTitle" destination="kd0-dc-C4M" id="Z2X-fM-zaN"/>
                         <outlet property="textMessageContent" destination="Q4y-E3-ytz" id="Tp2-hN-hPG"/>
                     </connections>
@@ -985,7 +978,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="j9o-MX-YgI"/>
         <segue reference="SZA-QZ-N70"/>
+        <segue reference="j9o-MX-YgI"/>
     </inferredMetricsTieBreakers>
 </document>

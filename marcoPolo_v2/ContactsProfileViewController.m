@@ -146,8 +146,6 @@ static inline BOOL IsEmpty(id thing)
                 break;
         }
     }
-    
-    
 }
 
 - (IBAction)sendKey:(UIButton *)sender

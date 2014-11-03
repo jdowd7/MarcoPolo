@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7943172A25764A8696145443 /* libPods-marcoPolo_v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */; };
 		902E4DE819775474006C06D5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 902E4DE619775474006C06D5 /* libssl.a */; };
 		902E4DE919775474006C06D5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 902E4DE719775474006C06D5 /* libcrypto.a */; };
 		902F90E3198D7771003931C5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902F90E2198D7771003931C5 /* CoreData.framework */; };
 		902F90E6198D7841003931C5 /* mpCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */; };
-		902F90E9198D856D003931C5 /* ContactsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F90E8198D856D003931C5 /* ContactsData.m */; };
-		902F90EC198D856E003931C5 /* MessagesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F90EB198D856E003931C5 /* MessagesData.m */; };
 		9033DCBA19A2D16700AFF2AF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9033DCB919A2D16700AFF2AF /* MessageUI.framework */; };
 		903446A419688B1F000C087A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A319688B1F000C087A /* Foundation.framework */; };
 		903446A619688B1F000C087A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A519688B1F000C087A /* CoreGraphics.framework */; };
@@ -22,11 +19,6 @@
 		903446B019688B1F000C087A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446AF19688B1F000C087A /* main.m */; };
 		903446B419688B1F000C087A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446B319688B1F000C087A /* AppDelegate.m */; };
 		903446B719688B1F000C087A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903446B519688B1F000C087A /* Main.storyboard */; };
-		903446C619688B1F000C087A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446C519688B1F000C087A /* XCTest.framework */; };
-		903446C719688B1F000C087A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A319688B1F000C087A /* Foundation.framework */; };
-		903446C819688B1F000C087A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A719688B1F000C087A /* UIKit.framework */; };
-		903446D019688B1F000C087A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 903446CE19688B1F000C087A /* InfoPlist.strings */; };
-		903446D219688B1F000C087A /* marcoPolo_v2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446D119688B1F000C087A /* marcoPolo_v2Tests.m */; };
 		903446F219688DE4000C087A /* Images-3.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903446DB19688DE4000C087A /* Images-3.xcassets */; };
 		903446F319688DE4000C087A /* MarcoSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446DD19688DE4000C087A /* MarcoSceneViewController.m */; };
 		903446F419688DE4000C087A /* MarcoSentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446DF19688DE4000C087A /* MarcoSentViewController.m */; };
@@ -35,38 +27,54 @@
 		903446FB19688DE4000C087A /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446EB19688DE4000C087A /* ContactsTableViewCell.m */; };
 		903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903446ED19688DE4000C087A /* ContactsTableViewController.m */; };
 		9036B77B19CBE8C4001D474C /* marcoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9036B77A19CBE8C4001D474C /* marcoTableViewController.m */; };
+		90419A9619F2DB5C0070DB19 /* MessagesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 90419A9519F2DB5C0070DB19 /* MessagesData.m */; };
+		90419A9919F2DB5C0070DB19 /* KeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 90419A9819F2DB5C0070DB19 /* KeyPair.m */; };
+		90419A9C19F2DB5C0070DB19 /* ContactsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 90419A9B19F2DB5C0070DB19 /* ContactsData.m */; };
+		90419A9E19F49D0A0070DB19 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90419A9D19F49D0A0070DB19 /* MobileCoreServices.framework */; };
+		90419AA019F49D140070DB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90419A9F19F49D140070DB19 /* Security.framework */; };
 		9043825919CBDA66004EB497 /* marcoContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043825819CBDA66004EB497 /* marcoContactCell.m */; };
 		904D643F1996CCE20024118E /* addContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904D643E1996CCE20024118E /* addContactViewController.m */; };
+		90541A911A007DEE009A38B4 /* testProfileMessage.txt in Resources */ = {isa = PBXBuildFile; fileRef = 90541A8C1A007DEE009A38B4 /* testProfileMessage.txt */; };
+		90541A931A007DEE009A38B4 /* testProfilePublicKey.txt in Resources */ = {isa = PBXBuildFile; fileRef = 90541A8E1A007DEE009A38B4 /* testProfilePublicKey.txt */; };
+		90541A941A007DEE009A38B4 /* testProfileSecretKey.asc in Resources */ = {isa = PBXBuildFile; fileRef = 90541A8F1A007DEE009A38B4 /* testProfileSecretKey.asc */; };
 		905925141984129900C6C1AD /* generateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905925131984129900C6C1AD /* generateKeyViewController.m */; };
-		9075CFEC199FF5F900A95AAC /* KeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9075CFEB199FF5F900A95AAC /* KeyPair.m */; };
+		905A5A5D1A03261F0076CB98 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446C519688B1F000C087A /* XCTest.framework */; };
+		905A5A5E1A03261F0076CB98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A319688B1F000C087A /* Foundation.framework */; };
+		905A5A5F1A03261F0076CB98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903446A719688B1F000C087A /* UIKit.framework */; };
+		905A5A651A03261F0076CB98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 905A5A631A03261F0076CB98 /* InfoPlist.strings */; };
+		905A5A671A03261F0076CB98 /* marcoPoloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 905A5A661A03261F0076CB98 /* marcoPoloTests.m */; };
+		905A5A731A032F580076CB98 /* secring-test.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 905A5A711A032F580076CB98 /* secring-test.gpg */; };
+		905A5A741A032F580076CB98 /* pubring-test.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 905A5A721A032F580076CB98 /* pubring-test.gpg */; };
+		905A5A771A0726DF0076CB98 /* demoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 905A5A761A0726DF0076CB98 /* demoData.m */; };
+		909E4EE419F5DE50003DB680 /* openpgp.js in Resources */ = {isa = PBXBuildFile; fileRef = 909E4EE219F5DE30003DB680 /* openpgp.js */; };
+		909E4EE719F690D6003DB680 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909E4EE619F690D6003DB680 /* JavaScriptCore.framework */; };
 		90AE284D19B6B8C7000DD416 /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AE284C19B6B8C7000DD416 /* MessageDetailViewController.m */; };
 		90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DAA197B041200C386D0 /* ContactsProfileViewController.m */; };
 		90C17DAE197B064000C386D0 /* keyInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DAD197B064000C386D0 /* keyInstanceViewController.m */; };
 		90C17DB1197B130000C386D0 /* optionsSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C17DB0197B130000C386D0 /* optionsSceneViewController.m */; };
 		90CAE3CE197B72C200030F22 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CAE3CD197B72C200030F22 /* libsqlite3.dylib */; };
+		CB1C155B2C5BC7449DD0EA0A /* libPods-marcoPolo_v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		903446C919688B1F000C087A /* PBXContainerItemProxy */ = {
+		905A5A691A03261F0076CB98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9034469819688B1F000C087A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9034469F19688B1F000C087A;
-			remoteInfo = marcoPolo_v2;
+			remoteInfo = marcoPolo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcoPolo_v2.xcconfig"; path = "Pods/Pods-marcoPolo_v2.xcconfig"; sourceTree = "<group>"; };
+		0023BB0A16275955A94B8EE6 /* Pods-marcoPolo_v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcoPolo_v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marcoPolo_v2/Pods-marcoPolo_v2.debug.xcconfig"; sourceTree = "<group>"; };
+		307D92F939B3389A15EED3BF /* libPods-marcoPolo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marcoPolo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marcoPolo_v2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		902E4DE619775474006C06D5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios/libssl.a"; sourceTree = "<group>"; };
 		902E4DE719775474006C06D5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios/libcrypto.a"; sourceTree = "<group>"; };
 		902F90E2198D7771003931C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		902F90E5198D7841003931C5 /* mpCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mpCoreData.xcdatamodel; sourceTree = "<group>"; };
-		902F90E7198D856D003931C5 /* ContactsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsData.h; sourceTree = "<group>"; };
-		902F90E8198D856D003931C5 /* ContactsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsData.m; sourceTree = "<group>"; };
-		902F90EA198D856E003931C5 /* MessagesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesData.h; sourceTree = "<group>"; };
-		902F90EB198D856E003931C5 /* MessagesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesData.m; sourceTree = "<group>"; };
+		902FEF8C19F5A73D00C2D69D /* libPods-marcoPolo_v2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-marcoPolo_v2.a"; path = "Pods/build/Debug-iphoneos/libPods-marcoPolo_v2.a"; sourceTree = "<group>"; };
 		9033DCB919A2D16700AFF2AF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		903446A019688B1F000C087A /* marcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903446A319688B1F000C087A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,7 +87,6 @@
 		903446B219688B1F000C087A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		903446B319688B1F000C087A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		903446B619688B1F000C087A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		903446C419688B1F000C087A /* marcoPolo_v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marcoPolo_v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		903446C519688B1F000C087A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		903446CD19688B1F000C087A /* marcoPolo_v2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "marcoPolo_v2Tests-Info.plist"; sourceTree = "<group>"; };
 		903446CF19688B1F000C087A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -99,14 +106,36 @@
 		903446ED19688DE4000C087A /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		9036B77919CBE8C4001D474C /* marcoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marcoTableViewController.h; sourceTree = "<group>"; };
 		9036B77A19CBE8C4001D474C /* marcoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = marcoTableViewController.m; sourceTree = "<group>"; };
+		90419A9419F2DB5C0070DB19 /* MessagesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesData.h; sourceTree = "<group>"; };
+		90419A9519F2DB5C0070DB19 /* MessagesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesData.m; sourceTree = "<group>"; };
+		90419A9719F2DB5C0070DB19 /* KeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPair.h; sourceTree = "<group>"; };
+		90419A9819F2DB5C0070DB19 /* KeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPair.m; sourceTree = "<group>"; };
+		90419A9A19F2DB5C0070DB19 /* ContactsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsData.h; sourceTree = "<group>"; };
+		90419A9B19F2DB5C0070DB19 /* ContactsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsData.m; sourceTree = "<group>"; };
+		90419A9D19F49D0A0070DB19 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		90419A9F19F49D140070DB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9043825719CBDA66004EB497 /* marcoContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marcoContactCell.h; sourceTree = "<group>"; };
 		9043825819CBDA66004EB497 /* marcoContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = marcoContactCell.m; sourceTree = "<group>"; };
 		904D643D1996CCE20024118E /* addContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addContactViewController.h; sourceTree = "<group>"; };
 		904D643E1996CCE20024118E /* addContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addContactViewController.m; sourceTree = "<group>"; };
+		90541A8C1A007DEE009A38B4 /* testProfileMessage.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = testProfileMessage.txt; path = ../pgp/testProfileMessage.txt; sourceTree = "<group>"; };
+		90541A8E1A007DEE009A38B4 /* testProfilePublicKey.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = testProfilePublicKey.txt; path = ../pgp/testProfilePublicKey.txt; sourceTree = "<group>"; };
+		90541A8F1A007DEE009A38B4 /* testProfileSecretKey.asc */ = {isa = PBXFileReference; lastKnownFileType = text; name = testProfileSecretKey.asc; path = ../pgp/testProfileSecretKey.asc; sourceTree = "<group>"; };
 		905925121984129900C6C1AD /* generateKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generateKeyViewController.h; sourceTree = "<group>"; };
 		905925131984129900C6C1AD /* generateKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = generateKeyViewController.m; sourceTree = "<group>"; };
-		9075CFEA199FF5F900A95AAC /* KeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPair.h; sourceTree = "<group>"; };
-		9075CFEB199FF5F900A95AAC /* KeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPair.m; sourceTree = "<group>"; };
+		905A5A5C1A03261F0076CB98 /* marcoPoloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marcoPoloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		905A5A621A03261F0076CB98 /* marcoPoloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "marcoPoloTests-Info.plist"; sourceTree = "<group>"; };
+		905A5A641A03261F0076CB98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		905A5A661A03261F0076CB98 /* marcoPoloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marcoPoloTests.m; sourceTree = "<group>"; };
+		905A5A681A03261F0076CB98 /* marcoPoloTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "marcoPoloTests-Prefix.pch"; sourceTree = "<group>"; };
+		905A5A711A032F580076CB98 /* secring-test.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "secring-test.gpg"; sourceTree = "<group>"; };
+		905A5A721A032F580076CB98 /* pubring-test.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pubring-test.gpg"; sourceTree = "<group>"; };
+		905A5A751A0726DF0076CB98 /* demoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demoData.h; sourceTree = "<group>"; };
+		905A5A761A0726DF0076CB98 /* demoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demoData.m; sourceTree = "<group>"; };
+		909E4ED619F5A975003DB680 /* libPods-marcoPolo_v2-ObjectivePGP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-marcoPolo_v2-ObjectivePGP.a"; path = "Pods/build/Debug-iphoneos/libPods-marcoPolo_v2-ObjectivePGP.a"; sourceTree = "<group>"; };
+		909E4EE019F5C941003DB680 /* libPods-marcoPolo_v2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-marcoPolo_v2.a"; path = "Pods/build/Debug-iphoneos/libPods-marcoPolo_v2.a"; sourceTree = "<group>"; };
+		909E4EE219F5DE30003DB680 /* openpgp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = openpgp.js; sourceTree = "<group>"; };
+		909E4EE619F690D6003DB680 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		90AE284B19B6B8C7000DD416 /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
 		90AE284C19B6B8C7000DD416 /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
 		90C17DA7197B02B400C386D0 /* libUNNetPGP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUNNetPGP.a; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libUNNetPGP.a"; sourceTree = "<group>"; };
@@ -120,6 +149,9 @@
 		90CAE3C8197B263200030F22 /* libPods-UNNetPGP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-UNNetPGP.a"; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods-UNNetPGP.a"; sourceTree = "<group>"; };
 		90CAE3C9197B263200030F22 /* libPods-OpenSSL-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OpenSSL-Universal.a"; path = "GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods-OpenSSL-Universal.a"; sourceTree = "<group>"; };
 		90CAE3CD197B72C200030F22 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9F1AC9B037AFC46371109567 /* Pods-marcoPolo_v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcoPolo_v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-marcoPolo_v2/Pods-marcoPolo_v2.release.xcconfig"; sourceTree = "<group>"; };
+		C8DA71B33DEBEA733340FFE8 /* Pods-marcoPolo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcoPolo.release.xcconfig"; path = "Pods/Target Support Files/Pods-marcoPolo/Pods-marcoPolo.release.xcconfig"; sourceTree = "<group>"; };
+		D29C98CC2E2ABD31B08D485D /* Pods-marcoPolo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marcoPolo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-marcoPolo/Pods-marcoPolo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +159,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909E4EE719F690D6003DB680 /* JavaScriptCore.framework in Frameworks */,
+				90419AA019F49D140070DB19 /* Security.framework in Frameworks */,
+				90419A9E19F49D0A0070DB19 /* MobileCoreServices.framework in Frameworks */,
 				9033DCBA19A2D16700AFF2AF /* MessageUI.framework in Frameworks */,
 				902F90E3198D7771003931C5 /* CoreData.framework in Frameworks */,
 				90CAE3CE197B72C200030F22 /* libsqlite3.dylib in Frameworks */,
@@ -135,31 +170,43 @@
 				903446A619688B1F000C087A /* CoreGraphics.framework in Frameworks */,
 				903446A819688B1F000C087A /* UIKit.framework in Frameworks */,
 				903446A419688B1F000C087A /* Foundation.framework in Frameworks */,
-				7943172A25764A8696145443 /* libPods-marcoPolo_v2.a in Frameworks */,
+				CB1C155B2C5BC7449DD0EA0A /* libPods-marcoPolo_v2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		903446C119688B1F000C087A /* Frameworks */ = {
+		905A5A591A03261F0076CB98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446C619688B1F000C087A /* XCTest.framework in Frameworks */,
-				903446C819688B1F000C087A /* UIKit.framework in Frameworks */,
-				903446C719688B1F000C087A /* Foundation.framework in Frameworks */,
+				905A5A5D1A03261F0076CB98 /* XCTest.framework in Frameworks */,
+				905A5A5F1A03261F0076CB98 /* UIKit.framework in Frameworks */,
+				905A5A5E1A03261F0076CB98 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CBCDAA2D86DE3F14D87B5F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D29C98CC2E2ABD31B08D485D /* Pods-marcoPolo.debug.xcconfig */,
+				C8DA71B33DEBEA733340FFE8 /* Pods-marcoPolo.release.xcconfig */,
+				0023BB0A16275955A94B8EE6 /* Pods-marcoPolo_v2.debug.xcconfig */,
+				9F1AC9B037AFC46371109567 /* Pods-marcoPolo_v2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9034469719688B1F000C087A = {
 			isa = PBXGroup;
 			children = (
 				903446A919688B1F000C087A /* marcoPolo_v2 */,
 				903446CB19688B1F000C087A /* marcoPolo_v2Tests */,
+				905A5A601A03261F0076CB98 /* marcoPoloTests */,
 				903446A219688B1F000C087A /* Frameworks */,
 				903446A119688B1F000C087A /* Products */,
-				3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */,
+				3CBCDAA2D86DE3F14D87B5F5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				903446A019688B1F000C087A /* marcoPolo.app */,
-				903446C419688B1F000C087A /* marcoPolo_v2Tests.xctest */,
+				905A5A5C1A03261F0076CB98 /* marcoPoloTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +222,12 @@
 		903446A219688B1F000C087A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909E4EE619F690D6003DB680 /* JavaScriptCore.framework */,
+				909E4EE019F5C941003DB680 /* libPods-marcoPolo_v2.a */,
+				909E4ED619F5A975003DB680 /* libPods-marcoPolo_v2-ObjectivePGP.a */,
+				902FEF8C19F5A73D00C2D69D /* libPods-marcoPolo_v2.a */,
+				90419A9F19F49D140070DB19 /* Security.framework */,
+				90419A9D19F49D0A0070DB19 /* MobileCoreServices.framework */,
 				9033DCB919A2D16700AFF2AF /* MessageUI.framework */,
 				902F90E2198D7771003931C5 /* CoreData.framework */,
 				90CAE3CD197B72C200030F22 /* libsqlite3.dylib */,
@@ -189,6 +242,7 @@
 				903446A719688B1F000C087A /* UIKit.framework */,
 				903446C519688B1F000C087A /* XCTest.framework */,
 				4A5C1B10AF4048B287427EB2 /* libPods-marcoPolo_v2.a */,
+				307D92F939B3389A15EED3BF /* libPods-marcoPolo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +250,7 @@
 		903446A919688B1F000C087A /* marcoPolo_v2 */ = {
 			isa = PBXGroup;
 			children = (
+				909E4EE519F5F1F3003DB680 /* iPad */,
 				903446DB19688DE4000C087A /* Images-3.xcassets */,
 				90DB3BB919689B6F0006DC09 /* Contollers */,
 				90DB3BB819689B570006DC09 /* Datasources */,
@@ -210,6 +265,10 @@
 		903446AA19688B1F000C087A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90541A8C1A007DEE009A38B4 /* testProfileMessage.txt */,
+				90541A8E1A007DEE009A38B4 /* testProfilePublicKey.txt */,
+				90541A8F1A007DEE009A38B4 /* testProfileSecretKey.asc */,
+				909E4EE219F5DE30003DB680 /* openpgp.js */,
 				903446AB19688B1F000C087A /* marcoPolo_v2-Info.plist */,
 				903446AC19688B1F000C087A /* InfoPlist.strings */,
 				903446AF19688B1F000C087A /* main.m */,
@@ -234,6 +293,34 @@
 				903446CE19688B1F000C087A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		905A5A601A03261F0076CB98 /* marcoPoloTests */ = {
+			isa = PBXGroup;
+			children = (
+				905A5A661A03261F0076CB98 /* marcoPoloTests.m */,
+				905A5A611A03261F0076CB98 /* Supporting Files */,
+			);
+			path = marcoPoloTests;
+			sourceTree = "<group>";
+		};
+		905A5A611A03261F0076CB98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				905A5A711A032F580076CB98 /* secring-test.gpg */,
+				905A5A721A032F580076CB98 /* pubring-test.gpg */,
+				905A5A621A03261F0076CB98 /* marcoPoloTests-Info.plist */,
+				905A5A631A03261F0076CB98 /* InfoPlist.strings */,
+				905A5A681A03261F0076CB98 /* marcoPoloTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		909E4EE519F5F1F3003DB680 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 		90C17DA4197AFFF700C386D0 /* optionsBranch */ = {
@@ -289,12 +376,14 @@
 			isa = PBXGroup;
 			children = (
 				902F90E4198D7841003931C5 /* mpCoreData.xcdatamodeld */,
-				9075CFEA199FF5F900A95AAC /* KeyPair.h */,
-				9075CFEB199FF5F900A95AAC /* KeyPair.m */,
-				902F90EA198D856E003931C5 /* MessagesData.h */,
-				902F90EB198D856E003931C5 /* MessagesData.m */,
-				902F90E7198D856D003931C5 /* ContactsData.h */,
-				902F90E8198D856D003931C5 /* ContactsData.m */,
+				90419A9A19F2DB5C0070DB19 /* ContactsData.h */,
+				90419A9B19F2DB5C0070DB19 /* ContactsData.m */,
+				90419A9719F2DB5C0070DB19 /* KeyPair.h */,
+				90419A9819F2DB5C0070DB19 /* KeyPair.m */,
+				90419A9419F2DB5C0070DB19 /* MessagesData.h */,
+				90419A9519F2DB5C0070DB19 /* MessagesData.m */,
+				905A5A751A0726DF0076CB98 /* demoData.h */,
+				905A5A761A0726DF0076CB98 /* demoData.m */,
 			);
 			name = Datasources;
 			sourceTree = "<group>";
@@ -331,22 +420,22 @@
 			productReference = 903446A019688B1F000C087A /* marcoPolo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		903446C319688B1F000C087A /* marcoPolo_v2Tests */ = {
+		905A5A5B1A03261F0076CB98 /* marcoPoloTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 903446D819688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo_v2Tests" */;
+			buildConfigurationList = 905A5A6C1A03261F0076CB98 /* Build configuration list for PBXNativeTarget "marcoPoloTests" */;
 			buildPhases = (
-				903446C019688B1F000C087A /* Sources */,
-				903446C119688B1F000C087A /* Frameworks */,
-				903446C219688B1F000C087A /* Resources */,
+				905A5A581A03261F0076CB98 /* Sources */,
+				905A5A591A03261F0076CB98 /* Frameworks */,
+				905A5A5A1A03261F0076CB98 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				903446CA19688B1F000C087A /* PBXTargetDependency */,
+				905A5A6A1A03261F0076CB98 /* PBXTargetDependency */,
 			);
-			name = marcoPolo_v2Tests;
-			productName = marcoPolo_v2Tests;
-			productReference = 903446C419688B1F000C087A /* marcoPolo_v2Tests.xctest */;
+			name = marcoPoloTests;
+			productName = marcoPoloTests;
+			productReference = 905A5A5C1A03261F0076CB98 /* marcoPoloTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -358,7 +447,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = red5;
 				TargetAttributes = {
-					903446C319688B1F000C087A = {
+					905A5A5B1A03261F0076CB98 = {
 						TestTargetID = 9034469F19688B1F000C087A;
 					};
 				};
@@ -377,7 +466,7 @@
 			projectRoot = "";
 			targets = (
 				9034469F19688B1F000C087A /* marcoPolo */,
-				903446C319688B1F000C087A /* marcoPolo_v2Tests */,
+				905A5A5B1A03261F0076CB98 /* marcoPoloTests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,17 +476,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90541A911A007DEE009A38B4 /* testProfileMessage.txt in Resources */,
+				90541A931A007DEE009A38B4 /* testProfilePublicKey.txt in Resources */,
+				90541A941A007DEE009A38B4 /* testProfileSecretKey.asc in Resources */,
+				909E4EE419F5DE50003DB680 /* openpgp.js in Resources */,
 				903446AE19688B1F000C087A /* InfoPlist.strings in Resources */,
 				903446F219688DE4000C087A /* Images-3.xcassets in Resources */,
 				903446B719688B1F000C087A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		903446C219688B1F000C087A /* Resources */ = {
+		905A5A5A1A03261F0076CB98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446D019688B1F000C087A /* InfoPlist.strings in Resources */,
+				905A5A731A032F580076CB98 /* secring-test.gpg in Resources */,
+				905A5A651A03261F0076CB98 /* InfoPlist.strings in Resources */,
+				905A5A741A032F580076CB98 /* pubring-test.gpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +526,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-marcoPolo_v2-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-marcoPolo_v2/Pods-marcoPolo_v2-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -443,11 +538,10 @@
 			files = (
 				903446F319688DE4000C087A /* MarcoSceneViewController.m in Sources */,
 				9043825919CBDA66004EB497 /* marcoContactCell.m in Sources */,
-				902F90E9198D856D003931C5 /* ContactsData.m in Sources */,
 				90C17DAB197B041200C386D0 /* ContactsProfileViewController.m in Sources */,
 				90AE284D19B6B8C7000DD416 /* MessageDetailViewController.m in Sources */,
 				903446B419688B1F000C087A /* AppDelegate.m in Sources */,
-				9075CFEC199FF5F900A95AAC /* KeyPair.m in Sources */,
+				90419A9619F2DB5C0070DB19 /* MessagesData.m in Sources */,
 				903446FC19688DE4000C087A /* ContactsTableViewController.m in Sources */,
 				903446F519688DE4000C087A /* MessageCellTableViewCell.m in Sources */,
 				90C17DB1197B130000C386D0 /* optionsSceneViewController.m in Sources */,
@@ -456,29 +550,31 @@
 				903446B019688B1F000C087A /* main.m in Sources */,
 				903446F619688DE4000C087A /* MessageSceneTableViewController.m in Sources */,
 				903446F419688DE4000C087A /* MarcoSentViewController.m in Sources */,
-				902F90EC198D856E003931C5 /* MessagesData.m in Sources */,
+				90419A9C19F2DB5C0070DB19 /* ContactsData.m in Sources */,
 				902F90E6198D7841003931C5 /* mpCoreData.xcdatamodeld in Sources */,
 				903446FB19688DE4000C087A /* ContactsTableViewCell.m in Sources */,
+				90419A9919F2DB5C0070DB19 /* KeyPair.m in Sources */,
 				9036B77B19CBE8C4001D474C /* marcoTableViewController.m in Sources */,
 				905925141984129900C6C1AD /* generateKeyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		903446C019688B1F000C087A /* Sources */ = {
+		905A5A581A03261F0076CB98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903446D219688B1F000C087A /* marcoPolo_v2Tests.m in Sources */,
+				905A5A771A0726DF0076CB98 /* demoData.m in Sources */,
+				905A5A671A03261F0076CB98 /* marcoPoloTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		903446CA19688B1F000C087A /* PBXTargetDependency */ = {
+		905A5A6A1A03261F0076CB98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9034469F19688B1F000C087A /* marcoPolo */;
-			targetProxy = 903446C919688B1F000C087A /* PBXContainerItemProxy */;
+			targetProxy = 905A5A691A03261F0076CB98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -507,11 +603,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		905A5A631A03261F0076CB98 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				905A5A641A03261F0076CB98 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		903446D319688B1F000C087A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0023BB0A16275955A94B8EE6 /* Pods-marcoPolo_v2.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
@@ -547,133 +652,86 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
-		903446D419688B1F000C087A /* Release */ = {
+		903446D619688B1F000C087A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0023BB0A16275955A94B8EE6 /* Pods-marcoPolo_v2.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/red5/GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios",
+					"/Users/red5/Library/Developer/Xcode/DerivedData/marcoPolo_v2-bubabdakzsbjxogtwluhypmdbefp/Build/Products/**",
+					"/Users/red5/Library/Developer/Xcode/DerivedData/marcoPolo_v2-bubabdakzsbjxogtwluhypmdbefp/Build/Products",
+					"\"${PODS_ROOT}/Headers/Public/ObjectivePGP\"",
+					"$(PROJECT_DIR)/Pods/ObjectivePGP/lib-ios",
+					"$(PROJECT_DIR)/marcoPolo_v2/lib-ios",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"/Users/red5/GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios",
+					"$(PROJECT_DIR)/GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		905A5A6B1A03261F0076CB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ADDITIONAL_SDKS = "";
 				ARCHS = (
 					armv7s,
 					armv7,
 				);
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
-			};
-			name = Release;
-		};
-		903446D619688B1F000C087A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
-				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/red5/GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios",
-					"$(PROJECT_DIR)/GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		903446D719688B1F000C087A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3466B6F2A3A54DD6B85379A0 /* Pods-marcoPolo_v2.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
-				INFOPLIST_FILE = "marcoPolo_v2/marcoPolo_v2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/red5/GitHub/unnetpgp/Pods/OpenSSL-Universal/lib-ios",
-					"$(PROJECT_DIR)/GitHub/unnetpgp/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		903446D919688B1F000C087A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/marcoPolo_v2.app/marcoPolo_v2";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/marcoPolo.app/marcoPolo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
+				GCC_PREFIX_HEADER = "marcoPoloTests/marcoPoloTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "marcoPolo_v2Tests/marcoPolo_v2Tests-Info.plist";
+				INFOPLIST_FILE = "marcoPoloTests/marcoPoloTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
-		};
-		903446DA19688B1F000C087A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/marcoPolo_v2.app/marcoPolo_v2";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "marcoPolo_v2/marcoPolo_v2-Prefix.pch";
-				INFOPLIST_FILE = "marcoPolo_v2Tests/marcoPolo_v2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -682,28 +740,24 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				903446D319688B1F000C087A /* Debug */,
-				903446D419688B1F000C087A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		903446D519688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				903446D619688B1F000C087A /* Debug */,
-				903446D719688B1F000C087A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		903446D819688B1F000C087A /* Build configuration list for PBXNativeTarget "marcoPolo_v2Tests" */ = {
+		905A5A6C1A03261F0076CB98 /* Build configuration list for PBXNativeTarget "marcoPoloTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				903446D919688B1F000C087A /* Debug */,
-				903446DA19688B1F000C087A /* Release */,
+				905A5A6B1A03261F0076CB98 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

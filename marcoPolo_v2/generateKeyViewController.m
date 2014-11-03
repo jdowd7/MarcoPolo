@@ -72,10 +72,11 @@
     NSString *documentPath = [paths objectAtIndex:0];
     
     //create key
+    [NSKeyedUnarchiver unarchiveObjectWithFile:@""];
+    
     UNNetPGP *pgpInstance = [[UNNetPGP alloc] initWithUserId:usernameString];
     pgpInstance.password = passwordString;
     pgpInstance.armored = YES;
-    
     
     if([pgpInstance generateKey:2048])
     {
@@ -90,16 +91,19 @@
         
         //DIAGNOSTIC: NSLog(@"path is: %@", pgpInstance.publicKeyRingPath);
         NSString *publicKey = [pgpInstance exportKeyNamed:usernameString];
+
+        
+        
         
         //DIAGNOSTIC: NSLog(@"key is: %@", key);
         
-        //get contents of the files
-        //NSString *publicKey = [NSString stringWithContentsOfFile:pgpInstance.publicKeyRingPath encoding:NSUTF8StringEncoding error:NULL];
+
         
         //save the results
         [_keyPair setValue:publicKey forKeyPath:@"publicKey"];
         [_keyPair setValue:usernameString forKeyPath:@"username"];
         [_keyPair setValue:contactPhoneNumber forKeyPath:@"user_contact_number"];
+        [_keyPair setValue:pgpInstance.secretKeyRingPath forKeyPath:@"privateKey"];
         
     
         NSError *error;
@@ -118,4 +122,6 @@
         NSLog(@"Something went  very wrong");
     }
 }
+
+
 @end

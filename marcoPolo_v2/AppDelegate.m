@@ -58,12 +58,13 @@
     [self findContact];
    if(!IsEmpty(_contact2Search.contact_phone_number))
     {
-        [self.managedObjectContext deleteObject:_contact2Search];
+        /*[self.managedObjectContext deleteObject:_contact2Search];
         NSError *error;
         if (![self.managedObjectContext save:&error])
         {
             NSLog(@"Whoops, couldn't delete: %@", [error localizedDescription]);
         }
+         */
     }
     
     

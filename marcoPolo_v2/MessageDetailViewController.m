@@ -104,7 +104,7 @@ static inline BOOL IsEmpty(id thing)
         NSData *decodedBase64Data = [[NSData alloc] initWithBase64EncodedString:pkBase64 options:0];
         NSString *decodedStringSecretKey = [[NSString alloc] initWithData:decodedBase64Data encoding:NSASCIIStringEncoding];
         
-        NSString *decryptResult = [self javaDecrypter:self.textMessageContent.text forKey:decodedStringSecretKey];
+        NSString *decryptResult = [self javaDecrypter:self.msgTextPolo forKey:decodedStringSecretKey];
         self.textMessageContent.text = decryptResult;
         NSLog(@"DATA: %@", decryptResult);
         
@@ -153,6 +153,11 @@ static inline BOOL IsEmpty(id thing)
 
 - (NSString *)javaDecrypter:(NSString *)message forKey:(NSString *)key
 {
+    if([self.msgContactPolo isEqualToString:@"demoTest"])
+    {
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        key = appDelegate.demoPrivateKey;
+    }
     NSString *javaResult = nil;
     
     UIWebView *javaWebView = [[UIWebView alloc] init];

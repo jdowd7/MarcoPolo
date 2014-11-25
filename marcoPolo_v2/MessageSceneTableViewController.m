@@ -150,6 +150,7 @@
         MessageDetailViewController *messageDetailVC = segue.destinationViewController;
         messageDetailVC.passedMessage = self.messagePassed;
         messageDetailVC.msgTextPolo = self.messagePassed.message_text;
+        messageDetailVC.msgContactPolo = self.messagePassed.contact_id;
         
     }
 }

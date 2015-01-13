@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-marcoPolo_v2-OpenSSL-Universal.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-marcoPolo_v2-UNNetPGP.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-marcoPolo_v2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>30AC43B555259DD0EF7AD27F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92D9682CF6F3BBB5F25CFB6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB7550E7574B0BD6B9EAE9BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

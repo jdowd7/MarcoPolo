@@ -1,0 +1,186 @@
+TPods
+v6
+r1
+cCheck dependencies
+cCompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7
+cLibtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s
+cLibtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64
+cCreateUniversalBinary /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a normal armv7\ armv7s\ arm64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk
+c00000000534B6CFB0000000000000132
+t1397452027
+s306
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/SDKSettings.plist
+c00000000531E6194000000000000036B
+t1394499988
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531E6195000000000000019E
+t1394499989
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531E61960000000000A90C10
+t1394499990
+s11078672
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c00000000531E61BF0000000000000ADC
+t1394500031
+s2780
+
+N/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+c0000000053C4B8FE0000000000000070
+t1405401342
+s112
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o
+t1405401992
+s3860
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods.LinkFileList
+c0000000053C4BB8700000000000000B1
+t1405401991
+s177
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a
+t1405401992
+s8592
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o
+t1405401992
+s3392
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods.LinkFileList
+c0000000053C4BB8700000000000000B1
+t1405401991
+s177
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a
+t1405401992
+s7632
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o
+t1405401992
+s3392
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods.LinkFileList
+c0000000053C4BB8700000000000000B2
+t1405401991
+s178
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a
+t1405401992
+s7632
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods-OpenSSL-Universal.a
+c0000000053C4BB870000000000003214
+t1405401991
+s12820
+
+N/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a
+t2
+s0
+
+CBuild AST from /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies3770b707f374b941^b41cb807f374b941^---0#1#1#--18"Check dependencies36"9B65A0B2-8E93-4529-958E-D2AD388991FF-
+
+CCompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427094791.720628
+e427094792.387346
+r1
+xCompileC
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o
+x/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m267"CompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler139ab807f374b941^282a6308f374b941^---0#0#1#-19%DVTDocumentLocation2@52"file:///Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m0000000000000000^4147"CompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/red5/GitHub/unnetpgp/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/red5/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-generated-files.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-own-target-headers.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-all-target-headers.hmap -iquote /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-project-headers.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/include -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal/openssl -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/UNNetPGP -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/DerivedSources/arm64 -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/DerivedSources -F/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal/openssl -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/UNNetPGP -MMD -MT dependencies -MF /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.d --serialize-diagnostics /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.dia -c /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o36"BD223259-0DDD-47BD-8D4D-58623E222811-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+
+CCompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427094791.719949
+e427094792.267484
+r1
+xCompileC
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o
+x/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m267"CompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler9c6fb807f374b941^7d7a4408f374b941^---0#0#1#-19%DVTDocumentLocation2@52"file:///Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m0000000000000000^4147"CompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/red5/GitHub/unnetpgp/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/red5/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-generated-files.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-own-target-headers.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-all-target-headers.hmap -iquote /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-project-headers.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/include -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal/openssl -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/UNNetPGP -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/DerivedSources/armv7 -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/DerivedSources -F/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal/openssl -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/UNNetPGP -MMD -MT dependencies -MF /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.d --serialize-diagnostics /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.dia -c /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o36"65A75B39-BA44-4079-9E4F-B2A039BEF512-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+
+CCompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427094791.720277
+e427094792.267755
+r1
+xCompileC
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o
+x/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m269"CompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler2383b807f374b941^f08a4408f374b941^---0#0#1#-19%DVTDocumentLocation2@52"file:///Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m0000000000000000^4154"CompileC /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/red5/GitHub/unnetpgp/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/red5/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-generated-files.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-own-target-headers.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-all-target-headers.hmap -iquote /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Pods-project-headers.hmap -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/include -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal/openssl -I/Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/UNNetPGP -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/DerivedSources/armv7s -I/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/DerivedSources -F/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/OpenSSL-Universal/openssl -isystem /Users/red5/GitHub/unnetpgp/Pods/Pods/Headers/UNNetPGP -MMD -MT dependencies -MF /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.d --serialize-diagnostics /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.dia -c /Users/red5/GitHub/unnetpgp/Pods/Pods-dummy.m -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o36"53241D0E-A12A-4BEE-91D2-CB01A8690FDB-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+
+CCreateUniversalBinary /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a normal armv7\ armv7s\ arm64
+s427094792.415135
+e427094792.422601
+r1
+xCreateUniversalBinary
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a
+xnormal
+xarmv7 armv7s arm64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection149"Create universal binary /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a175"CreateUniversalBinary /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a normal armv7\ armv7s\ arm649e5d6a08f374b941^a1306c08f374b941^---0#0#1#-19%DVTDocumentLocation2@132"file:///Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a00346438ddffdf42^1163"CreateUniversalBinary /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a normal armv7\ armv7s\ arm64    cd /Users/red5/GitHub/unnetpgp/Pods    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos/libPods.a36"5618A75D-001E-424D-9AAA-C1EE69A6E9A1-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+
+CLibtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64
+s427094792.388358
+e427094792.414406
+r1
+xLibtool
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a
+xnormal
+xarm64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection194"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64194"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64a7756308f374b941^b1176a08f374b941^---0#0#1#--1303"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64    cd /Users/red5/GitHub/unnetpgp/Pods    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only arm64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos -L/Users/red5/GitHub/unnetpgp/Pods/Pods/OpenSSL-Universal/lib-ios -filelist /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/Pods.LinkFileList -framework Foundation -lPods-OpenSSL-Universal -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/arm64/libPods.a36"0F388E19-8FA9-41C8-AF8F-33629235E9EA-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+
+CLibtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7
+s427094792.388037
+e427094792.413647
+r1
+xLibtool
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a
+xnormal
+xarmv7
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection194"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7194"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv71b636308f374b941^25e66908f374b941^---0#0#1#--1303"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7    cd /Users/red5/GitHub/unnetpgp/Pods    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos -L/Users/red5/GitHub/unnetpgp/Pods/Pods/OpenSSL-Universal/lib-ios -filelist /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/Pods.LinkFileList -framework Foundation -lPods-OpenSSL-Universal -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7/libPods.a36"32415A99-3029-467A-8EEE-07AB6E907C75-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+
+CLibtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s
+s427094792.388190
+e427094792.413735
+r1
+xLibtool
+x/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a
+xnormal
+xarmv7s
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection196"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s196"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7sa06b6308f374b941^f1f16908f374b941^---0#0#1#--1308"Libtool /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s    cd /Users/red5/GitHub/unnetpgp/Pods    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7s -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Products/Debug-iphoneos -L/Users/red5/GitHub/unnetpgp/Pods/Pods/OpenSSL-Universal/lib-ios -filelist /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/Pods.LinkFileList -framework Foundation -lPods-OpenSSL-Universal -o /Users/red5/Library/Developer/Xcode/DerivedData/UNNetPGP-gelajfcxsbcmwnamafcalisgwwje/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a36"67A0E64E-8AF2-4DAF-8F51-6AE23C2637E8-
+bB7E20350-AA02-4CF1-8E27-DA8C46BDAE10
+

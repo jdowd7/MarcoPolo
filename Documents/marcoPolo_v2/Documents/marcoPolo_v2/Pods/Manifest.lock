@@ -1,0 +1,17 @@
+PODS:
+  - OpenSSL-Universal (1.0.1.h)
+  - UNNetPGP (0.8.1):
+    - OpenSSL-Universal
+
+DEPENDENCIES:
+  - UNNetPGP (from `https://raw.githubusercontent.com/upnext/unnetpgp/master/UNNetPGP.podspec`)
+
+EXTERNAL SOURCES:
+  UNNetPGP:
+    :podspec: https://raw.githubusercontent.com/upnext/unnetpgp/master/UNNetPGP.podspec
+
+SPEC CHECKSUMS:
+  OpenSSL-Universal: c109d62ff4632cfa306e98d2159365266b3f44c3
+  UNNetPGP: 112d12c81d8a479553e26315d2512be61c8f12af
+
+COCOAPODS: 0.33.1

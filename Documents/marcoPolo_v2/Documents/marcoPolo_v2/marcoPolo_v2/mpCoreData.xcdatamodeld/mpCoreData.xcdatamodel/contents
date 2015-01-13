@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Contact" representedClassName="ContactsData" syncable="YES">
+        <attribute name="contact_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="contact_name" attributeType="String" syncable="YES"/>
+        <attribute name="contact_phone_number" attributeType="String" syncable="YES"/>
+        <attribute name="contact_public_key" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="KeyPair" representedClassName="KeyPair" syncable="YES">
+        <attribute name="privateKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_contact_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="MessagesData" syncable="YES">
+        <attribute name="contact_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="message_encrypted" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="message_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="message_read" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="message_text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contact" positionX="-405" positionY="-36" width="128" height="103"/>
+        <element name="KeyPair" positionX="-290" positionY="-190" width="128" height="103"/>
+        <element name="Message" positionX="-153" positionY="-63" width="128" height="133"/>
+    </elements>
+</model>

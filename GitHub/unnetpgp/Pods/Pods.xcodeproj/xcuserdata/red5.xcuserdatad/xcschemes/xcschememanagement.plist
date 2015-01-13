@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-OpenSSL-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-UNNetPGP Tests-OpenSSL-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-UNNetPGP Tests-UNNetPGP.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-UNNetPGP Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-test client-OpenSSL-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>Pods-test client-UNNetPGP.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Pods-test client.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>028C2FB989944C48A3F6D86D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28E1A8A53E944EDC9A377EAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A187064C6B9406FA31686C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8662CBF128CB44A0B6127E2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>960E97F2040B4D878A705E02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A65E281C07F4457A9BEABA5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F849643712E947A48AA39FEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEA3F09EC3754E74B432C8D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
